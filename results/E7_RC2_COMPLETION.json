@@ -1,0 +1,15 @@
+{
+  "status": "complete",
+  "protocol_sha256": "724bb9ba8befe88473e25bacb0dcb298f68f9fcc2af08e118773e019626a250d",
+  "new_panel_qualifies": true,
+  "panels": 2,
+  "seeds_per_panel": 20,
+  "pac_reps": 10,
+  "generator_score_cells": 12,
+  "preprocessing_states": 120,
+  "evaluated_arm_records": 10000,
+  "paired_comparisons": 2400,
+  "new_annotation_requests": 15200,
+  "old_qwen_llama_reused": true,
+  "scope": "Same AG News items, amended Mistral/Phi constrained decoding, observational panel contrast, fixed seeds and audit policy"
+}

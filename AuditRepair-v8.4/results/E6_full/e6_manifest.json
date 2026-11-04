@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "cells": 54,
+  "seed_range": [
+    0,
+    100
+  ],
+  "per_cell_independent_seeds": 100,
+  "checkpoints": 5400,
+  "PAC_pairs": 81000,
+  "policy_states": 16200,
+  "protocol_sha256": "0881b97943d41bd88af688147a897a108e4938143564176001cd479f97585887",
+  "code_sha256": "aefa78b3c27085e9fbdcd8b25f7a6cf251bcb30b49b0416593c0029b9e8186b5",
+  "merge_code_sha256": "35ddc64cf74f96dd42d3f6ad2308739ed26cb689be8492f9485030ee2efdfce6",
+  "scope": "fresh controlled synthetic populations, NOT new LLM annotations"
+}

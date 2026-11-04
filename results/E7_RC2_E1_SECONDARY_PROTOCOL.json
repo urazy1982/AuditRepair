@@ -1,0 +1,29 @@
+{
+  "status": "secondary_E1_sensitivity_added_after_E7_design",
+  "inputs": "RC2 qualified four-family AG News and unchanged v8.3 corrected E1 implementation",
+  "methods": [
+    "PAC-only",
+    "same-audit DS",
+    "historical guarded",
+    "O1 restricted",
+    "O2 disagreement",
+    "O3 unanimous",
+    "O4 adaptive baseline prefix",
+    "O5 all wrong gold-corrected"
+  ],
+  "setup": {
+    "B": 400,
+    "warmup_share": 0.3,
+    "m": 500,
+    "epsilon": 0.03,
+    "alpha_final": 0.1,
+    "alpha_repair": 0.05,
+    "seeds": 20,
+    "replications": 10,
+    "bootstrap": 4000
+  },
+  "runner_sha256": "6ab71ae6fab9f0b64dea10713f23c2a9cd3917caf796e287ce194b70f779db4d",
+  "primary_protocol_sha256": "724bb9ba8befe88473e25bacb0dcb298f68f9fcc2af08e118773e019626a250d",
+  "gold_oracles_not_deployable": true,
+  "O4_adaptive_not_final_PAC_guaranteed": true
+}

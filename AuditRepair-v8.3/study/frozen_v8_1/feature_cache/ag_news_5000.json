@@ -1,0 +1,13 @@
+{
+  "pool": "ag_news_5000",
+  "protocol_sha256": "2931a624b1ce970ce15ce2a6d4205b3992aa42606fc4d972fb5a3db38b042f61",
+  "code_sha256": "a3961faca0ee61aa4a3f5af3882827636321c562b0d83f55836b3f279d527f73",
+  "features_sha256": "fb75113120d4e8ef9feff9b63e64ceb019f2bd94920dc76d194d7a4b45c61866",
+  "neighbors_sha256": "1b6490c859f66e93e30afb2e2bfa2fda2ee742e68d917331ae07c0bb3ee2200b",
+  "cache_sha256": "4237516082e8cf5c1f29ed12506c72104c65dc8684e52091ad25a8718ba591e0",
+  "n": 5000,
+  "dimensions": 128,
+  "neighbor_count": 15,
+  "wall_seconds": 3.6872313759999997,
+  "created_utc": "2026-11-04T06:16:31.401382+00:00"
+}

@@ -1,0 +1,40 @@
+{
+  "status": "completed",
+  "main_status": "passed_under_tested_conditions",
+  "large_pool_status": "passed_under_tested_conditions",
+  "large_pool_seconds": 162.614,
+  "large_pool_pools": [
+    {
+      "fixture": "large_32levels_distributed_risk_034",
+      "N": 5000,
+      "m": 500,
+      "already_owned": 0,
+      "violations": 60,
+      "trials": 10000,
+      "one_sided_95_lower": 0.004787904240449218,
+      "one_sided_95_upper": 0.007433605812518839,
+      "comparison": "pass_with_margin",
+      "mean_total_unique_experts": 2823.1308,
+      "mean_automatic_retention": 2176.8692,
+      "runs_saving_at_least_one_label": 10000,
+      "maximum_final_error": 0.0338
+    },
+    {
+      "fixture": "large_32levels_misranked_risk_034_owned400",
+      "N": 5000,
+      "m": 500,
+      "already_owned": 400,
+      "violations": 60,
+      "trials": 10000,
+      "one_sided_95_lower": 0.004787904240449218,
+      "one_sided_95_upper": 0.007433605812518839,
+      "comparison": "pass_with_margin",
+      "mean_total_unique_experts": 4984.6193,
+      "mean_automatic_retention": 15.380699999999706,
+      "runs_saving_at_least_one_label": 89,
+      "maximum_final_error": 0.0334
+    }
+  ],
+  "main_script_unchanged": true,
+  "overview": "verification_overview.json"
+}

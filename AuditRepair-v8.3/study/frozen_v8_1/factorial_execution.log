@@ -1,0 +1,230 @@
+E2/E3 1/140 ag_news_5000 seed=1 completed 7.5s
+E2/E3 2/140 ag_news_5000 seed=0 completed 7.5s
+E2/E3 3/140 ag_news_5000 seed=2 completed 7.9s
+E2/E3 4/140 ag_news_5000 seed=3 completed 7.7s
+E2/E3 5/140 ag_news_5000 seed=4 completed 8.2s
+E2/E3 6/140 ag_news_5000 seed=5 completed 7.9s
+E2/E3 7/140 ag_news_5000 seed=6 completed 7.3s
+E2/E3 8/140 ag_news_5000 seed=7 completed 7.5s
+E2/E3 9/140 ag_news_5000 seed=8 completed 7.4s
+E2/E3 10/140 ag_news_5000 seed=9 completed 7.0s
+E2/E3 11/140 ag_news_5000 seed=11 completed 7.0s
+E2/E3 12/140 ag_news_5000 seed=10 completed 7.5s
+E2/E3 13/140 ag_news_5000 seed=12 completed 6.6s
+E2/E3 14/140 ag_news_5000 seed=13 completed 6.7s
+E2/E3 15/140 ag_news_5000 seed=14 completed 6.9s
+E2/E3 16/140 ag_news_5000 seed=15 completed 6.7s
+E2/E3 17/140 ag_news_5000 seed=16 completed 6.8s
+E2/E3 18/140 ag_news_5000 seed=17 completed 6.2s
+E2/E3 19/140 ag_news_holdout seed=0 completed 4.5s
+E2/E3 20/140 ag_news_5000 seed=18 completed 6.2s
+E2/E3 21/140 ag_news_5000 seed=19 completed 6.1s
+E2/E3 22/140 ag_news_holdout seed=1 completed 4.1s
+E2/E3 23/140 ag_news_holdout seed=2 completed 4.2s
+E2/E3 24/140 ag_news_holdout seed=3 completed 4.0s
+E2/E3 25/140 ag_news_holdout seed=4 completed 4.2s
+E2/E3 26/140 ag_news_holdout seed=6 completed 3.3s
+E2/E3 27/140 ag_news_holdout seed=5 completed 4.0s
+E2/E3 28/140 ag_news_holdout seed=7 completed 4.2s
+E2/E3 29/140 ag_news_holdout seed=8 completed 4.1s
+E2/E3 30/140 ag_news_holdout seed=9 completed 4.2s
+E2/E3 31/140 ag_news_holdout seed=10 completed 4.4s
+E2/E3 32/140 ag_news_holdout seed=12 completed 3.9s
+E2/E3 33/140 ag_news_holdout seed=11 completed 4.3s
+E2/E3 34/140 ag_news_holdout seed=15 completed 4.0s
+E2/E3 35/140 ag_news_holdout seed=14 completed 4.3s
+E2/E3 36/140 ag_news_holdout seed=13 completed 4.5s
+E2/E3 37/140 ag_news_holdout seed=16 completed 4.2s
+E2/E3 38/140 ag_news_holdout seed=18 completed 4.2s
+E2/E3 39/140 ag_news_holdout seed=17 completed 4.5s
+E2/E3 40/140 ag_news_holdout seed=19 completed 4.0s
+E2/E3 41/140 yelp_2600_star_alias seed=0 completed 4.2s
+E2/E3 42/140 yelp_2600_star_alias seed=1 completed 4.1s
+E2/E3 43/140 yelp_2600_star_alias seed=2 completed 3.8s
+E2/E3 44/140 yelp_2600_star_alias seed=4 completed 3.9s
+E2/E3 45/140 yelp_2600_star_alias seed=3 completed 4.6s
+E2/E3 46/140 yelp_2600_star_alias seed=5 completed 4.5s
+E2/E3 47/140 yelp_2600_star_alias seed=6 completed 4.6s
+E2/E3 48/140 yelp_2600_star_alias seed=7 completed 4.5s
+E2/E3 49/140 yelp_2600_star_alias seed=8 completed 4.6s
+E2/E3 50/140 yelp_2600_star_alias seed=9 completed 4.1s
+E2/E3 51/140 yelp_2600_star_alias seed=10 completed 5.0s
+E2/E3 52/140 yelp_2600_star_alias seed=12 completed 4.5s
+E2/E3 53/140 yelp_2600_star_alias seed=11 completed 5.0s
+E2/E3 54/140 yelp_2600_star_alias seed=13 completed 4.2s
+E2/E3 55/140 yelp_2600_star_alias seed=14 completed 4.5s
+E2/E3 56/140 yelp_2600_star_alias seed=16 completed 3.6s
+E2/E3 57/140 yelp_2600_star_alias seed=15 completed 4.9s
+E2/E3 58/140 yelp_2600_star_alias seed=18 completed 4.2s
+E2/E3 59/140 yelp_2600_star_alias seed=17 completed 4.5s
+E2/E3 60/140 yelp_2600_star_alias seed=19 completed 4.6s
+E2/E3 61/140 dbpedia seed=0 completed 4.5s
+E2/E3 62/140 dbpedia seed=1 completed 4.5s
+E2/E3 63/140 dbpedia seed=2 completed 3.9s
+E2/E3 64/140 dbpedia seed=3 completed 4.4s
+E2/E3 65/140 dbpedia seed=5 completed 4.6s
+E2/E3 66/140 dbpedia seed=4 completed 4.8s
+E2/E3 67/140 dbpedia seed=6 completed 4.3s
+E2/E3 68/140 dbpedia seed=8 completed 4.0s
+E2/E3 69/140 dbpedia seed=7 completed 4.4s
+E2/E3 70/140 dbpedia seed=9 completed 4.7s
+E2/E3 71/140 dbpedia seed=10 completed 5.2s
+E2/E3 72/140 dbpedia seed=11 completed 5.2s
+E2/E3 73/140 dbpedia seed=12 completed 4.8s
+E2/E3 74/140 dbpedia seed=14 completed 4.3s
+E2/E3 75/140 dbpedia seed=13 completed 4.8s
+E2/E3 76/140 dbpedia seed=16 completed 4.5s
+E2/E3 77/140 dbpedia seed=15 completed 5.2s
+E2/E3 78/140 dbpedia seed=17 completed 4.8s
+E2/E3 79/140 emotion seed=0 completed 3.5s
+E2/E3 80/140 dbpedia seed=19 completed 4.3s
+E2/E3 81/140 dbpedia seed=18 completed 4.7s
+E2/E3 82/140 emotion seed=2 completed 3.9s
+E2/E3 83/140 emotion seed=1 completed 4.2s
+E2/E3 84/140 emotion seed=3 completed 4.3s
+E2/E3 85/140 emotion seed=4 completed 3.8s
+E2/E3 86/140 emotion seed=5 completed 4.1s
+E2/E3 87/140 emotion seed=6 completed 4.1s
+E2/E3 88/140 emotion seed=7 completed 4.1s
+E2/E3 89/140 emotion seed=8 completed 4.5s
+E2/E3 90/140 emotion seed=9 completed 4.6s
+E2/E3 91/140 emotion seed=10 completed 4.8s
+E2/E3 92/140 emotion seed=11 completed 4.7s
+E2/E3 93/140 emotion seed=12 completed 4.5s
+E2/E3 94/140 emotion seed=13 completed 4.4s
+E2/E3 95/140 emotion seed=14 completed 4.6s
+E2/E3 96/140 emotion seed=15 completed 4.6s
+E2/E3 97/140 emotion seed=16 completed 4.7s
+E2/E3 98/140 emotion seed=17 completed 4.2s
+E2/E3 99/140 emotion seed=18 completed 4.7s
+E2/E3 100/140 imdb seed=0 completed 3.0s
+E2/E3 101/140 emotion seed=19 completed 3.8s
+E2/E3 102/140 imdb seed=1 completed 2.8s
+E2/E3 103/140 imdb seed=2 completed 3.2s
+E2/E3 104/140 imdb seed=3 completed 3.4s
+E2/E3 105/140 imdb seed=4 completed 3.4s
+E2/E3 106/140 imdb seed=5 completed 3.0s
+E2/E3 107/140 imdb seed=6 completed 2.9s
+E2/E3 108/140 imdb seed=7 completed 3.1s
+E2/E3 109/140 imdb seed=8 completed 3.2s
+E2/E3 110/140 imdb seed=9 completed 3.3s
+E2/E3 111/140 imdb seed=10 completed 3.1s
+E2/E3 112/140 imdb seed=11 completed 3.1s
+E2/E3 113/140 imdb seed=12 completed 3.3s
+E2/E3 114/140 imdb seed=13 completed 3.0s
+E2/E3 115/140 imdb seed=14 completed 3.5s
+E2/E3 116/140 imdb seed=15 completed 3.2s
+E2/E3 117/140 imdb seed=16 completed 3.2s
+E2/E3 118/140 imdb seed=17 completed 3.1s
+E2/E3 119/140 imdb seed=18 completed 2.9s
+E2/E3 120/140 imdb seed=19 completed 2.9s
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+E2/E3 121/140 banking77 seed=2 completed 22.9s
+E2/E3 122/140 banking77 seed=1 completed 23.8s
+E2/E3 123/140 banking77 seed=0 completed 24.2s
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+E2/E3 124/140 banking77 seed=3 completed 24.2s
+E2/E3 125/140 banking77 seed=4 completed 23.7s
+E2/E3 126/140 banking77 seed=5 completed 23.8s
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+E2/E3 127/140 banking77 seed=7 completed 23.1s
+E2/E3 128/140 banking77 seed=8 completed 23.0s
+E2/E3 129/140 banking77 seed=6 completed 24.5s
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+E2/E3 130/140 banking77 seed=9 completed 24.7s
+E2/E3 131/140 banking77 seed=10 completed 25.2s
+E2/E3 132/140 banking77 seed=11 completed 24.6s
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+E2/E3 133/140 banking77 seed=13 completed 25.0s
+E2/E3 134/140 banking77 seed=12 completed 25.7s
+E2/E3 135/140 banking77 seed=14 completed 25.2s
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+E2/E3 136/140 banking77 seed=15 completed 24.0s
+E2/E3 137/140 banking77 seed=17 completed 23.4s
+E2/E3 138/140 banking77 seed=16 completed 25.2s
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+<python-prefix>/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1201: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  check_classification_targets(y)
+E2/E3 139/140 banking77 seed=19 completed 20.7s
+E2/E3 140/140 banking77 seed=18 completed 23.3s

@@ -1,0 +1,15 @@
+{
+  "status": "prepared_not_collected",
+  "worklists": 8,
+  "requests": 30400,
+  "new_model_responses": 0,
+  "families": ["qwen", "llama", "mistral", "phi"],
+  "dataset": "AG News development and previously viewed holdout, same original IDs",
+  "quality_gate": "Each source on each panel must have <=5% unusable/failed responses before gold join",
+  "preflight_tests": {
+    "gold_omitted_from_worklists": true,
+    "parser_smoke": "passed",
+    "mock_format_quality_gate_and_join": "passed; synthetic mock files deleted and excluded from release"
+  },
+  "limitation": "Server /v1/models only verifies model ID, not pinned commit. An operator must verify actual revision before executing requests. No external-validity claims about a new panel are currently supported."
+}

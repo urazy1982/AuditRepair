@@ -1,0 +1,18 @@
+V8.2 MATCHED FIXED-GROUP ACCEPTANCE STUDY
+
+30 prespecified finite populations; 30,000 matched random audit orders; 60,000 level-specific group runs.
+The alpha=.05 and alpha=.005 curves use the same permutations and the corrected production remainder predicate.
+Alpha=.005 is alpha_repair/10 for a maximum-size shortlist. Actual shorter shortlists use alpha_repair/g.
+Every isolated group receives its full per-group allowance: at most min(80,ceil(N/2)) observations, with the unchanged futility rule.
+No warm-up, shortlist ranking, shared group budget or final PAC cost is simulated. These curves are not whole-policy power.
+
+Total accepted counts across this deliberately heterogeneous fixture grid: {"0.005": 1826, "0.05": 4839}.
+Total nonbeneficial accepted remainders across the grid: {"0.005": 5, "0.05": 67}.
+These totals are inventory counts; pooling them is not an operational acceptance probability or an error guarantee.
+Report the population-specific rows and their actual integer gains. At N=50, requested .1 and .3 yield actual .12 and .28.
+
+Uncertainty: exact pointwise two-sided binomial 95% intervals for each fixed population/level.
+The paired difference is .005 minus .05; its interval is the negative exact interval for lost-acceptance indicators.
+There are no .005-only acceptances under the matched paths; this nesting is checked for every order.
+Intervals quantify Monte Carlo uncertainty only, not new-panel variation, joint coverage across the grid, or proof of the statistical guarantee.
+No simulation count or plotted setting was selected after viewing outcomes.

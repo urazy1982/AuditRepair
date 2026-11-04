@@ -1,0 +1,13 @@
+pool,generator,score,e7_minus_old_joint_savings,seed_bootstrap95_low,seed_bootstrap95_high
+ag_news_5000,G0_uniform,S0,0.0,0.0,0.0
+ag_news_5000,G0_uniform,S1,21.025,6.304875000000001,35.95525
+ag_news_5000,G1,S0,0.01,0.0,0.030000000000000006
+ag_news_5000,G1,S1,9.445000000000002,-30.19000000000001,45.735125
+ag_news_5000,G2,S0,0.0,0.0,0.0
+ag_news_5000,G2,S1,2.8899999999999997,-4.015,9.725125
+ag_news_holdout,G0_uniform,S0,0.0,0.0,0.0
+ag_news_holdout,G0_uniform,S1,3.755,-8.741,15.511250000000004
+ag_news_holdout,G1,S0,0.0,0.0,0.0
+ag_news_holdout,G1,S1,16.125,-2.940375,46.561125
+ag_news_holdout,G2,S0,0.0,0.0,0.0
+ag_news_holdout,G2,S1,0.2799999999999999,-2.13,3.3299999999999996

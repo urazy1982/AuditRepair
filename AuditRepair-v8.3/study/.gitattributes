@@ -1,0 +1,3 @@
+# Preserve byte-for-byte original CRLF/LF encodings in frozen numerical CSVs.
+# Required for SHA-256 identity across a GitHub checkout; no scientific file is changed.
+*.csv -text

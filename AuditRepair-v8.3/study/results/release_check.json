@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "checks": 1157,
+  "frozen_files_verified": 442,
+  "release_manifest_present": true,
+  "release_files_verified": 514,
+  "regression_tests": 9,
+  "regression_failures": 0,
+  "regression_errors": 0,
+  "frozen_main_study_unchanged": true,
+  "cell_partition": {
+    "no_certified_action_in_sampled_seeds": 32,
+    "certified_action_but_all_paired_costs_identical": 7,
+    "certified_action_and_some_nonzero_cost_differences": 3
+  },
+  "accepted_state_pairs": 620,
+  "power_matched_orders": 30000,
+  "protocol_sha256": "6695e33de9eb88ccf74726d3015bc7cc4b2baf650cdb4cb1b2696f3c04f53516",
+  "source_sha256": "f08f065a2bf1f624bf26c60d2ad83d9783b16f64a7f9f782e7cdb74970dd09a9",
+  "scope": "Integrity, cross-table accounting and focused regression; not a new experiment or universal arithmetic proof."
+}

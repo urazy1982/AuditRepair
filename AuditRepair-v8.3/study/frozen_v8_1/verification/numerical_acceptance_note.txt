@@ -1,0 +1,104 @@
+NUMERICAL ACCEPTANCE AUDIT OF THE FROZEN V8.1 STUDY
+
+Finding
+-------
+None of the 55 actually accepted groups in the completed E1, E2/E3, and E4
+preprocessing states was accepted solely because a zero or negative exact
+nominal-grid remainder became positive in floating-point arithmetic.
+
+Experiment    Checkpoints    Preprocessing states    Accepted groups audited    Minimum positive exact margin
+E1            140            140                     11                         1/40 = 0.025
+E2/E3         140            420                     31                         1/100 = 0.01
+E4             40             40                     13                         1/20 = 0.05
+Total         320            600                     55
+
+The exact margins above are lower bounds on aggregate remaining gain, in label
+count units. They are not observed true gains or per-item percentages.
+
+There were zero float-positive / exact-nominal-zero cases, zero
+float-positive / exact-nominal-negative cases, and zero float-positive /
+exact-represented-grid-nonpositive cases. All 2,169 audit checks passed.
+Runtime was 27.037 seconds. This specific numerical caveat does not require
+reinterpretation of any accepted study group. Broader floating-point validity
+remains outside this audit.
+
+Coverage and recovery
+---------------------
+E2/E3 checkpoints preserve 2,594 group records, including the 31 acceptances.
+Their integer gain histories and stored lower endpoints were read directly.
+
+E1/E4 checkpoints preserve acceptance counts and frozen output hashes but omit
+group histories. Only the 11 E1 and 13 E4 preprocessing states reporting an
+acceptance were recovered with the unchanged source, protocol, and seeds.
+Recovered predictions, scores, and audited item identities matched the saved
+hashes. E4 additionally matched the source panel, gold, reference predictions,
+and recorded audit labels. No PAC calls were allowed; no score sweep or full
+study was rerun. States reporting zero acceptances needed no recovery.
+
+All 320 checkpoint files and the relevant frozen source files were hashed
+before and after the audit and remained unchanged. The original main
+verification script and report were not edited. Per-group gain histories,
+fractions, identities, hashes, and check counts are recorded in
+numerical_acceptance_audit.json. audit_numerical_acceptance.py reproduces this
+targeted audit.
+
+Exact calculation
+-----------------
+Let q = 400 for the 401-point grid; j is the integer index of the selected lower
+grid point; N is the tested finite-population size; and A is the integer sum
+of observed gains z in {-1, 0, 1}. The nominal-grid remainder is
+
+    R_nominal = [N*(2*j - q) - q*A] / q.
+
+The audit locates j by exact equality with the stored np.linspace grid value,
+then uses Python integer arithmetic and fractions. It also evaluates the
+remainder exactly at the represented binary floating-point lower endpoint,
+using Fraction.from_float. Each saved audit path reproduces its selected
+lower endpoint and stopping margin, and no earlier step has a positive
+floating-point acceptance margin.
+
+The smallest margin is E2/E3, AG News 5,000, seed 14, G0_uniform, group rank 6
+(zero-based): N=87, j=246, A=20, so the exact numerator is 4 and the margin is
+4/400 = 0.01. The stored floating margin is 0.00999999999999801.
+
+Conservative future implementation recommendation
+------------------------------------------------
+For this integer-gain setting, carry the selected lower-grid index directly
+from inversion and accumulate A as an integer. Do not reconstruct either
+quantity from a rounded mean in production.
+
+    q = grid_points - 1
+    nominal_num = N * (2*j - q) - q * A
+
+The final nominal-grid sign test is then nominal_num > 0, together with t < N.
+This avoids the zero-margin cancellation problem without an arbitrary epsilon.
+
+To be conservative with respect to both the nominal rational grid and the
+actual represented grid value, additionally use:
+
+    a, b = float(grid[j]).as_integer_ratio()
+    represented_num = N * (2*a - b) - b * A
+    accept = (t < N and nominal_num > 0 and represented_num > 0)
+
+This is exact positivity at the smaller of j/q and the represented grid value.
+A migration that must never add an acceptance to the legacy floating rule can
+also retain its old floating-margin > 0 condition. Both exact guards pass for
+all 55 observed accepted groups.
+
+Use Python integers, or separately establish overflow limits for fixed-width
+integers. This rule relies on gains being exactly {-1,0,1}; do not silently
+quantize arbitrary observations in [0,1]. For other observation types, use
+verified interval or directed-rounding arithmetic throughout the final
+expression and accept only when the lower endpoint is positive. Moving only
+the final rounded result down by one representable float does not account for
+rounding in earlier operations.
+
+Scope of the recommendation
+---------------------------
+The proposed guards address the final remainder-sign calculation and the
+nominal-grid boundary. They do not prove accuracy or conservatism of the
+conditional null means, predictable stakes, log-capital updates, impossible-null
+tolerances, or threshold rejection comparisons. The audit conditions on the
+observed selected grid indices; exact path replay is not a proof of general
+floating-point validity. No frozen implementation or reported study result
+was modified as part of this audit.

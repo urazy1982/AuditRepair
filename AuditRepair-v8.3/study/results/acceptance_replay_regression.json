@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "created_utc": "2026-11-04T10:49:38.420954+00:00",
+  "tests_run": 8,
+  "failures": 0,
+  "errors": 0,
+  "elapsed_seconds": 0.005414998000560445,
+  "test_sha256": "7f8126d679349707f2c09f74b2fa1458467f8662af17e77d426862d622f6bd66",
+  "core_sha256": "b1145503a8beb0a3690d4db395eab2ffffb5676396188b396940d0cd3ec46089",
+  "v8_2_protocol_sha256": "6695e33de9eb88ccf74726d3015bc7cc4b2baf650cdb4cb1b2696f3c04f53516",
+  "log": "test_acceptance_does_not_consult_rounded_diagnostic (v82_exact_acceptance_tests.ExactAcceptanceTests.test_acceptance_does_not_consult_rounded_diagnostic) ... ok\ntest_adjacent_grid_points_keep_strict_boundary (v82_exact_acceptance_tests.ExactAcceptanceTests.test_adjacent_grid_points_keep_strict_boundary) ... ok\ntest_fraction_reference_and_unbounded_integer_arithmetic (v82_exact_acceptance_tests.ExactAcceptanceTests.test_fraction_reference_and_unbounded_integer_arithmetic) ... ok\ntest_general_bounded_values_are_not_silently_quantized (v82_exact_acceptance_tests.ExactAcceptanceTests.test_general_bounded_values_are_not_silently_quantized) ... ok\ntest_integer_gain_accumulation_and_selected_index (v82_exact_acceptance_tests.ExactAcceptanceTests.test_integer_gain_accumulation_and_selected_index) ... ok\ntest_no_empty_remainder_or_unaudited_acceptance (v82_exact_acceptance_tests.ExactAcceptanceTests.test_no_empty_remainder_or_unaudited_acceptance) ... ok\ntest_record_distinguishes_exact_and_float_quantities (v82_exact_acceptance_tests.ExactAcceptanceTests.test_record_distinguishes_exact_and_float_quantities) ... ok\ntest_reviewers_zero_margin_regression (v82_exact_acceptance_tests.ExactAcceptanceTests.test_reviewers_zero_margin_regression) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.005s\n\nOK\n"
+}

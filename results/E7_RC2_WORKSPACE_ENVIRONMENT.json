@@ -1,0 +1,12 @@
+{
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "requirements_source": "AuditRepair-v8.3/requirements.txt",
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0"
+  },
+  "scientific_note": "Observed local computational environment; E7 full cross-workstation reproduction is not claimed. Reference targeted PAC checks passed."
+}

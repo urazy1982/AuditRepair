@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "source_archive_sha256": "929563f0021daebb3ee64a22383c6ace4b14054fd9d17395b2fa40f4ea85aa7c",
+  "csv_checks": [
+    {
+      "file": "E1_effects.csv",
+      "recomputed_identical": true,
+      "sha256": "61f9a63f5b7f0bcb2ef9a5ee79eeaeb1a432e84eac3c96dad622f77c9e936ebd"
+    },
+    {
+      "file": "E1_observed_error.csv",
+      "recomputed_identical": true,
+      "sha256": "f2b05e15ffad062397c6668fa6370e51904723a776db8029576bade181222f9f"
+    },
+    {
+      "file": "E1_reach.csv",
+      "recomputed_identical": true,
+      "sha256": "ae02c6375334a16f891a204e6983c01155d80b262c5df589588dbe9179e00bbc"
+    },
+    {
+      "file": "E2_E3_effects.csv",
+      "recomputed_identical": true,
+      "sha256": "63c9702c47e352a266add084df7735dd9cb24f2e87f40bdb325c74d829bc729a"
+    },
+    {
+      "file": "E2_E3_observed_error.csv",
+      "recomputed_identical": true,
+      "sha256": "2dbefe405d9cc6bb20561659729c314ca5a0410e2d38ede6a4fe78642450b012"
+    },
+    {
+      "file": "E2_E3_primary_contrasts.csv",
+      "recomputed_identical": true,
+      "sha256": "321c7fd60337fcf75941d84dcbaf939af05204a39f4d0d58daf8dcec1715b702"
+    },
+    {
+      "file": "E2_E3_reach.csv",
+      "recomputed_identical": true,
+      "sha256": "def2a072972383128d5fde77e8c80b3f0e43fabc049d69349f3c2228f5158ec9"
+    },
+    {
+      "file": "E4_observed_error.csv",
+      "recomputed_identical": true,
+      "sha256": "ef6bd5c2e139e42cbd095d291d38262105ceb61c8aa91a291f03c4a650c92dde"
+    }
+  ]
+}

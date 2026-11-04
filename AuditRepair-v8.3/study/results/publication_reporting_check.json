@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "protocol_sha256": "6695e33de9eb88ccf74726d3015bc7cc4b2baf650cdb4cb1b2696f3c04f53516",
+  "script_sha256": "647f35121dde062ec0971dbc63563557535cb9777e5fc8202b903e06dc63458a",
+  "blocks": {
+    "E1": {
+      "input": "frozen_v8_1/analysis/E1_effects.csv",
+      "input_sha256": "61f9a63f5b7f0bcb2ef9a5ee79eeaeb1a432e84eac3c96dad622f77c9e936ebd",
+      "output": "results/publication_E1_effects.csv",
+      "output_sha256": "a09627ae13c8d4ad8b3d700f9f0a25fca2a2e31a457313f8cbb7d8b2dc246bc2",
+      "rows": 56,
+      "means_and_intervals_unchanged": true
+    },
+    "E2_E3": {
+      "input": "frozen_v8_1/analysis/E2_E3_effects.csv",
+      "input_sha256": "63c9702c47e352a266add084df7735dd9cb24f2e87f40bdb325c74d829bc729a",
+      "output": "results/publication_E2_E3_effects.csv",
+      "output_sha256": "811b93542ad8bd76345140178a3d568d8f6c8c47bc355ab7a7caf4d521f4fbde",
+      "rows": 168,
+      "means_and_intervals_unchanged": true
+    }
+  },
+  "removed_fields": [
+    "ci_rules_out_1pct_saving",
+    "lower_bound_meets_1pct"
+  ],
+  "replacement_statement": "No practically important mean saving was observed in the sampled realizations of these repair configurations.",
+  "scope_of_statement": "The 42 same-audit/same-score certified-repair contrasts only; not all score-only or oracle contrasts in the files.",
+  "warning": "A bootstrap interval from all-zero seed means cannot rule out rare events, bound their frequency, or establish practical equivalence."
+}

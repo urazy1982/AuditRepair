@@ -1,0 +1,7 @@
+# Completed runtime: Python 3.12.14.
+# Principal dependencies only; this is not a full transitive/platform lock.
+numpy==2.3.5
+pandas==2.2.3
+scipy==1.17.0
+scikit-learn==1.8.0
+matplotlib==3.10.8

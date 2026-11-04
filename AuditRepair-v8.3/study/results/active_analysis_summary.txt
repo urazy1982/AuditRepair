@@ -1,0 +1,29 @@
+v8.2 active-repair analysis of frozen v8.1 factorial
+
+Cell partition: {'no_certified_action_in_sampled_seeds': 32, 'certified_action_but_all_paired_costs_identical': 7, 'certified_action_and_some_nonzero_cost_differences': 3}
+Accepted actions: 31 groups in 31 preprocessing states; 620 paired score/repetition comparisons.
+All 10 active cells remain represented, with all 20 seeds and all 10 PAC repetitions each.
+
+           pool  generator score  mean_reviews_saved  changed_cost_repetitions  saving_repetitions  cost_increase_repetitions  savings_at_least_1pct_pool_repetitions  increases_at_least_1pct_pool_repetitions  repetition_savings_min  repetition_savings_max
+   ag_news_5000 G0_uniform    S1              -0.450                        23                  13                         10                                       9                                         7                  -380.0                   496.0
+   ag_news_5000         G1    S1               2.015                        29                  14                         15                                      10                                        13                  -200.0                   340.0
+ag_news_holdout         G1    S1               1.190                        11                   6                          5                                       3                                         4                   -77.0                   283.0
+
+Mechanisms among accepted-state paired repetitions:
+{
+  "no_actual_prediction_change_vs_final_DS": 0,
+  "all_changed_predictions_strictly_above_baseline_threshold": 374,
+  "prefix_reached_but_sampled_prefix_losses_unchanged": 157,
+  "sampled_prefix_losses_changed_threshold_unchanged": 26,
+  "threshold_changed_unique_purchase_union_unchanged": 0,
+  "expert_cost_decreased": 33,
+  "expert_cost_increased": 30
+}
+
+Gain totals count occurrences across preprocessing states, not distinct items:
+frozen-reference gain sum=1512; final same-audit DS gain sum=1295.
+31 positive, 0 zero, 0 negative group gains against final same-audit DS.
+
+All recorded input arrays reconstructed with exact hashes; no tolerance substitution.
+Corrected preprocessing comparison: True; all saved outputs and stopping trajectories matched where run.
+No new annotations and no new PAC repetitions. No practical-equivalence or rare-event exclusion claim.

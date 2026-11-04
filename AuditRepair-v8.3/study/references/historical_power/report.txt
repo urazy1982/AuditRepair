@@ -1,0 +1,6 @@
+alpha = 0.05, 1000 audit orders per population
+worst harmful-acceptance rate per rule:
+rule
+remainder    0.017
+unguarded    0.385
+whole        0.092

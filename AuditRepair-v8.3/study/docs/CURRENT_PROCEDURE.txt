@@ -1,0 +1,77 @@
+CURRENT PUBLICATION PROCEDURE FOR THE CONTROLLED FACTORIAL
+
+Scope and version
+
+This is the complete current G0_uniform/G1/G2 factorial procedure. E1 and E4 retain their historical preprocessing designs and are separately identified. The v8.2 change to the actual repair decision is the exact remainder predicate. All other listed settings describe the frozen v8.1 implementation, not newly tuned settings. Sources: frozen_v8_1/factorial.py, audit_repair/core.py, audit_repair/pac.py, run_factorial.py, experiment_common.py and protocol_v8_1.json. The corrected implementation lives in corrected/.
+
+Inputs and randomness
+
+Inputs are a fixed pool of source labels L (missing=-1), text, class vocabulary, and benchmark gold hidden behind a simulated expert oracle. The full gold vector is used for diagnostics only after adaptive choices finish. A preprocessing label is paid for once. The total budget is B=400, with a uniform warm-up of 120 and at most 196 additional group-stage audits. Final calibration has m=500 IID draws with replacement, epsilon=0.03 and alpha_final=0.10. The repair family level is alpha_repair=0.05.
+
+For pool replicate s, SeedSequence([20261030,s]).spawn(3) supplies the item permutation, preprocessing seed, and PAC parent; the PAC parent spawns 10 children. The preprocessing seed is reconstructed before spawning separate warm-up and group-permutation children, so reuse does not advance a caller-owned SeedSequence. All three generators use the same permuted pool and the same warm-up items. All paired arms in a repetition use the same PAC child. Pool replicates are not new annotation panels.
+
+Frozen text features
+
+Fit word unigram/bigram TF-IDF on the fixed pool text, with lowercase=True, strip_accents='unicode', min_df=2, max_features=20000, sublinear_tf=True and the scikit-learn default token pattern recorded in protocol_v8_1.json. Apply TruncatedSVD(random_state=20261030) with dimension min(128,n-1,vocabulary_size-1), then L2 normalization. Degenerate vocabularies fail explicitly. Each item has 15 nonself cosine neighbors; distance ties use lexicographic string item IDs. Features and neighbor lists are cached and hashed before seed-specific permutation/remapping. Features use no gold labels.
+
+Dawid-Skene fitting
+
+The exact implementation is supplied. It initializes each class count with 0.01 plus observed votes, normalizes, and clamps queried items to their gold one-hot posteriors. EM uses smoothing 0.01 in each source confusion matrix and class prior mean posterior plus 1e-12, with at most 50 iterations and stopping when maximum posterior change is below 1e-6. Missing source labels are omitted. Argmax ties use the lowest class index. Stable uncertainty-sort ties are resolved by the seeded item order. These details affect the experiment and should not be replaced by a generic 'fit DS' description without a code reference.
+
+Algorithm A  Current controlled repair and certification procedure
+
+1. Fit initial DS without audits and retain initial_ref. Draw 120 distinct uniform warm-up items and buy their gold labels. Refit DS with those labels clamped. Freeze ref and post_ref at this point, retaining expert labels on warm-up items. Group certificates always compare their alternative with this frozen ref.
+
+2. Fit a multiclass logistic text classifier only on warm-up feature vectors and gold labels, with C=1, solver='lbfgs', max_iter=1000. Nonconvergence fails explicitly. Map probabilities into all K classes and smooth q=(q+1e-6)/(1+K*1e-6). With one observed class, use a one-hot probability on that class before smoothing. This one warm-up model supplies G2 alternatives and S1 probabilities; their combination does not establish statistical independence.
+
+3. Form the requested generator's fixed disjoint groups on items outside warm-up. Each group has one frozen current class c and one fixed alternative b != c. Exclude warm-up before applying minimum size 30. G0_uniform chooses b as the most frequent valid dissenting source label (a label different from ref), breaking ties by the lowest class index. Its supporting-source signature lists all source indices voting for b, and the group key is (c,b,signature). Groups are ordered by decreasing eligible size, decreasing size times mean post_ref probability of b, then c, b, source signature. G1 uses the majority frozen ref class among the 15 neighbors as its alternative; rank by decreasing size then c,b. G2 uses argmax q as alternative; rank by decreasing warm-up confusion count initial_ref -> warm-up gold for (c,b), then decreasing size, then c,b. Class-count ties use the lowest class index.
+
+4. Freeze the first g<=10 groups, their item lists, alternatives and ordering before any group audit. Assign each test alpha_g=0.05/max(g,1). Group populations are disjoint and contain no known warm-up items. This is 0.005 when g=10; smaller shortlists receive a larger per-group level. If g=0, proceed to fill.
+
+5. Visit groups in the frozen order. Stop the group phase at 316 total audits (120+196) or 10 consecutive failed groups. For each visited population of size N_g, generate a fresh uniform random permutation. Initialize the group confidence sequence described in ACCEPTANCE_AND_BETTING.txt. Before each new query, enforce the group budget.
+
+6. Query the next item i. Its integer gain is d_i=1[y_i=b]-1[y_i=ref_i], and x_i=(d_i+1)/2. Update the betting capital, sticky grid-rejection indicators, selected lower grid index, and exact integer gain sum. Apply checks in this order: (a) accept if a nonempty remainder has strictly positive exact nominal and represented-grid lower margins; (b) stop for futility if t>=10 and mean(x)<0.45; (c) stop at 80 draws or t>=N_g/2, hence ceil(N_g/2) for odd sizes. Acceptance at a cap draw is allowed because it is checked first. A nonaccepted stop is an abstention or futility rejection; it is not a declaration that the alternative is harmful.
+
+7. On acceptance, save b for every still-unaudited item of that population. Protect the entire accepted population from later fill auditing; previously queried items already carry gold. Reset the consecutive-failure counter. Otherwise increment the failure counter. The certificate applies to this actual unaudited remainder. An accepted action may correct some errors and introduce others while achieving positive net gain against ref.
+
+8. After the group phase, spend remaining budget by descending DS uncertainty 1-max posterior, refitting DS in batches of at most 50. Exclude all queried items and all protected accepted populations. Stable sorting resolves ties by the seed's item order. Stop at B=400 or when no eligible item remains. This fill can audit nonaccepted or untested groups, but no hypothesis is tested again after fill.
+
+9. Let A be the final set of all paid preprocessing audits. The last clamped DS refit gives post_final and base=argmax post_final, with base[A]=gold[A]. Construct repair as a copy of base, overwrite only accepted unaudited remainders with their fixed alternative, then retain gold on A. Later DS refitting never overrides those accepted replacements. The certificate's reference remains ref, while the experimental incremental-cost comparator is base. Report gains against both.
+
+10. Construct one common score vector per score type from the same-audit baseline: S0_i=1-max_k post_final[i,k] and S1_i=1-q[i,base_i]. Mark arrays read-only and reuse exact bytes for base, repair and O1 within this generator/score state. Do not recompute S1 for the repaired label.
+
+11. For the retrospective O1 comparator only, inspect full gold after preprocessing, and apply each frozen shortlisted alternative on its final unaudited remainder when the net accuracy gain against base is positive. O1 does not steer audits and does not optimize cost over action subsets. It uses the same common scores and draws. Other gold diagnostics likewise cannot influence the executed policy. After all three role vectors exist, freeze and hash labels, audits and score arrays before final PAC draws.
+
+12. For each of 10 fresh independent PAC calibration streams, evaluate base, repair and O1 under each common S0/S1 vector using Algorithm B. Reuse the same stream across compared arms. Also evaluate the explicitly separate PAC-only baseline without prepaid audits. Charge the union of all queried items exactly once.
+
+Algorithm B  Exact implemented final PAC convention
+
+Inputs: prediction vector, fixed score vector U, already-owned A with gold, epsilon=0.03, alpha=0.10, m=500, c=0.5, and a fresh calibration seed. Copy predictions and U, substitute expert labels on A and U_i=-1 for i in A. Candidate thresholds are the sorted distinct U_i>=0. Draw I_1,...,I_m IID uniformly from the pool with replacement.
+
+For each candidate u initialize log K_0(u)=0, s_0(u)=0 and v_0(u)=0. For t=1,...,m, BEFORE observing Z_t(u), compute
+
+  mu_{t-1}(u) = (epsilon/2 + s_{t-1}(u))/t,
+  V_{t-1}(u)  = (0.25 + v_{t-1}(u))/t,
+  gap         = epsilon - mu_{t-1}(u),
+  lambda_t(u) = clip( gap/(V_{t-1}(u)+gap^2) if gap>0 else 0,
+                      0, 0.5/(1-epsilon) ).
+
+Then Z_t(u)=1[prediction_{I_t} != gold_{I_t}] * 1[U_{I_t}<=u], and
+
+  log K_t(u) = log K_{t-1}(u) + log1p(lambda_t(u)*(epsilon-Z_t(u))),
+  s_t(u)     = s_{t-1}(u) + Z_t(u),
+  v_t(u)     = v_{t-1}(u) + (Z_t(u)-mu_{t-1}(u))^2.
+
+At epsilon=0.03 the numerical stake cap is 0.5/0.97 = 0.5154639175257733. The initial mu is epsilon/2, and initial V is 0.25. v is a sum of squared deviations from the predictable running mean, not the ordinary sample variance.
+
+After ALL m observations, reject a candidate exactly when log K_m(u)>=log(1/alpha). Rejection is TERMINAL, not sticky. A boundary crossing followed by a fall below the threshold does not reject at the end. Set u_hat to the first candidate not rejected at the terminal time, or +infinity if all candidates reject (also if the candidate set is empty). Review every item with U_i>=u_hat. Override every unique calibration item with its observed gold as well. Strictly-below items outside all purchases keep their predictions.
+
+For D=unique calibration items and R={i:U_i>=u_hat}, additional cost is |(D union R) minus A| and total cost is |A union D union R|. Duplicates and overlaps are counted once. Candidate tests include U<=u, while automatic retention is U<u_hat; equality items are still tested at their candidate and are reviewed at the selected boundary.
+
+Two rejection conventions
+
+The final PAC test rejects at the fixed horizon when K_m reaches or exceeds 1/alpha (terminal capital), not whenever the capital first reaches 1/alpha. The group confidence sequence, by contrast, uses sticky first-crossing rejection. Both conventions remain as implemented in v8.1, so this clarification is not a new experimental treatment. The artificial regression in tests/test_pac_convention.py has a capital crossing at draw15 and a terminal fall below the boundary; it verifies the terminal implementation. It is a deterministic code test, not an empirical error-rate estimate.
+
+Guarantee scope
+
+Under the stated conditional fixed-population and sampling assumptions, alpha_repair=0.05 concerns no nonbeneficial accepted remainder against the frozen reference; it does not promise improvement over final same-audit DS or lower expert cost. The final-stage alpha_final=0.10 statement concerns whole-pool error at most 0.03 for fixed pre-PAC labels and scores. A union bound gives at least 0.85 for the conjunction in one executed procedure. These are per-run bounds, not simultaneous coverage statements over all cells, seeds or repetitions in the study. The numerical amendment fixes the final strict remainder expression; the accompanying documentation states the remaining floating-capital arithmetic without claiming an all-operations machine-arithmetic theorem.

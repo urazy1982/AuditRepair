@@ -1,0 +1,94 @@
+{
+  "status": "all_completed_under_tested_conditions",
+  "artifact_kind": "implementation_verification_not_study_results",
+  "main": {
+    "report": "verification_report.json",
+    "script": "verify_guarantees.py",
+    "assertions": 305547,
+    "failures": 0,
+    "elapsed_seconds": 391.878,
+    "configuration": {
+      "profile": "full",
+      "seed": 20261104,
+      "max_N": 8,
+      "reference_grid": 41,
+      "production_grid": 401,
+      "wor_reps": 1000,
+      "search_reps": 1000,
+      "pac_reps": 10000,
+      "alpha_repair": 0.05,
+      "alpha_final": 0.1,
+      "epsilon": 0.03,
+      "pac_m": 500
+    },
+    "script_hash_matches_completed_report": true,
+    "report_sha256": "aa6f0cb15b601ce4ef0e3bbf0faa84107339f5716a3775e2770b9c767a800aaa"
+  },
+  "large_pool_extension": {
+    "report": "large_pool_pac_report.json",
+    "script": "verify_large_pool_pac.py",
+    "assertions": 60005,
+    "failures": 0,
+    "elapsed_seconds": 162.614,
+    "configuration": {
+      "n": 5000,
+      "m": 500,
+      "epsilon": 0.03,
+      "alpha_final": 0.1,
+      "seed": 20261106,
+      "repetitions_per_fixture": 10000,
+      "fixture_count": 2
+    },
+    "pools": [
+      {
+        "fixture": "large_32levels_distributed_risk_034",
+        "N": 5000,
+        "m": 500,
+        "already_owned": 0,
+        "violations": 60,
+        "trials": 10000,
+        "one_sided_95_lower": 0.004787904240449218,
+        "one_sided_95_upper": 0.007433605812518839,
+        "comparison": "pass_with_margin",
+        "mean_total_unique_experts": 2823.1308,
+        "mean_automatic_retention": 2176.8692,
+        "runs_saving_at_least_one_label": 10000,
+        "maximum_final_error": 0.0338
+      },
+      {
+        "fixture": "large_32levels_misranked_risk_034_owned400",
+        "N": 5000,
+        "m": 500,
+        "already_owned": 400,
+        "violations": 60,
+        "trials": 10000,
+        "one_sided_95_lower": 0.004787904240449218,
+        "one_sided_95_upper": 0.007433605812518839,
+        "comparison": "pass_with_margin",
+        "mean_total_unique_experts": 4984.6193,
+        "mean_automatic_retention": 15.380699999999706,
+        "runs_saving_at_least_one_label": 89,
+        "maximum_final_error": 0.0334
+      }
+    ]
+  },
+  "factorial_independent_gate": {
+    "report": "factorial_independent_gate_report.json",
+    "assertions": 593,
+    "synthetic_orchestration_rows": 57,
+    "status": "passed_under_tested_conditions"
+  },
+  "unit_tests": {
+    "status": "passed",
+    "count": 7,
+    "includes_cost_mutation_nonzero_exit_check": true
+  },
+  "limitations": [
+    "Not a proof of the general statistical guarantees.",
+    "Main PAC trials use four N=240 synthetic pools; the extension uses two fixed N=5000 pools and does not represent seven real pools.",
+    "Exact coverage enumeration is limited to ternary populations N<=8 and alphas .05,.20,.50, with full 401-point production grid; exact rational capital comparison uses 41 nested points.",
+    "Independent factorial gate substitutes a deterministic observable base estimator to isolate chronology, cost and pairing.",
+    "Monte Carlo bounds are individual one-sided 95% Clopper-Pearson intervals, with no simultaneous adjustment.",
+    "Separate repair .05 and final .10 targets; joint .15 budget applies only to the conjunction of both guarantees."
+  ]
+}

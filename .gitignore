@@ -1,0 +1,26 @@
+# Reproduction outputs, local environment, credentials, and Python caches
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.venv/
+**/venv/
+**/reproductions/
+**/rerun/
+**/local_outputs/
+**/local_runs/
+**/.reproduction_work/
+**/.mypy_cache/
+.env
+.env.*
+*.pem
+*.p12
+*.pfx
+*.key
+*.safetensors
+*.gguf
+*.pt
+*.pth
+*.safetensors.index.json
+.DS_Store
+# Do not globally ignore *.log: the sealed original-study logs are required
+# by archived SHA-256 manifests.

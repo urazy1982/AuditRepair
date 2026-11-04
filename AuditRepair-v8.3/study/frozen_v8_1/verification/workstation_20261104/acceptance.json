@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "completed_study_and_wsl_verification_acceptance",
+  "status": "accepted_complete",
+  "accepted_utc": "2026-11-04T09:14:09.597339+00:00",
+  "protocol_sha256": "2931a624b1ce970ce15ce2a6d4205b3992aa42606fc4d972fb5a3db38b042f61",
+  "input_archives": {
+    "rerun.zip": {
+      "sha256": "929563f0021daebb3ee64a22383c6ace4b14054fd9d17395b2fa40f4ea85aa7c",
+      "bytes": 6224836
+    },
+    "verification_wsl.zip": {
+      "sha256": "4e061670bd9f2e7d463e9cc1e8e0c88429941af29bd4cf1dd2c81dd1ebdb09d1",
+      "bytes": 18408
+    }
+  },
+  "study_rerun": {
+    "status": "outcomes_reproduced",
+    "checkpoints": 320,
+    "evaluation_records": 42200,
+    "rows_by_block": {
+      "E1": 12600,
+      "E2_E3": 26600,
+      "E4": 3000
+    },
+    "authoritative_analysis_csvs_byte_identical": 8,
+    "independent_reanalysis_csvs_byte_identical": 8,
+    "universal_bitwise_identity": false,
+    "records_are_independent": false,
+    "same_panels_and_seeds": true
+  },
+  "verification": {
+    "status": "passed_under_tested_conditions",
+    "main_assertions": 305547,
+    "large_pool_assertions": 60005,
+    "total_assertions": 365552,
+    "failure_count": 0,
+    "main_sections_complete": 8,
+    "unique_source_script_files_checked": 5,
+    "source_and_script_sha256": {
+      "audit_repair/core.py": "d8c463954a8454b1755986129053d2abf6214004712e21ef6362b2c0d1461d3a",
+      "audit_repair/pac.py": "e8be17586836737780d2e9e98fefea05a64fa41019952300d38b87add160f978",
+      "verification/run_certified_v7_9_reference.py": "f5e68e8cc42dc1e089ce7395d8d75c7f10db9194835eca1abb8334ae2d271739",
+      "verification/verify_large_pool_pac.py": "ba6bae68fc6de5ab71246a65200cfce63bb2bd777a8cdd44277497aac679bb47",
+      "verification/verify_guarantees.py": "15a05324d97d2163487e55b48da9f104df8a4ec6e7d1e0be68bb2f1a9afe5cff"
+    },
+    "main_configuration": {
+      "profile": "full",
+      "seed": 20261104,
+      "max_N": 8,
+      "reference_grid": 41,
+      "production_grid": 401,
+      "wor_reps": 1000,
+      "search_reps": 1000,
+      "pac_reps": 10000,
+      "alpha_repair": 0.05,
+      "alpha_final": 0.1,
+      "epsilon": 0.03,
+      "pac_m": 500
+    },
+    "large_pool_configuration": {
+      "n": 5000,
+      "m": 500,
+      "epsilon": 0.03,
+      "alpha_final": 0.1,
+      "seed": 20261106,
+      "repetitions_per_fixture": 10000,
+      "fixture_count": 2
+    },
+    "all_detailed_results_match_reference": true,
+    "allowed_differences": [
+      "package path prefix",
+      "elapsed_seconds",
+      "main Python build string"
+    ],
+    "main_elapsed_seconds": 153.984,
+    "large_pool_elapsed_seconds": 73.211,
+    "same_fixtures_and_seeds_as_reference": true
+  },
+  "workstation_environment": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "platform": "Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scipy": "1.17.0",
+      "scikit-learn": "1.8.0"
+    }
+  },
+  "known_numerical_caveat": {
+    "synthetic_floating_positive_margin_with_zero_nominal_grid_margin_cases": 28,
+    "separate_reference_study_acceptance_audit_groups": 55,
+    "affected_acceptances_in_that_audit": 0,
+    "study_acceptance_audit_rerun_in_this_upload": false,
+    "frozen_code_changed": false,
+    "scope_note": "Existing nominal/represented-grid acceptance audit does not prove general floating-point validity."
+  },
+  "evidence_files": {
+    "ACCEPTANCE.txt": {
+      "sha256": "c2c61339ebb53c637753500692a9c90d490b1fd764685da1407270d3da003157",
+      "bytes": 6046
+    },
+    "independent_verification_comparison.json": {
+      "sha256": "c6a6dfc3018433562472bd7780464e53576610aeacb2714ce02a153ada0b05df",
+      "bytes": 30778
+    },
+    "large_pool_pac_report.json": {
+      "sha256": "f18881555ec1ef1d3834f4f9286c66dca4003d099d3b32f6e6ee6454a7cc77c5",
+      "bytes": 4562
+    },
+    "study_analysis_recomputation_check.json": {
+      "sha256": "ad72038b2c6112d535dcf9355730f5ab13a8d2349c43ce1037db2e39bd084baf",
+      "bytes": 1493
+    },
+    "study_rerun_comparison.json": {
+      "sha256": "4f8518312e6235b1c3cda8e6d9104076c1dc0a6730fd558aed349844317bb678",
+      "bytes": 36854
+    },
+    "verification_report.json": {
+      "sha256": "fdc9c80fc7d0a4cce4f057d36df218c99243fa424f27831efab04842c395dbb3",
+      "bytes": 481967
+    },
+    "workstation_environment.json": {
+      "sha256": "f81322598fbffbb19392e997d2d642ff5bd323032781f1e56d37c8b3f1c2c6e2",
+      "bytes": 263
+    }
+  },
+  "no_additional_rerun_required": true,
+  "E5": "not_run",
+  "limits": [
+    "Implementation checks cover declared finite populations and fixed synthetic fixtures; they are not proofs of the general guarantees.",
+    "WSL repetition uses the same seeds and inputs, so it supplies computational portability evidence, not new independent trials.",
+    "The final-error guarantee and joint two-stage guarantee remain distinct.",
+    "Full score-vector differences in the study rerun cannot be quantified from their hashes alone."
+  ]
+}

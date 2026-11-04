@@ -1,0 +1,171 @@
+{
+  "version": "8.2",
+  "amendment_frozen_utc": "2026-11-04T10:43:10.048796+00:00",
+  "status_at_freeze": "Retrospective revision after v8.1 and peer review; power extension not yet executed. No claim of preregistration predating the panels or v8.1 outcomes.",
+  "purpose": "Bounded publication revision: exact remainder acceptance, complete implementation specification, active-repair mechanism/distribution reporting, and matched group-level power at alpha 0.05 and 0.005.",
+  "controlling_review": "User supplied Independent Peer Review v8.1, major revision; methodological and reporting corrections without new annotations.",
+  "manuscript": {
+    "name": "Audit_Repair_v8_1_manuscript.pdf",
+    "library_file_id": "libfile_9352bb5ae7a4819187475caf5dd68cc6",
+    "pages": 39,
+    "source_status": "Read current PDF through Library; exact byte hash is not claimed until bytes are materialized."
+  },
+  "frozen_baseline": {
+    "directory": "frozen_v8_1",
+    "protocol_sha256": "2931a624b1ce970ce15ce2a6d4205b3992aa42606fc4d972fb5a3db38b042f61",
+    "results_policy": "Immutable archive. Revised code and derived outputs are stored separately. No historical output is relabeled as a corrected run."
+  },
+  "scope": {
+    "new_annotation_calls": 0,
+    "new_datasets": 0,
+    "additional_real_pool_seeds": 0,
+    "new_calibration_repetitions": 0,
+    "fixed_annotation_panels": true,
+    "fixed_scores_within_repair_comparisons": true,
+    "preserve_E1_E4_design": true,
+    "optional_extensions_excluded": [
+      "new annotation panel",
+      "generic additional dataset",
+      "stronger feature sweep",
+      "cost-optimal subset oracle",
+      "joint repair plus rescoring"
+    ]
+  },
+  "R1_exact_acceptance": {
+    "grid_points": 401,
+    "denominator": 400,
+    "integer_gain_sum": "sum d_i with d_i in {-1,0,1}",
+    "nominal_numerator": "N*(2*j-400)-400*sum(d_i)",
+    "equivalent_review_formula": "N*(j-200)-200*sum(d_i)>0",
+    "represented_grid_guard": "If float(grid[j])=a/b exactly, also require N*(2*a-b)-b*sum(d_i)>0.",
+    "decision": "Accept only when the remainder is nonempty and both exact Python-integer numerators are strictly positive. No epsilon substitution.",
+    "numerical_scope": "This correction fixes final remainder decision arithmetic. Floating capital, stake updates, and impossible-null tolerance remain the explicitly documented frozen rules; no general rounding-safety theorem is claimed.",
+    "regression": {
+      "N": 50,
+      "j": 204,
+      "gain_sum": 1,
+      "expected": "reject exact zero even when floating margin is positive"
+    },
+    "replay": "Audit archived factorial prefixes and reconstruct E1/E4 preprocessing trajectories with saved hashes. Compare stopping decisions, audit sets, labels and score hashes; rerun downstream PAC only if corrected preprocessing inputs differ."
+  },
+  "R2_implemented_conventions": {
+    "final_PAC": "Terminal rejection at fixed m=500, log K_m >= log(1/alpha_final); no sticky rejection. Preserve the convention that generated v8.1.",
+    "group_CS": "Sticky rejection at any prefix, lower endpoint immediately preceding first never-rejected grid index.",
+    "stakes": "Both stages retain c=0.5 and actual regularized predictable updates; fully specified in accompanying algorithm document.",
+    "threshold_ties": "Tests use U<=u; threshold review uses U>=u_hat; automatically retained labels have U<u_hat. Audited items use U=-1 and expert labels.",
+    "certified_comparator": "Post-warm-up frozen reference, distinct from final same-audit DS comparator."
+  },
+  "R3_R4_active_analysis": {
+    "source": "All frozen E2_E3 checkpoints and rows; no additional real-data sampling.",
+    "cell_count": 42,
+    "cell_definition": "generator x score x pool",
+    "classification": [
+      "no certified action in any sampled seed",
+      "some certified action and all paired costs equal",
+      "some certified action and some paired costs unequal"
+    ],
+    "reported_counts_from_review": [
+      32,
+      7,
+      3
+    ],
+    "classification_must_be_recomputed": true,
+    "primary_saving": "C_same_audit - C_repair, positive means fewer unique expert labels.",
+    "denominators": [
+      "all 20 preprocessing seeds and 200 repetitions per cell",
+      "accepted preprocessing states and their repetitions, explicitly descriptive conditional subset"
+    ],
+    "practical_event": "savings >= ceil(0.01*N) or savings <= -ceil(0.01*N)",
+    "mean_practical_threshold": "0.01*N unique labels; mean saving threshold distinct from per-repetition events",
+    "distributions": [
+      "zero/nonzero frequency",
+      "positive/negative frequency",
+      "practical savings/increase frequency",
+      "minimum and maximum",
+      "median and prespecified quantiles",
+      "20 seed means and per-seed event frequencies"
+    ],
+    "mechanism": [
+      "accepted-group gain vs frozen reference",
+      "gain vs final same-audit DS",
+      "actual changed/corrected/introduced predictions",
+      "strict below/equal/above baseline threshold",
+      "sufficient locality condition",
+      "threshold shift",
+      "review-set membership changes",
+      "unique purchase-set membership changes",
+      "final label changes"
+    ],
+    "inference": "Whole preprocessing-seed clusters. Retain original mean paired intervals as pointwise conditional-panel summaries. Rates and accepted-only distributions are descriptive; no binomial intervals treating PAC repetitions as independent.",
+    "degenerate_intervals": "Explicitly flag; zero bootstrap width cannot exclude unseen outcomes or demonstrate practical equivalence.",
+    "deprecated_flag": "Remove ci_rules_out_1pct_saving from v8.2 publication summaries. Preserve archived tables byte-for-byte."
+  },
+  "R5_reporting": {
+    "oracle_savings_denominators": [
+      "(C_baseline-C_oracle)/N",
+      "(C_baseline-C_oracle)/C_baseline, separately labeled"
+    ],
+    "O1_scope": "E1 O1 savings are zero; factorial O1 effects can be nonzero. O1 maximizes no cost objective and is only a restricted accuracy-oriented action oracle.",
+    "transfer_interpretation": "Development result did not generalize to frozen holdout; selection optimism and/or pool heterogeneity are plausible, not separately identified."
+  },
+  "power_extension": {
+    "scope": "Isolated fixed-group operating characteristic under current stopping/cap rules with full group allowance. It is not end-to-end power of a 10-group shortlist with shared budget.",
+    "levels": [
+      0.05,
+      0.005
+    ],
+    "level_labels": [
+      "illustrative single-group level",
+      "alpha_repair/10 default maximum-shortlist per-group level"
+    ],
+    "population_sizes": [
+      50,
+      100,
+      300
+    ],
+    "zero_gain_fractions": [
+      0.0,
+      0.4
+    ],
+    "requested_mean_gains": [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4
+    ],
+    "population_construction": "Match original safeguard-validity integer composition rule; record actual counts and mean separately from requested mean.",
+    "independent_WOR_orders_per_population": 1000,
+    "matched_levels_on_same_order": true,
+    "root_seed": 20261108,
+    "fixed_sample_size": true,
+    "stopping": {
+      "grid_points": 401,
+      "bet_cap_c": 0.5,
+      "max_draws": 80,
+      "fraction_cap": "ceil(N/2)",
+      "futility_after": 10,
+      "futility_mean_x": 0.45,
+      "acceptance_checked_before_caps": true
+    },
+    "outputs": [
+      "acceptance rate and exact pointwise binomial 95% intervals",
+      "accepted remainder true net gains",
+      "nonbeneficial acceptance counts",
+      "draw counts/stopping reasons",
+      "paired alpha-level power difference on same orders",
+      "actual finite population compositions"
+    ],
+    "no_adaptive_extension": "Do not increase replication count or select plotted settings after inspecting outcomes. Negative-gain Type I fixtures remain in prior verification evidence."
+  },
+  "release_gates": [
+    "zero-margin regression passes",
+    "frozen-baseline inventory unchanged",
+    "archived replay decisions accounted for",
+    "cell partition and cost accounting reproduce",
+    "reconstructed mechanism hashes match",
+    "power run uses frozen settings",
+    "full source/protocol/output hashes and dependency provenance supplied"
+  ],
+  "provenance_policy": "Record exact corrected code and script hashes, full protocol hashes, environment metadata and focused dependency lock. Distinguish independent mathematical/reference checks from same-code second-workstation execution."
+}

@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "parent_input_checkpoint_hashes": 166,
+  "e5_pairs": 8400,
+  "e5_active_state_score_cells": 62,
+  "e6_pairs": 81000,
+  "e6_states": 16200,
+  "e6_design_cells": 54,
+  "e8_small_WoR_paths": 585,
+  "e8_PAC_decimal_cases": 36,
+  "e7_gold_blind_requests": 30400,
+  "new_LLM_annotation_files": 0,
+  "scope": "completed CPU interventions on cached panels plus fresh synthetic populations; no newly collected annotation panel"
+}

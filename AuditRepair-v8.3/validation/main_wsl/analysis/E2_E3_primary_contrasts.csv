@@ -1,0 +1,22 @@
+pool,contrast,difference_in_incremental_cost,ci95_low,ci95_high,negative_favors
+ag_news_5000,primary_generator_G1_S0_vs_G0_uniform_S0,0.0,0.0,0.0,first named intervention
+ag_news_5000,primary_score_G0_uniform_S1_vs_S0,0.45,-9.122374999999998,9.841000000000003,first named intervention
+ag_news_5000,secondary_G1_by_score_interaction,-2.465,-16.257749999999998,9.560750000000002,first named intervention
+ag_news_holdout,primary_generator_G1_S0_vs_G0_uniform_S0,0.0,0.0,0.0,first named intervention
+ag_news_holdout,primary_score_G0_uniform_S1_vs_S0,0.0,0.0,0.0,first named intervention
+ag_news_holdout,secondary_G1_by_score_interaction,-1.19,-3.745,0.7550000000000001,first named intervention
+yelp_2600_star_alias,primary_generator_G1_S0_vs_G0_uniform_S0,0.0,0.0,0.0,first named intervention
+yelp_2600_star_alias,primary_score_G0_uniform_S1_vs_S0,0.0,0.0,0.0,first named intervention
+yelp_2600_star_alias,secondary_G1_by_score_interaction,0.0,0.0,0.0,first named intervention
+dbpedia,primary_generator_G1_S0_vs_G0_uniform_S0,0.0,0.0,0.0,first named intervention
+dbpedia,primary_score_G0_uniform_S1_vs_S0,0.0,0.0,0.0,first named intervention
+dbpedia,secondary_G1_by_score_interaction,0.0,0.0,0.0,first named intervention
+emotion,primary_generator_G1_S0_vs_G0_uniform_S0,0.0,0.0,0.0,first named intervention
+emotion,primary_score_G0_uniform_S1_vs_S0,0.0,0.0,0.0,first named intervention
+emotion,secondary_G1_by_score_interaction,0.0,0.0,0.0,first named intervention
+imdb,primary_generator_G1_S0_vs_G0_uniform_S0,0.0,0.0,0.0,first named intervention
+imdb,primary_score_G0_uniform_S1_vs_S0,0.0,0.0,0.0,first named intervention
+imdb,secondary_G1_by_score_interaction,0.0,0.0,0.0,first named intervention
+banking77,primary_generator_G1_S0_vs_G0_uniform_S0,0.0,0.0,0.0,first named intervention
+banking77,primary_score_G0_uniform_S1_vs_S0,0.0,0.0,0.0,first named intervention
+banking77,secondary_G1_by_score_interaction,0.0,0.0,0.0,first named intervention

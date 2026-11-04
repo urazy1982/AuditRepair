@@ -1,0 +1,24 @@
+{
+  "status": "complete",
+  "scope": "retrospective cached-panel conditional evidence; same original seeds; no new LLM labels",
+  "pools": [
+    "ag_news_5000",
+    "ag_news_holdout",
+    "yelp_2600_star_alias",
+    "dbpedia",
+    "imdb",
+    "emotion",
+    "banking77"
+  ],
+  "seeds": [
+    0,
+    20
+  ],
+  "rows": 8400,
+  "state_score_cells": 840,
+  "accepted_group_state_score_cells": 62,
+  "baseline_and_repair_checked": "A/B archived outcomes reexecuted for all active state comparisons",
+  "primary_contrast": "G1 S1 A-C on AG News holdout (retrospective extension; previously viewed holdout)",
+  "code_sha256": "932c38fbcb0d15bf2832360631b9eab12618edced77f4a04473c51a190a08a22",
+  "protocol_sha256": "3fb2dabc3cac17e5ab302a90066b8cca132f60c8cb98261c90654cecd62dc9ab"
+}

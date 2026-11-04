@@ -1,0 +1,7 @@
+{
+  "amendment": "E7-RC2",
+  "model": "mistralai/Mistral-7B-Instruct-v0.3",
+  "revision": "c170c708c41dac9275d15a8fff4eca08d52bab71",
+  "image": "vllm/vllm-openai@sha256:d825baf9ce4b1b6bfc5ecc7b79880c7e6748c65a72d697ce3d47607aafa84c6e",
+  "timestamp_utc": "2026-11-04T17:45:21.062027+00:00"
+}

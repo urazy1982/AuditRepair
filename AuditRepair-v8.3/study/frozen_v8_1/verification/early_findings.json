@@ -1,0 +1,5 @@
+{
+  "status": "in_progress",
+  "critical_plan_issue": "The proposed bisection comparison is not a valid independent oracle for nonmonotone rejection sets. The discrete prefix rule has a one-true-null coverage argument, but a coarse grid may skip an unrejected continuous hole, so grid <= continuous first-unrejected bound is not generally true for arbitrary patterns. Verification will compare against exact rational discrete-prefix calculations and enumerate nonmonotone masks; no invalid bisection.",
+  "implementation_defect_reproduced": false
+}

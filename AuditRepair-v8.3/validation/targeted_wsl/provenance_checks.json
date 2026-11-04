@@ -1,0 +1,30 @@
+{
+  "release": {
+    "actual_manifest_sha256": "a04d96b09a618c422fafa6ea318a3bd4c7587e780109c58534b2e185dcf88916",
+    "uploaded_manifest_sha256": "a04d96b09a618c422fafa6ea318a3bd4c7587e780109c58534b2e185dcf88916",
+    "manifest_matches_upload": true,
+    "files_checked": 532,
+    "file_hash_failures": []
+  },
+  "companion": {
+    "actual_manifest_sha256": "b47e8d6593e734a1fa816df4987f70632328fa10a46928accf80b954a0a77844",
+    "uploaded_manifest_sha256": "b47e8d6593e734a1fa816df4987f70632328fa10a46928accf80b954a0a77844",
+    "manifest_matches_upload": true,
+    "files_checked": 456,
+    "file_hash_failures": []
+  },
+  "environment_vs_previous_failed_WSL_run": {
+    "python": true,
+    "platform": true,
+    "packages": true,
+    "roots": true
+  },
+  "historical/portable_acceptance_summary.json": {
+    "recorded_source_hashes_checked": 328,
+    "source_hash_failures": []
+  },
+  "active/active_portability_report.json": {
+    "recorded_source_hashes_checked": 149,
+    "source_hash_failures": []
+  }
+}

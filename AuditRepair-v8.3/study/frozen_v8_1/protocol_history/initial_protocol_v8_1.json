@@ -1,0 +1,225 @@
+{
+  "version": "8.1-start",
+  "frozen_utc": "2026-11-04T06:08:09.747680+00:00",
+  "purpose": "Dated amendment and prospective computational specification after inspecting the v8 plan and historical v7.9 materials; not a preregistration predating the existing data.",
+  "source_plan_sha256": "5b9db442102922420866e36a0c00a64d1dfa2b60507c0156db4e4758187f1a66",
+  "source_archives": {
+    "DMKD_Audit_Repair_v7_9.zip": "3539da4a089c3ae7bac087c06c5230c74a3fa205d6e678f3a780cfb32f8f4862",
+    "auditrepairWorkspace(3).zip": "2098fd48ec36b7184d8331429c6c4e9d7abde15028ed658c01f04f6c0465ac3c"
+  },
+  "historical_core_sha256": {
+    "core.py": "d8c463954a8454b1755986129053d2abf6214004712e21ef6362b2c0d1461d3a",
+    "simulate.py": "bb529d860ef1e4c76671cbf61574e1eb1feda5adf4b15c69646c7eb02c5bac90",
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "pac.py": "e8be17586836737780d2e9e98fefea05a64fa41019952300d38b87add160f978"
+  },
+  "software": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.8.0"
+  },
+  "software_note": "Uses available bundled CPU environment. The old requirements file pins different NumPy/Pandas versions; every within-v8 comparator is recomputed here. Exact cross-environment historical reproduction is not assumed.",
+  "pools": [
+    "ag_news_5000",
+    "ag_news_holdout",
+    "yelp_2600_star_alias",
+    "dbpedia",
+    "emotion",
+    "imdb",
+    "banking77"
+  ],
+  "input_files": {
+    "data/ag_news_5000.csv": {
+      "sha256": "b3a87b9b80d531e579634a64aca6239f58c640e851cbd8ac3ce849a2961d1f59",
+      "bytes": 1323247
+    },
+    "data/ag_news_5000.csv.meta.json": {
+      "sha256": "86f7de08cbf29f8b35b54acca66cdaf8931556528f10d2d5e1e39bb1714d8fe7",
+      "bytes": 1510
+    },
+    "data/ag_news_holdout.csv": {
+      "sha256": "be7a8e71e0f004761f21910be684a4f24a2e1a1c1f7e5ae4bf2899c783812b82",
+      "bytes": 701210
+    },
+    "data/ag_news_holdout.csv.meta.json": {
+      "sha256": "688cc3298ffa51b196ca1ba767914646af03d4f89fa5de4ab71bb3da20f674b6",
+      "bytes": 1774
+    },
+    "data/banking77.csv": {
+      "sha256": "111170bac00b61c4623fba9ab273da8639bb82f586c250766269db4599812984",
+      "bytes": 62181
+    },
+    "data/banking77.csv.meta.json": {
+      "sha256": "c187acad8ce1fe4a6c7e802474c2c7a68e41f4c7da335233a72f5e67f4e5bb5d",
+      "bytes": 2299
+    },
+    "data/banking77_items.jsonl": {
+      "sha256": "00f2feca06911e97662d0e32cef5eb4a4b58353c9820a8ca7672764bd2159043",
+      "bytes": 242960
+    },
+    "data/banking77_with_text.csv": {
+      "sha256": "80767202c56ac633e784449fec3b4a54d7626a070e5e84b253f9496a4251ef0c",
+      "bytes": 230011
+    },
+    "data/banking77_with_text.csv.meta.json": {
+      "sha256": "c187acad8ce1fe4a6c7e802474c2c7a68e41f4c7da335233a72f5e67f4e5bb5d",
+      "bytes": 2299
+    },
+    "data/dbpedia.csv": {
+      "sha256": "65a0a179f48fc01336db174b47fa97361f69cce3ee33c03d3ce16ac9a6aaf102",
+      "bytes": 816142
+    },
+    "data/dbpedia.csv.meta.json": {
+      "sha256": "39206014f4c1aa313b2dae00ba04db7df87a71196e901e400d1be7397d9361c5",
+      "bytes": 2239
+    },
+    "data/emotion.csv": {
+      "sha256": "1ebf642af7edc53dc553f9baca55530c08c139673b50f708cc3211256fa3fdc9",
+      "bytes": 259386
+    },
+    "data/emotion.csv.meta.json": {
+      "sha256": "c5775c44f2a98e4519857d13a060419921f9d1498e66af07b840a6062b803307",
+      "bytes": 1999
+    },
+    "data/imdb.csv": {
+      "sha256": "a79c44059bd98e01145a0209109e3596c15cc8d307c37c91550b952172ad53a5",
+      "bytes": 3461609
+    },
+    "data/imdb.csv.meta.json": {
+      "sha256": "6e2005d140ee63a0af73713540e8ea9eaf048e1e8d92a3ceb6fefa28b99cad0a",
+      "bytes": 1996
+    },
+    "data/yelp_2600_star_alias.csv": {
+      "sha256": "d892551dbeba09bbe7377a45370c6f90a166c94e4c5ef7a3aeab799dfabe7e83",
+      "bytes": 2031968
+    },
+    "data/yelp_2600_star_alias.csv.meta.json": {
+      "sha256": "636cfe3d24b08b2225de2aff637add79044a8af37694c1aa05e0872f4246bd97",
+      "bytes": 3086
+    }
+  },
+  "parameters": {
+    "epsilon": 0.03,
+    "alpha_final": 0.1,
+    "alpha_repair": 0.05,
+    "joint_failure_upper_bound": 0.15,
+    "B": 400,
+    "m": 500,
+    "min_group_size": 30,
+    "max_groups": 10,
+    "warmup": 120,
+    "group_share_remaining": 0.7,
+    "max_audits_per_group": 80,
+    "max_group_audit_fraction": 0.5,
+    "futility_after": 10,
+    "futility_mean": 0.45,
+    "stop_after_fails": 10,
+    "seeds": 20,
+    "pac_reps": 10,
+    "root_seed": 20261030,
+    "bootstrap_reps": 4000,
+    "bootstrap_seed": 20261104
+  },
+  "E1": {
+    "preprocessing": "Unmodified v7.9 G0 disagreement procedure with 0.3B uncertainty warm-up, frozen disjoint shortlist, same-audit refit DS. Reuse exact recorded source implementation.",
+    "seed_scheme": "SeedSequence([20261030, seed]).spawn(3): item permutation, preprocessing, PAC; PAC child streams spawn 10 repetitions. Same child stream reused without mutation across every paired arm.",
+    "arms": {
+      "pac_only": "DS without audits, original DS uncertainty; practical baseline",
+      "same_audit_ds": "DS refit on every G0 audit, scores 1-max posterior",
+      "O0_identity": "Exact copy of same_audit_ds inputs, must match labels, threshold and cost",
+      "legacy_guarded": "v7.9 guarded predictions and legacy repair_conf uncertainty; contextual pipeline comparator, not fixed-score label-only effect",
+      "O1_shortlist": "For each original frozen shortlist group, apply its fixed alternative to the final unaudited remainder only if its exact net gain relative to same-audit DS is positive; may correct and introduce errors",
+      "O2_disagreement": "Correct all incorrect same-audit predictions with at least two distinct observed valid source votes",
+      "O3_complete_unanimity": "Correct all incorrect same-audit predictions where every source gave a valid vote and all votes agree",
+      "O4_baseline_prefix": "For each paired PAC repetition, correct all same-audit errors with U<=that repetition baseline first-failing threshold, ties included; explicitly adaptive retrospective diagnostic",
+      "O5_all_errors": "Correct every incorrect same-audit prediction with gold, keeping scores and draws fixed"
+    },
+    "O4_limitation": "O4 depends on calibration through the baseline threshold. Do not apply the frozen-label PAC theorem to this arm. It is neither an unrestricted ceiling nor a deployable method.",
+    "O5_claim": "Optimistic fixed-score counterfactual. When every threshold certifies with all losses zero, cost equals the unavoidable union of prepaid audits and distinct calibration labels, yielding an exact cost floor conditional on those fixed inputs. No claim about affordable or learnable repairs.",
+    "oracle_family": "O2 and O3 are disjoint nonnested interventions. Missing-vote errors outside both are reported separately. No ordering of savings is assumed.",
+    "threshold_convention": "PAC tests U<=u_hat and reviews U>=u_hat. Automatic acceptance uses U<u_hat. Report strict below, equal, above, and <= shares separately.",
+    "scores": "Fixed same-audit DS scores in O0-O5; known audit items U=-1 and gold labels; labels and scores hashed before evaluation except explicitly adaptive O4.",
+    "outputs": "Per seed and repetition costs and labels-changed diagnostics; group opportunity; same-audit paired mean differences and seed-bootstrap intervals; complete per-seed checkpoints."
+  },
+  "E2_E3": {
+    "design": "Three generators G0_uniform, G1_neighborhood, G2_audit_text crossed with S0_DS and S1_text_frozen. Common uniform warm-up of 120 included in B400; G0_uniform is a distinct controlled variant, not a claim of exact v7.9 G0 replication.",
+    "features": {
+      "tfidf": {
+        "lowercase": true,
+        "strip_accents": "unicode",
+        "ngram_range": [
+          1,
+          2
+        ],
+        "min_df": 2,
+        "max_features": 20000,
+        "sublinear_tf": true,
+        "token_pattern": "(?u)\\b\\w\\w+\\b"
+      },
+      "svd_components": "min(128,n-1,p-1)",
+      "svd_random_state": 20261030,
+      "normalization": "l2",
+      "neighbors": 15,
+      "metric": "cosine",
+      "neighbor_ties": "stable item ID; exclude self"
+    },
+    "classifier": {
+      "type": "multiclass LogisticRegression",
+      "C": 1.0,
+      "solver": "lbfgs",
+      "max_iter": 1000,
+      "class_weight": null,
+      "training": "warm-up gold labels only",
+      "missing_classes": "zero probability then add 1e-6 to every class and normalize",
+      "single_class": "smoothed one-hot fallback"
+    },
+    "generators": {
+      "G0_uniform": "original disagreement signatures on warm-up refit DS, excluding all known audited items before size eligibility",
+      "G1_neighborhood": "group reference DS c -> majority DS label among 15 nearest nonself text neighbors; ties smallest class; rank size then(c,b)",
+      "G2_audit_text": "group reference DS c -> warm-up text classifier argmax b; rank warm-up counts DS-before-warm c to gold b, then group size then(c,b)"
+    },
+    "S0": "1-max same-audit refit DS posterior, identical scores for repaired and no-repair arms; no repair_conf override",
+    "S1": "1-q(baseline same-audit DS label | text), trained on warm-up only, frozen identical for repaired and no-repair arms. No source votes enter classifier. No adaptive refit using PAC labels.",
+    "certificate_scope": "Certificate is gain vs frozen warm-up reference on the unaudited remainder, not noninferiority vs later refitted DS; report both effects separately.",
+    "baselines": "Within each generator/score cell: same-audit DS labels evaluated using exactly that score vector; PAC-only original DS retained as practical baseline. All distinct training/audit/calibration/final-review labels counted.",
+    "primary_comparisons": [
+      "G1_S0 minus G0_uniform_S0 on paired incremental repair cost",
+      "G0_uniform_S1 minus G0_uniform_S0 on paired incremental repair cost"
+    ],
+    "secondary_interaction": "(G1_S1-G1_S0)-(G0_uniform_S1-G0_uniform_S0) on incremental cost",
+    "other_cells": "G2 cells and any winning cell summaries descriptive; do not use selected winner with unadjusted interval as primary.",
+    "interpretation": "Architectural sensitivity of pipelines; not statistical independence of candidates/scores and not causal identification of coupling alone."
+  },
+  "E4": {
+    "status": "Specification amended; execution follows verification of preserving score informativeness",
+    "population": "Original simulate() n5000,K4,confusions true class0->1 for sources(0,1,2) or(0,1,2,3), slice_frac .2 or .35,flip_prob .85; other defaults unchanged",
+    "seeds": 10,
+    "pac_reps": 5,
+    "eta": [
+      0,
+      0.25,
+      0.5,
+      0.75,
+      1
+    ],
+    "intervention": "For each fixed synthetic pool and preprocessing state, permute fixed baseline DS scores only within correctness strata (base==gold) among unaudited items. Assign ascending scores in ascending order of (1-eta)*fixed Uniform(0,1) rank + eta*disagreement-fraction rank, ties fixed random rank. Keep audits U=-1. This preserves the exact empirical score multiset separately for correct and incorrect predictions, hence baseline score-correctness discrimination and calibration distribution.",
+    "disagreement": "1-max count(valid source label)/number valid source votes; zero when fewer than2 valid",
+    "interpretation": "eta is a mixing strength, not claimed Pearson rho. Report achieved correlation; no assumed attainable endpoints or monotonic conversion effect.",
+    "outcomes": "O1 fixed beneficial shortlist labels, baseline, guarded labels all with identical permuted scores per eta; cost differences, threshold-influencing shares, realized score-disagreement association; verify classwise loss-conditioned score multiset equality before running PAC."
+  },
+  "analysis": {
+    "cost": "Number of unique expert-labeled items in union of warm-up, repair, uncertainty-fill, calibration, final threshold review. Oracle corrections are privileged free labels and not added to expert cost.",
+    "bootstrap": "Within each pool, first average paired repetition-level differences per preprocessing seed; bootstrap 20 whole seeds with paired arms retained. No inference over fresh datasets/models/annotation panels.",
+    "primary_practical_threshold": "Savings >=1% of pool; report estimate and interval separately. No testing-driven stopping.",
+    "no_selection": "Report all arms including zero/adverse, no outcome-based seed dropping or feature tuning.",
+    "empty_changes": "Fractions undefined when no changed items; report null and denominator, not zero.",
+    "frozen_scope": "Conditional fixed annotation panels. AG News development/holdout not independent datasets. E5 not authorized to consume GPU/API here and is not run."
+  },
+  "verification": {
+    "mandatory": "Deterministic accounting, oracle identity, fullgold floor for main parameters, input/code hashes and paired RNG replay; independent verification module reports own scope and remaining gaps.",
+    "grid": "Do not use bisection as a global exact reference for nonmonotone rejection sets. Do not claim <=one-grid-step distance from a continuous inversion without a separate proof.",
+    "monte_carlo": "Report Clopper-Pearson lower and upper confidence bounds; lower>nominal indicates violation evidence, upper<nominal supports a margin, otherwise inconclusive; simulations do not prove guarantees."
+  }
+}

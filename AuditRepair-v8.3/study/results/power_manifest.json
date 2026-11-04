@@ -1,0 +1,35 @@
+{
+  "acceptance_counts_by_alpha": {
+    "0.005": 1826,
+    "0.05": 4839
+  },
+  "completed_utc": "2026-11-04T10:47:12.071158+00:00",
+  "elapsed_seconds": 57.14627524599928,
+  "inference": "Pointwise two-sided equal-tailed Clopper-Pearson 95% intervals; paired acceptance difference uses nested lost-acceptance indicators, not independent alpha samples.",
+  "level_runs": 60000,
+  "matched_orders": 30000,
+  "nested_pair_violations": 0,
+  "nonbeneficial_acceptance_counts_by_alpha": {
+    "0.005": 5,
+    "0.05": 67
+  },
+  "output_sha256": {
+    "power_acceptance_curves.pdf": "9fa3478059e9b4c086fb98504227abb73b44d565091e0af471997802e29cc7fc",
+    "power_acceptance_curves.png": "a223e1fb416e574041323cc4dc2d041cbf5183ae8788860d688ab73ed2219b6c",
+    "power_execution_freeze.json": "41b30677d3de0111541fc4535c13d334cdef9f3de384531e372cecdb0434a6ab",
+    "power_paired_summary.csv": "d140daeaaececc5784cd58401c55499ca840a86e4e09e30e26a968543cce4f9f",
+    "power_population_summary.csv": "0ff78922edea168382aaa0c5943eec9ab766e4c6c8831a1f85e40b7ea5104994",
+    "power_populations.csv": "471486b302b43b26893ff95f59b3bbf6b1407c0385f60fe54fd5771e61845000",
+    "power_summary.txt": "74ea84e72eb1f29a3c32b0b0e7750b2eaed1bf5cfecf70c7dbfb744ebe40d50f",
+    "power_trials.csv": "8b968d00212e5787c893f0eb7376663add91fe5bcb6a1bd83467b97b473b2678"
+  },
+  "populations": 30,
+  "scope": "Isolated fixed-group operating characteristic under current stopping/cap rules with full group allowance. It is not end-to-end power of a 10-group shortlist with shared budget.",
+  "source_sha256": {
+    "corrected/audit_repair/core.py": "b1145503a8beb0a3690d4db395eab2ffffb5676396188b396940d0cd3ec46089",
+    "protocol_v8_2.json": "6695e33de9eb88ccf74726d3015bc7cc4b2baf650cdb4cb1b2696f3c04f53516",
+    "scripts/run_operational_power.py": "bf9af73232e8e571c9dbb39c7600c1ac852b9828e4be54aa3426fb6df5d45005"
+  },
+  "source_unchanged": true,
+  "status": "complete"
+}

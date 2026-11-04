@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "cells": 54,
+  "policies": [
+    "cost_aware_no_gold",
+    "random",
+    "size"
+  ],
+  "seeds_per_cell_policy": 100,
+  "analysis": "full-seed paired bootstrap, exact beta-binomial event intervals on any-event-per-seed; fixed synthetic-generating distribution"
+}

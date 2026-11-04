@@ -1,0 +1,23 @@
+{
+  "status": "complete",
+  "started_utc": "2026-11-04T06:20:51.278643+00:00",
+  "protocol_sha256": "2931a624b1ce970ce15ce2a6d4205b3992aa42606fc4d972fb5a3db38b042f61",
+  "selected_pools": [
+    "ag_news_5000",
+    "ag_news_holdout",
+    "yelp_2600_star_alias",
+    "dbpedia",
+    "emotion",
+    "imdb",
+    "banking77"
+  ],
+  "seed_range": [
+    0,
+    20
+  ],
+  "expected_tasks": 140,
+  "completed_tasks": 140,
+  "completed_utc": "2026-11-04T06:26:46.309387+00:00",
+  "rows": 26600,
+  "full_frozen_scope_complete": true
+}

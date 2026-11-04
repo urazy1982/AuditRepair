@@ -1,0 +1,22 @@
+pool,contrast,seeds,mean_difference_in_incremental_repair_cost,ci95_low,ci95_high,negative_favors,scope
+ag_news_5000,primary_generator_G1_S0_vs_G0_uniform_S0,20,0.0,0.0,0.0,first named intervention,fixed-pool algorithmic variability; no selection of best cell
+ag_news_5000,primary_score_G0_uniform_S1_vs_S0,20,0.45,-9.2855,9.645,first named intervention,fixed-pool algorithmic variability; no selection of best cell
+ag_news_5000,secondary_G1_by_S1_interaction,20,-2.465,-16.175749999999997,9.525750000000004,first named intervention,fixed-pool algorithmic variability; no selection of best cell
+ag_news_holdout,primary_generator_G1_S0_vs_G0_uniform_S0,20,0.0,0.0,0.0,first named intervention,fixed-pool algorithmic variability; no selection of best cell
+ag_news_holdout,primary_score_G0_uniform_S1_vs_S0,20,0.0,0.0,0.0,first named intervention,fixed-pool algorithmic variability; no selection of best cell
+ag_news_holdout,secondary_G1_by_S1_interaction,20,-1.19,-3.7600000000000002,0.7451250000000004,first named intervention,fixed-pool algorithmic variability; no selection of best cell
+banking77,primary_generator_G1_S0_vs_G0_uniform_S0,20,0.0,0.0,0.0,first named intervention,fixed-pool algorithmic variability; no selection of best cell
+banking77,primary_score_G0_uniform_S1_vs_S0,20,0.0,0.0,0.0,first named intervention,fixed-pool algorithmic variability; no selection of best cell
+banking77,secondary_G1_by_S1_interaction,20,0.0,0.0,0.0,first named intervention,fixed-pool algorithmic variability; no selection of best cell
+dbpedia,primary_generator_G1_S0_vs_G0_uniform_S0,20,0.0,0.0,0.0,first named intervention,fixed-pool algorithmic variability; no selection of best cell
+dbpedia,primary_score_G0_uniform_S1_vs_S0,20,0.0,0.0,0.0,first named intervention,fixed-pool algorithmic variability; no selection of best cell
+dbpedia,secondary_G1_by_S1_interaction,20,0.0,0.0,0.0,first named intervention,fixed-pool algorithmic variability; no selection of best cell
+emotion,primary_generator_G1_S0_vs_G0_uniform_S0,20,0.0,0.0,0.0,first named intervention,fixed-pool algorithmic variability; no selection of best cell
+emotion,primary_score_G0_uniform_S1_vs_S0,20,0.0,0.0,0.0,first named intervention,fixed-pool algorithmic variability; no selection of best cell
+emotion,secondary_G1_by_S1_interaction,20,0.0,0.0,0.0,first named intervention,fixed-pool algorithmic variability; no selection of best cell
+imdb,primary_generator_G1_S0_vs_G0_uniform_S0,20,0.0,0.0,0.0,first named intervention,fixed-pool algorithmic variability; no selection of best cell
+imdb,primary_score_G0_uniform_S1_vs_S0,20,0.0,0.0,0.0,first named intervention,fixed-pool algorithmic variability; no selection of best cell
+imdb,secondary_G1_by_S1_interaction,20,0.0,0.0,0.0,first named intervention,fixed-pool algorithmic variability; no selection of best cell
+yelp_2600_star_alias,primary_generator_G1_S0_vs_G0_uniform_S0,20,0.0,0.0,0.0,first named intervention,fixed-pool algorithmic variability; no selection of best cell
+yelp_2600_star_alias,primary_score_G0_uniform_S1_vs_S0,20,0.0,0.0,0.0,first named intervention,fixed-pool algorithmic variability; no selection of best cell
+yelp_2600_star_alias,secondary_G1_by_S1_interaction,20,0.0,0.0,0.0,first named intervention,fixed-pool algorithmic variability; no selection of best cell

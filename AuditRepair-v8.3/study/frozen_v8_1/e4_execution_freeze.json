@@ -1,0 +1,13 @@
+{
+  "frozen_utc": "2026-11-04T06:25:22.344435+00:00",
+  "protocol_sha256": "2931a624b1ce970ce15ce2a6d4205b3992aa42606fc4d972fb5a3db38b042f61",
+  "files": {
+    "run_e4.py": "927d07577fb7afea1b7e9777a46fa129e755ffe1f61a5950d63de04894ac1319",
+    "experiment_common.py": "0d2faa792d52e0c80582c16451e7839e36b66479336e715c041ab1840ba8bc24",
+    "audit_repair/core.py": "d8c463954a8454b1755986129053d2abf6214004712e21ef6362b2c0d1461d3a",
+    "audit_repair/pac.py": "e8be17586836737780d2e9e98fefea05a64fa41019952300d38b87add160f978",
+    "audit_repair/simulate.py": "bb529d860ef1e4c76671cbf61574e1eb1feda5adf4b15c69646c7eb02c5bac90",
+    "tests/test_e4.py": "7141177f98f611dca6fa1bde484f52efef6863b7bb6ce36d56e72365225c4468"
+  },
+  "preflight": "13 targeted implementation tests passed; score preservation verified in deterministic fixtures before E4 outcomes."
+}

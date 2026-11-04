@@ -1,0 +1,24 @@
+{
+  "started_utc": "2026-11-04T06:11:36.081329+00:00",
+  "protocol_sha256": "2931a624b1ce970ce15ce2a6d4205b3992aa42606fc4d972fb5a3db38b042f61",
+  "expected_tasks": 140,
+  "completed_tasks": 140,
+  "status": "complete",
+  "selected_pools": [
+    "ag_news_5000",
+    "ag_news_holdout",
+    "yelp_2600_star_alias",
+    "dbpedia",
+    "emotion",
+    "imdb",
+    "banking77"
+  ],
+  "seed_range": [
+    0,
+    20
+  ],
+  "interpretation": "complete protocol only if all seven pools and all twenty seeds finish",
+  "full_frozen_scope_complete": true,
+  "rows": 12600,
+  "completed_utc": "2026-11-04T06:14:52.281528+00:00"
+}

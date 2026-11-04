@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "preprocessing_states": 120,
+  "accepted_group_actions": 60,
+  "pac_arm_records": 10000,
+  "paired_evaluations": 2400,
+  "generator_score_cells": 12,
+  "inactive_generator_score_repetitions": 1200,
+  "independent_original_pac_spotchecks": 6,
+  "all_results_accounting_and_pairing_checked": true
+}

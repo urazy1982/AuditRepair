@@ -1,0 +1,57 @@
+{
+  "status": "passed_under_tested_conditions",
+  "artifact_kind": "independent_synthetic_engineering_gate_not_study_results",
+  "assertion_count": 593,
+  "chronology": [
+    {
+      "generator": "G0_uniform",
+      "events": [
+        "text_model_fitted_from_warmup",
+        "shortlist_frozen",
+        "all_adaptive_audits_finished"
+      ],
+      "groups": 1,
+      "tested": 1,
+      "accepted": 1,
+      "audits": 144
+    },
+    {
+      "generator": "G1",
+      "events": [
+        "text_model_fitted_from_warmup",
+        "shortlist_frozen",
+        "all_adaptive_audits_finished"
+      ],
+      "groups": 1,
+      "tested": 1,
+      "accepted": 1,
+      "audits": 144
+    },
+    {
+      "generator": "G2",
+      "events": [
+        "text_model_fitted_from_warmup",
+        "shortlist_frozen",
+        "all_adaptive_audits_finished"
+      ],
+      "groups": 1,
+      "tested": 1,
+      "accepted": 1,
+      "audits": 144
+    }
+  ],
+  "synthetic_orchestration_rows": 57,
+  "pac_calls": 57,
+  "source_sha256": {
+    "factorial.py": "a3961faca0ee61aa4a3f5af3882827636321c562b0d83f55836b3f279d527f73",
+    "run_factorial.py": "513405820407acbe382b0f074245fc10e1f7c617c453c657875348a1cc62d330",
+    "experiment_common.py": "0d2faa792d52e0c80582c16451e7839e36b66479336e715c041ab1840ba8bc24",
+    "audit_repair/core.py": "d8c463954a8454b1755986129053d2abf6214004712e21ef6362b2c0d1461d3a",
+    "audit_repair/pac.py": "e8be17586836737780d2e9e98fefea05a64fa41019952300d38b87add160f978"
+  },
+  "limitations": [
+    "Deterministic observable base model substitutes for DS estimation to isolate chronology, pairing and costs.",
+    "Does not certify effectiveness, real-data results, annotation variability, or the statistical theorem.",
+    "The reviewed runner freezes each generator state before PAC, reuses one score vector for its roles, and uses common PAC draws within a replication."
+  ]
+}

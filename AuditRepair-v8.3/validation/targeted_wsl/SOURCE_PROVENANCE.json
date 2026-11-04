@@ -1,0 +1,23 @@
+{
+  "completed_WSL_upload": {
+    "file_name": "results_portable_reproduction.zip",
+    "sha256": "2a216eb465b7426369d54aadceb37d0575661e66949453e1d66a9ca824ed1ae8"
+  },
+  "prior_failed_WSL_upload": {
+    "file_name": "results_local_reproduction.zip",
+    "sha256": "137eefc6d84d1c2017262095bb0b468f8e9c9711d70bf2b62dce1f0af3d0b1ca"
+  },
+  "reference_release": {
+    "file_name": "Audit_Repair_v8_2_Revision_2026-11-04.zip",
+    "zip_sha256": "8ddd12b536767fc24f169cfc32ef66d004e05de3b6ebea93c309e44dd50dad69",
+    "release_manifest_sha256": "a04d96b09a618c422fafa6ea318a3bd4c7587e780109c58534b2e185dcf88916",
+    "protocol_sha256": "6695e33de9eb88ccf74726d3015bc7cc4b2baf650cdb4cb1b2696f3c04f53516"
+  },
+  "recovery_companion": {
+    "file_name": "Audit_Repair_v8_2_WSL_Recovery_2026-11-04.zip",
+    "zip_sha256": "8bc27eebc94d0712d77324964bdb4302deb18768b3db644b6affece488daedc0",
+    "companion_manifest_sha256": "b47e8d6593e734a1fa816df4987f70632328fa10a46928accf80b954a0a77844",
+    "recovery_protocol_sha256": "ebb98af66720f8b436311d3cb9fd47a04af88711b198680c3e3fc4bd180a2547"
+  },
+  "artifact_role": "Verified WSL results and independent artifact comparisons. Original uploads are preserved unchanged; the source release and recovery companion remain distinct artifacts."
+}

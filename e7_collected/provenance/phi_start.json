@@ -1,0 +1,8 @@
+{
+  "timestamp_utc": "2026-11-04T17:03:58.804988+00:00",
+  "family": "phi",
+  "model": "microsoft/Phi-3.5-mini-instruct",
+  "revision": "2fe192450127e6a83f7441aef6e3ca586c338b77",
+  "image": "vllm/vllm-openai@sha256:d825baf9ce4b1b6bfc5ecc7b79880c7e6748c65a72d697ce3d47607aafa84c6e",
+  "collection_status": "starting"
+}

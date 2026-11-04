@@ -1,0 +1,72 @@
+[
+  {
+    "name": "data/ag_news_5000.csv",
+    "sha256": "b3a87b9b80d531e579634a64aca6239f58c640e851cbd8ac3ce849a2961d1f59",
+    "bytes": 1323247
+  },
+  {
+    "name": "data/ag_news_5000.csv.meta.json",
+    "sha256": "86f7de08cbf29f8b35b54acca66cdaf8931556528f10d2d5e1e39bb1714d8fe7",
+    "bytes": 1510
+  },
+  {
+    "name": "data/ag_news_holdout.csv",
+    "sha256": "be7a8e71e0f004761f21910be684a4f24a2e1a1c1f7e5ae4bf2899c783812b82",
+    "bytes": 701210
+  },
+  {
+    "name": "data/ag_news_holdout.csv.meta.json",
+    "sha256": "688cc3298ffa51b196ca1ba767914646af03d4f89fa5de4ab71bb3da20f674b6",
+    "bytes": 1774
+  },
+  {
+    "name": "data/yelp_2600_star_alias.csv",
+    "sha256": "d892551dbeba09bbe7377a45370c6f90a166c94e4c5ef7a3aeab799dfabe7e83",
+    "bytes": 2031968
+  },
+  {
+    "name": "data/yelp_2600_star_alias.csv.meta.json",
+    "sha256": "636cfe3d24b08b2225de2aff637add79044a8af37694c1aa05e0872f4246bd97",
+    "bytes": 3086
+  },
+  {
+    "name": "data/dbpedia.csv",
+    "sha256": "65a0a179f48fc01336db174b47fa97361f69cce3ee33c03d3ce16ac9a6aaf102",
+    "bytes": 816142
+  },
+  {
+    "name": "data/dbpedia.csv.meta.json",
+    "sha256": "39206014f4c1aa313b2dae00ba04db7df87a71196e901e400d1be7397d9361c5",
+    "bytes": 2239
+  },
+  {
+    "name": "data/emotion.csv",
+    "sha256": "1ebf642af7edc53dc553f9baca55530c08c139673b50f708cc3211256fa3fdc9",
+    "bytes": 259386
+  },
+  {
+    "name": "data/emotion.csv.meta.json",
+    "sha256": "c5775c44f2a98e4519857d13a060419921f9d1498e66af07b840a6062b803307",
+    "bytes": 1999
+  },
+  {
+    "name": "data/imdb.csv",
+    "sha256": "a79c44059bd98e01145a0209109e3596c15cc8d307c37c91550b952172ad53a5",
+    "bytes": 3461609
+  },
+  {
+    "name": "data/imdb.csv.meta.json",
+    "sha256": "6e2005d140ee63a0af73713540e8ea9eaf048e1e8d92a3ceb6fefa28b99cad0a",
+    "bytes": 1996
+  },
+  {
+    "name": "data/banking77.csv",
+    "sha256": "111170bac00b61c4623fba9ab273da8639bb82f586c250766269db4599812984",
+    "bytes": 62181
+  },
+  {
+    "name": "data/banking77.csv.meta.json",
+    "sha256": "c187acad8ce1fe4a6c7e802474c2c7a68e41f4c7da335233a72f5e67f4e5bb5d",
+    "bytes": 2299
+  }
+]

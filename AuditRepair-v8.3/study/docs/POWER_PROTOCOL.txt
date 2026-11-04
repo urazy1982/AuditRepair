@@ -1,0 +1,141 @@
+V8.2 POWER AMENDMENT: MATCHED FIXED-GROUP ACCEPTANCE CURVES
+=======================================================
+
+Status and provenance
+---------------------
+This is a small additional simulation of acceptance power at the operative
+per-group level. The design is frozen in protocol_v8_2.json under
+power_extension, SHA-256
+6695e33de9eb88ccf74726d3015bc7cc4b2baf650cdb4cb1b2696f3c04f53516.
+The runner writes its source hashes, exact population compositions, seed
+mapping, interval methods and execution timestamp BEFORE generating orders.
+It does not modify or replace the historical simulation.
+
+The original safeguard-validity experiment used 78 finite populations:
+N in {50,100,300}, zero-gain fractions {0,.4}, requested mean gains from -.2 to
+.4 by .05. Its archived manifest records 1,000 orders per population at alpha
+.05. Its population-construction source is
+experiments/safeguard_validity/run_safeguard_validity.py in the historical
+v7.9 release, SHA-256
+49453e74f52b47f75f854c24d55652871b72c83279fcd46df949167dba66f2d1.
+An unmodified copy of that source, its original manifest, its original results
+CSV and its original short report are retained in references/historical_power/.
+They are historical evidence, not the runnable v8.2 entry point. The original
+manifest records NumPy 2.5.3; the new execution records NumPy 2.3.5 explicitly.
+Those historical rates are illustrative single-group-level results. They must
+not be presented as the power of the maximum-size ten-group shortlist.
+
+Question and scope
+------------------
+How much does changing only the nominal group level from .05 to .005 alter
+the corrected remainder rule's probability of accepting a fixed candidate
+group under the same audit-order distribution and the same stopping rules?
+
+The .005 level equals alpha_repair/10 when all ten shortlist positions are
+occupied. Actual shorter shortlists use alpha_repair/g, not automatically
+.005. The new experiment supplies each isolated group its full per-group
+allowance; it omits shortlist ranking, competition for the shared 196-audit
+group budget, previous-group outcomes, warm-up, generator selection and final
+PAC calibration. It is therefore an operating-characteristic comparison of
+fixed group tests, not whole-policy operational power or expected savings.
+
+Design fixed before simulation
+------------------------------
+Thirty populations cross N={50,100,300}, zero-gain fraction={0,.4}, and
+requested mean gain={0,.1,.2,.3,.4}. Gains d belong to {-1,0,+1}. Construction
+exactly preserves the original integer rounding rule:
+
+  n_zero = round(zero_fraction*N)
+  n_nonzero = N - n_zero
+  n_positive = clip(round((requested_gain*N+n_nonzero)/2), 0, n_nonzero)
+  n_negative = n_nonzero - n_positive.
+
+Actual mean gain is reported from these counts. In particular, at N=50,
+requested .1 and .3 produce .12 and .28. The target and realised means are
+different columns; the figure uses the realised mean.
+
+Each population receives 1,000 independent uniform permutations. The two
+levels see the same complete order, but can stop at different times. The seed
+is fixed at 20261108. Each population gets a separate generator from
+SeedSequence([20261108,population_id]); population IDs follow the nested order
+N, then zero fraction, then requested gain. The execution record fixes this
+mapping before generation. The script archives every permutation hash and
+both resulting stopping states.
+
+At each observation, the corrected production WorLowerCS receives x=(d+1)/2
+with its 401-point grid and bet cap c=.5. Its exact dual-grid remainder gate
+is checked first. If no acceptance occurs, the run stops for futility at
+t>=10 and mean(x)<.45, or at min(80,ceil(N/2)) observations. No adaptive
+extension of the simulation count, tuning of bets, or selection of plotted
+populations is permitted. The negative-gain validity fixtures remain in the
+prior verification evidence rather than being rerun as an additional study.
+
+End points and uncertainty
+--------------------------
+For each fixed population and alpha, report accepted, beneficial accepted
+(true unaudited-remainder gain>0), and nonbeneficial accepted (gain<=0), each
+as counts and frequencies over all 1,000 orders. Also report audit counts,
+stopping reasons and true remainder gains at acceptance. Conditional summaries
+are explicitly labelled; zero acceptances leave them undefined, not zero.
+
+Acceptance intervals are pointwise, equal-tailed, two-sided 95% exact binomial
+(Clopper-Pearson) intervals. They quantify only Monte Carlo uncertainty about
+the fixed population and algorithm. They are not simultaneous over the
+population grid, not inference about future annotation panels, and not proof
+of the procedure's guarantee.
+
+Changing alpha only changes rejection boundaries. With identical paths and
+identical observation-dependent futility/caps, acceptance at .005 implies
+acceptance at .05 no later. The runner checks this nesting for every order.
+Consequently the paired difference p(.005)-p(.05) is minus the probability
+of a .05-only acceptance. Its 95% interval is [-upper,-lower] from the exact
+binomial interval for that paired lost-acceptance indicator. The two levels
+must not be treated as independent simulations.
+
+The complete design is plotted, including zero-gain points. Any nonbeneficial
+acceptances are reported as observed counts, not suppressed or treated as a
+failed requirement merely because a finite-sample count is nonzero. The
+mathematical false-certification control remains a probabilistic statement;
+this small power extension is not an additional proof of that guarantee.
+
+Outputs and rerun
+-----------------
+  python3 scripts/run_operational_power.py --workers 2
+
+Outputs are results/power_execution_freeze.json, power_populations.csv,
+power_trials.csv, power_population_summary.csv, power_paired_summary.csv,
+power_acceptance_curves.pdf/png, power_summary.txt and power_manifest.json.
+The source/input/output hashes are checked before returning a cached run.
+For a distinct reproduction, supply --out results/power_reproduction.
+
+The simulation calls the publication implementation. It is a matched design
+and a rerunnable computational experiment; it is not an independently
+implemented confidence-sequence solver or an independent annotation sample.
+
+Completed execution
+-------------------
+The prespecified run completed on 4 November 2026: all 30 populations, 30,000
+matched audit orders and 60,000 level-specific runs. The protocol and source
+hashes stayed unchanged throughout. Every paired acceptance satisfied the
+expected alpha nesting. See power_manifest.json for complete hashes and the
+execution environment, and the CSV files for all outcomes.
+
+Illustrative slices from the COMPLETE plotted grid, with 40% zero-gain items:
+
+  N     actual mean gain     acceptance at .05     acceptance at .005
+  50          .4                    5.7%                    0.0%
+  100         .4                   62.4%                    7.5%
+  300         .4                   97.5%                   85.0%
+
+Each percentage is based on 1,000 orders. The 0/1,000 case has a pointwise
+two-sided 95% exact upper endpoint of 0.3682%; zero observed acceptances do
+not establish zero acceptance probability. At N=100 and mean gain .4, the
+paired decrease is 54.9 percentage points; the CSV supplies its exact paired
+interval. The two level-specific acceptance rates are not independent.
+
+Nonbeneficial accepted remainders occurred in the simulation and are retained
+in the output: 67 at .05 and five at .005 across the heterogeneous grid, with
+counts and exact intervals per population. These totals are inventory counts,
+not a pooled operational error probability or evidence of a zero-error rule.
+The extension supplies the previously missing level comparison; it does not
+convert a Monte Carlo result into a proof or estimate the full policy's power.

@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-04",
+  "scope": "Launcher dispatch checks using isolated mock interpreters; no experiment rerun",
+  "cases": [
+    {
+      "case": "python3 exists; python absent",
+      "status": "passed",
+      "exit_code": 0,
+      "stage_calls": 4
+    },
+    {
+      "case": "project virtualenv before global python3",
+      "status": "passed",
+      "exit_code": 0,
+      "stage_calls": 4
+    },
+    {
+      "case": "active virtualenv before project virtualenv",
+      "status": "passed",
+      "exit_code": 0,
+      "stage_calls": 4
+    },
+    {
+      "case": "explicit relative interpreter path with spaces",
+      "status": "passed",
+      "exit_code": 0,
+      "stage_calls": 4
+    },
+    {
+      "case": "invalid explicit override fails without fallback",
+      "status": "passed",
+      "exit_code": 127,
+      "stage_calls": 0
+    },
+    {
+      "case": "stage failure stops later stages",
+      "status": "passed",
+      "exit_code": 23,
+      "stage_calls": 2
+    },
+    {
+      "case": "no interpreter gives setup error",
+      "status": "passed",
+      "exit_code": 127,
+      "stage_calls": 0
+    }
+  ],
+  "passed": 7,
+  "frozen_experiment_code_changed": false
+}

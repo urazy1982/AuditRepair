@@ -1,0 +1,54 @@
+{
+  "status": "failed_pre_gold",
+  "assessments": {
+    "ag_news_5000_qwen": {
+      "items": 5000,
+      "unusable": 21,
+      "unusable_rate": 0.0042,
+      "passed": true
+    },
+    "ag_news_5000_llama": {
+      "items": 5000,
+      "unusable": 11,
+      "unusable_rate": 0.0022,
+      "passed": true
+    },
+    "ag_news_5000_mistral": {
+      "items": 5000,
+      "unusable": 569,
+      "unusable_rate": 0.1138,
+      "passed": false
+    },
+    "ag_news_5000_phi": {
+      "items": 5000,
+      "unusable": 2284,
+      "unusable_rate": 0.4568,
+      "passed": false
+    },
+    "ag_news_holdout_qwen": {
+      "items": 2600,
+      "unusable": 7,
+      "unusable_rate": 0.002692307692307692,
+      "passed": true
+    },
+    "ag_news_holdout_llama": {
+      "items": 2600,
+      "unusable": 7,
+      "unusable_rate": 0.002692307692307692,
+      "passed": true
+    },
+    "ag_news_holdout_mistral": {
+      "items": 2600,
+      "unusable": 316,
+      "unusable_rate": 0.12153846153846154,
+      "passed": false
+    },
+    "ag_news_holdout_phi": {
+      "items": 2600,
+      "unusable": 1177,
+      "unusable_rate": 0.45269230769230767,
+      "passed": false
+    }
+  },
+  "source": "All checks computed without reading reference gold or historical labels"
+}

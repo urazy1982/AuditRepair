@@ -1,0 +1,39 @@
+{
+  "version": "8.2",
+  "status": "targeted_experimental_revision_complete",
+  "main_study_replay": {
+    "states": 600,
+    "audit_prefixes": 52824,
+    "accepted_groups_before": 55,
+    "accepted_groups_after": 55,
+    "changed_decisions": 0,
+    "new_PAC_calls": 0
+  },
+  "active_analysis": {
+    "cell_partition": {
+      "no_certified_action_in_sampled_seeds": 32,
+      "certified_action_but_all_paired_costs_identical": 7,
+      "certified_action_and_some_nonzero_cost_differences": 3
+    },
+    "accepted_states": 31,
+    "accepted_state_pairs": 620,
+    "cost_unchanged_pairs": 557,
+    "saving_pairs": 33,
+    "cost_increase_pairs": 30
+  },
+  "power_extension": {
+    "populations": 30,
+    "matched_orders": 30000,
+    "alpha_levels": [
+      0.05,
+      0.005
+    ],
+    "level_runs": 60000,
+    "scope": "Isolated fixed-group operating characteristic under current stopping/cap rules with full group allowance. It is not end-to-end power of a 10-group shortlist with shared budget."
+  },
+  "new_LLM_annotations": 0,
+  "new_real_pool_seeds": 0,
+  "default_command": "bash run_revision.sh",
+  "reproduction_command": "bash run_revision.sh --recompute results_local_reproduction",
+  "historical_power_status": "Original78-population three-rule simulation retained as historical, not wholly rerun under corrected gate"
+}

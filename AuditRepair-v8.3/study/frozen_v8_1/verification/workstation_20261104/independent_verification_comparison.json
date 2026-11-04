@@ -1,0 +1,787 @@
+{
+  "status": "pass",
+  "verdict": "WSL verification reproduces all reference verification values under the tested conditions; differences are limited to package path prefixes, Python build, and execution times.",
+  "audited_utc": "2026-11-04T09:13:21.208946+00:00",
+  "validation_errors": [],
+  "method": "Read-only parsing and exhaustive recursive comparison of both complete JSON reports. Only known leading package path prefixes are normalized, in string values and dictionary keys. No numeric rounding, tolerance, deletion, or other normalization is used; every remaining difference is recorded. All reported source/script hashes are compared against reference declarations and current frozen files. No verifier or experiment is executed.",
+  "path_prefix_normalization": {
+    "reference": "<workdir>/v8_experiments",
+    "workstation": "/mnt/c/audit_repair_v8_1",
+    "replacement": "<PACKAGE_ROOT>"
+  },
+  "summary": {
+    "main_assertions": 305547,
+    "large_pool_assertions": 60005,
+    "combined_assertions": 365552,
+    "failures": 0,
+    "main_sections_complete": 8,
+    "warnings_in_main_report": 2,
+    "unique_source_script_files": 5,
+    "source_script_hash_declarations_checked": 7,
+    "all_hashes_match_current_and_reference": true,
+    "probability_comparisons_pass_with_margin": 17,
+    "unexplained_report_differences": 0,
+    "no_new_experiments_run": true
+  },
+  "reports": {
+    "verification_report.json": {
+      "reference_file": "<workdir>/v8_experiments/verification/verification_report.json",
+      "workstation_file": "<workdir>/wsl_verification_review_20261104/verification/verification_report.json",
+      "reference_sha256": "aa6f0cb15b601ce4ef0e3bbf0faa84107339f5716a3775e2770b9c767a800aaa",
+      "workstation_sha256": "fdc9c80fc7d0a4cce4f057d36df218c99243fa424f27831efab04842c395dbb3",
+      "byte_identical": false,
+      "configuration_exactly_equal": true,
+      "configuration": {
+        "profile": "full",
+        "seed": 20261104,
+        "max_N": 8,
+        "reference_grid": 41,
+        "production_grid": 401,
+        "wor_reps": 1000,
+        "search_reps": 1000,
+        "pac_reps": 10000,
+        "alpha_repair": 0.05,
+        "alpha_final": 0.1,
+        "epsilon": 0.03,
+        "pac_m": 500
+      },
+      "assertion_count": 305547,
+      "retained_failure_count": 0,
+      "status": "passed_under_tested_conditions",
+      "all_differences_after_path_prefix_normalization": [
+        {
+          "path": ".elapsed_seconds",
+          "reference": 391.878,
+          "workstation": 153.984
+        },
+        {
+          "path": ".python",
+          "reference": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+          "workstation": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]"
+        },
+        {
+          "path": ".sections.exact_wor_and_remainder.elapsed_seconds",
+          "reference": 11.025,
+          "workstation": 4.22
+        },
+        {
+          "path": ".sections.fixed_input_pac_manual_oracle.elapsed_seconds",
+          "reference": 0.078,
+          "workstation": 0.034
+        },
+        {
+          "path": ".sections.frozen_candidates_and_remainders.elapsed_seconds",
+          "reference": 0.005,
+          "workstation": 0.002
+        },
+        {
+          "path": ".sections.frozen_input_pac_monte_carlo.elapsed_seconds",
+          "reference": 342.775,
+          "workstation": 134.843
+        },
+        {
+          "path": ".sections.full_search_monte_carlo.elapsed_seconds",
+          "reference": 18.51,
+          "workstation": 6.382
+        },
+        {
+          "path": ".sections.grid_prefix_inversion.elapsed_seconds",
+          "reference": 0.02,
+          "workstation": 0.01
+        },
+        {
+          "path": ".sections.random_stream_wiring.elapsed_seconds",
+          "reference": 0.008,
+          "workstation": 0.004
+        },
+        {
+          "path": ".sections.wor_monte_carlo.elapsed_seconds",
+          "reference": 19.282,
+          "workstation": 8.317
+        }
+      ],
+      "difference_count_after_path_prefix_normalization": 10,
+      "unexpected_differences": [],
+      "all_verification_values_equal": true,
+      "warnings_exactly_equal": true,
+      "limitations_exactly_equal": true,
+      "reference_elapsed_seconds": 391.878,
+      "workstation_elapsed_seconds": 153.984
+    },
+    "large_pool_pac_report.json": {
+      "reference_file": "<workdir>/v8_experiments/verification/large_pool_pac_report.json",
+      "workstation_file": "<workdir>/wsl_verification_review_20261104/verification/large_pool_pac_report.json",
+      "reference_sha256": "5732950cddfc46e104118140d8ac959258ca56d9637a2facd98efaa43537f5de",
+      "workstation_sha256": "f18881555ec1ef1d3834f4f9286c66dca4003d099d3b32f6e6ee6454a7cc77c5",
+      "byte_identical": false,
+      "configuration_exactly_equal": true,
+      "configuration": {
+        "n": 5000,
+        "m": 500,
+        "epsilon": 0.03,
+        "alpha_final": 0.1,
+        "seed": 20261106,
+        "repetitions_per_fixture": 10000,
+        "fixture_count": 2
+      },
+      "assertion_count": 60005,
+      "retained_failure_count": 0,
+      "status": "passed_under_tested_conditions",
+      "all_differences_after_path_prefix_normalization": [
+        {
+          "path": ".elapsed_seconds",
+          "reference": 162.614,
+          "workstation": 73.211
+        }
+      ],
+      "difference_count_after_path_prefix_normalization": 1,
+      "unexpected_differences": [],
+      "all_verification_values_equal": true,
+      "warnings_exactly_equal": true,
+      "limitations_exactly_equal": true,
+      "reference_elapsed_seconds": 162.614,
+      "workstation_elapsed_seconds": 73.211
+    }
+  },
+  "unique_source_script_hash_checks": {
+    "audit_repair/core.py": {
+      "current_sha256": "d8c463954a8454b1755986129053d2abf6214004712e21ef6362b2c0d1461d3a",
+      "reference_reported_sha256": "d8c463954a8454b1755986129053d2abf6214004712e21ef6362b2c0d1461d3a",
+      "workstation_reported_sha256": "d8c463954a8454b1755986129053d2abf6214004712e21ef6362b2c0d1461d3a",
+      "all_match": true,
+      "declarations": [
+        "verification_report.json:source_sha256"
+      ]
+    },
+    "audit_repair/pac.py": {
+      "current_sha256": "e8be17586836737780d2e9e98fefea05a64fa41019952300d38b87add160f978",
+      "reference_reported_sha256": "e8be17586836737780d2e9e98fefea05a64fa41019952300d38b87add160f978",
+      "workstation_reported_sha256": "e8be17586836737780d2e9e98fefea05a64fa41019952300d38b87add160f978",
+      "all_match": true,
+      "declarations": [
+        "verification_report.json:source_sha256",
+        "large_pool_pac_report.json:source_and_script_sha256"
+      ]
+    },
+    "verification/run_certified_v7_9_reference.py": {
+      "current_sha256": "f5e68e8cc42dc1e089ce7395d8d75c7f10db9194835eca1abb8334ae2d271739",
+      "reference_reported_sha256": "f5e68e8cc42dc1e089ce7395d8d75c7f10db9194835eca1abb8334ae2d271739",
+      "workstation_reported_sha256": "f5e68e8cc42dc1e089ce7395d8d75c7f10db9194835eca1abb8334ae2d271739",
+      "all_match": true,
+      "declarations": [
+        "verification_report.json:source_sha256"
+      ]
+    },
+    "verification/verify_large_pool_pac.py": {
+      "current_sha256": "ba6bae68fc6de5ab71246a65200cfce63bb2bd777a8cdd44277497aac679bb47",
+      "reference_reported_sha256": "ba6bae68fc6de5ab71246a65200cfce63bb2bd777a8cdd44277497aac679bb47",
+      "workstation_reported_sha256": "ba6bae68fc6de5ab71246a65200cfce63bb2bd777a8cdd44277497aac679bb47",
+      "all_match": true,
+      "declarations": [
+        "large_pool_pac_report.json:source_and_script_sha256"
+      ]
+    },
+    "verification/verify_guarantees.py": {
+      "current_sha256": "15a05324d97d2163487e55b48da9f104df8a4ec6e7d1e0be68bb2f1a9afe5cff",
+      "reference_reported_sha256": "15a05324d97d2163487e55b48da9f104df8a4ec6e7d1e0be68bb2f1a9afe5cff",
+      "workstation_reported_sha256": "15a05324d97d2163487e55b48da9f104df8a4ec6e7d1e0be68bb2f1a9afe5cff",
+      "all_match": true,
+      "declarations": [
+        "large_pool_pac_report.json:source_and_script_sha256",
+        "verification_report.json:script_sha256"
+      ]
+    }
+  },
+  "environment": {
+    "workstation_capture_sha256": "f81322598fbffbb19392e997d2d642ff5bd323032781f1e56d37c8b3f1c2c6e2",
+    "workstation_capture": {
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "platform": "Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+      "packages": {
+        "numpy": "2.3.5",
+        "pandas": "2.2.3",
+        "scipy": "1.17.0",
+        "scikit-learn": "1.8.0"
+      }
+    },
+    "reference_python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "python_build_differs": true,
+    "reference_pinned_versions": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scipy": "1.17.0",
+      "scikit-learn": "1.8.0"
+    },
+    "captured_packages_match_frozen_pins": true,
+    "reference_workstation_environment_json_present": false,
+    "limitation": "The upload records Python, the WSL platform, and four packages. It is not a full transitive dependency, BLAS, CPU, or OS-image lock; the Python patch/build differs from the reference runtime."
+  },
+  "main_configuration": {
+    "profile": "full",
+    "seed": 20261104,
+    "max_N": 8,
+    "reference_grid": 41,
+    "production_grid": 401,
+    "wor_reps": 1000,
+    "search_reps": 1000,
+    "pac_reps": 10000,
+    "alpha_repair": 0.05,
+    "alpha_final": 0.1,
+    "epsilon": 0.03,
+    "pac_m": 500
+  },
+  "probability_targets": {
+    "repair_familywise_failure_budget": 0.05,
+    "final_error_failure_budget": 0.1,
+    "joint_union_bound_failure_budget": 0.15000000000000002,
+    "interpretation": "Repair and final PAC probabilities are separate. The union-bound sum applies only to the conjunction of both stage guarantees; final error alone uses alpha_final."
+  },
+  "main_section_coverage": {
+    "exact_wor_and_remainder": {
+      "status": "completed",
+      "all_results_exactly_equal": true,
+      "reference_elapsed_seconds": 11.025,
+      "workstation_elapsed_seconds": 4.22,
+      "max_N": 8,
+      "values": [
+        0,
+        0.5,
+        1
+      ],
+      "production_grid": 401,
+      "rational_reference_grid": 41,
+      "distinct_population_count": 164,
+      "population_alpha_combinations": 492,
+      "distinct_full_orders": 9840,
+      "distinct_prefixes": 14748,
+      "capital_point_comparisons_across_alpha": 1814004,
+      "max_absolute_log_capital_error": 4.107825191113079e-15,
+      "threshold_roundoff_cases_within_tolerance": 0,
+      "coverage_by_alpha": {
+        "0.05": {
+          "population_count": 164,
+          "maximum_miscoverage_probability": 0,
+          "maximum_harmful_probability": 0
+        },
+        "0.2": {
+          "population_count": 164,
+          "maximum_miscoverage_probability": 0.03571428571428571,
+          "maximum_harmful_probability": 0
+        },
+        "0.5": {
+          "population_count": 164,
+          "maximum_miscoverage_probability": 0.2,
+          "maximum_harmful_probability": 0.14285714285714285
+        }
+      }
+    },
+    "grid_prefix_inversion": {
+      "status": "completed",
+      "all_results_exactly_equal": true,
+      "reference_elapsed_seconds": 0.02,
+      "workstation_elapsed_seconds": 0.01,
+      "exhaustive_nonmonotone_masks": 256,
+      "sticky_drop_cases": 256,
+      "bisection_used": false
+    },
+    "frozen_candidates_and_remainders": {
+      "status": "completed",
+      "all_results_exactly_equal": true,
+      "reference_elapsed_seconds": 0.005,
+      "workstation_elapsed_seconds": 0.002,
+      "hand_checked_candidate_groups": 5,
+      "freeze_calls": 1,
+      "warmup_audits": 4,
+      "remainder_records_reconstructed": 1,
+      "hidden_gold_items_perturbed": 60,
+      "overlap_groups_checked": 3,
+      "accepted_groups_exercised": 1
+    },
+    "fixed_input_pac_manual_oracle": {
+      "status": "completed",
+      "all_results_exactly_equal": true,
+      "reference_elapsed_seconds": 0.078,
+      "workstation_elapsed_seconds": 0.034,
+      "fixed_input_cases": 18,
+      "nonmonotone_control_flow_injections": 1,
+      "epsilon": 0.2,
+      "alpha_final": 0.2
+    },
+    "random_stream_wiring": {
+      "status": "completed",
+      "all_results_exactly_equal": true,
+      "reference_elapsed_seconds": 0.008,
+      "workstation_elapsed_seconds": 0.004,
+      "seed_calls": [
+        {
+          "function": "run_group_repair",
+          "seed_expression": "ss_pre"
+        },
+        {
+          "function": "pac_labels",
+          "seed_expression": "pac_streams[r]"
+        }
+      ],
+      "verification_spawn_key_count": 8
+    },
+    "wor_monte_carlo": {
+      "status": "completed",
+      "all_results_exactly_equal": true,
+      "reference_elapsed_seconds": 19.282,
+      "workstation_elapsed_seconds": 8.317,
+      "total_trajectories": 4000
+    },
+    "full_search_monte_carlo": {
+      "status": "completed",
+      "all_results_exactly_equal": true,
+      "reference_elapsed_seconds": 18.51,
+      "workstation_elapsed_seconds": 6.382,
+      "total_search_runs": 3000
+    },
+    "frozen_input_pac_monte_carlo": {
+      "status": "completed",
+      "all_results_exactly_equal": true,
+      "reference_elapsed_seconds": 342.775,
+      "workstation_elapsed_seconds": 134.843,
+      "total_pac_runs": 40000
+    }
+  },
+  "probability_outputs_exactly_matching_reference": {
+    "wor_monte_carlo": {
+      "status": "completed",
+      "alpha_repair": 0.05,
+      "repetitions_per_fixture": 1000,
+      "total_trajectories": 4000,
+      "fixtures": [
+        {
+          "N": 50,
+          "ones": 25,
+          "zeros": 25,
+          "halves": 0,
+          "miscoverage": {
+            "events": 8,
+            "trials": 1000,
+            "estimate": 0.008,
+            "one_sided_confidence": 0.95,
+            "lower": 0.00398685115538823,
+            "upper": 0.0143882249520919
+          },
+          "harmful_first_acceptance": {
+            "events": 7,
+            "trials": 1000,
+            "estimate": 0.007,
+            "one_sided_confidence": 0.95,
+            "lower": 0.0032897874006538055,
+            "upper": 0.013107715416593313
+          },
+          "accepted": 11,
+          "floating_point_positive_margin_with_zero_exact_grid_margin": 1,
+          "miscoverage_comparison": "pass_with_margin",
+          "harmful_comparison": "pass_with_margin"
+        },
+        {
+          "N": 100,
+          "ones": 55,
+          "zeros": 45,
+          "halves": 0,
+          "miscoverage": {
+            "events": 23,
+            "trials": 1000,
+            "estimate": 0.023,
+            "one_sided_confidence": 0.95,
+            "lower": 0.015769269315304684,
+            "upper": 0.032428870441319126
+          },
+          "harmful_first_acceptance": {
+            "events": 23,
+            "trials": 1000,
+            "estimate": 0.023,
+            "one_sided_confidence": 0.95,
+            "lower": 0.015769269315304684,
+            "upper": 0.032428870441319126
+          },
+          "accepted": 39,
+          "floating_point_positive_margin_with_zero_exact_grid_margin": 16,
+          "miscoverage_comparison": "pass_with_margin",
+          "harmful_comparison": "pass_with_margin"
+        },
+        {
+          "N": 100,
+          "ones": 40,
+          "zeros": 40,
+          "halves": 20,
+          "miscoverage": {
+            "events": 10,
+            "trials": 1000,
+            "estimate": 0.01,
+            "one_sided_confidence": 0.95,
+            "lower": 0.005435140144706775,
+            "upper": 0.016903175120562504
+          },
+          "harmful_first_acceptance": {
+            "events": 9,
+            "trials": 1000,
+            "estimate": 0.009,
+            "one_sided_confidence": 0.95,
+            "lower": 0.004703013189857319,
+            "upper": 0.015652573749606477
+          },
+          "accepted": 18,
+          "floating_point_positive_margin_with_zero_exact_grid_margin": 5,
+          "miscoverage_comparison": "pass_with_margin",
+          "harmful_comparison": "pass_with_margin"
+        },
+        {
+          "N": 300,
+          "ones": 153,
+          "zeros": 147,
+          "halves": 0,
+          "miscoverage": {
+            "events": 16,
+            "trials": 1000,
+            "estimate": 0.016,
+            "one_sided_confidence": 0.95,
+            "lower": 0.010061014595940894,
+            "upper": 0.02420022583124934
+          },
+          "harmful_first_acceptance": {
+            "events": 15,
+            "trials": 1000,
+            "estimate": 0.015,
+            "one_sided_confidence": 0.95,
+            "lower": 0.009268430980521622,
+            "upper": 0.0230035488509501
+          },
+          "accepted": 23,
+          "floating_point_positive_margin_with_zero_exact_grid_margin": 6,
+          "miscoverage_comparison": "pass_with_margin",
+          "harmful_comparison": "pass_with_margin"
+        }
+      ]
+    },
+    "full_search_monte_carlo": {
+      "status": "completed",
+      "alpha_repair": 0.05,
+      "repetitions_per_fixture": 1000,
+      "total_search_runs": 3000,
+      "fixtures": [
+        {
+          "fixture": "disjoint_mixed_gain",
+          "trials": 1000,
+          "groups_tested": 3000,
+          "accepted_groups": 673,
+          "accepted_groups_with_known_warmup": 0,
+          "any_harmful_acceptance": {
+            "events": 1,
+            "trials": 1000,
+            "estimate": 0.001,
+            "one_sided_confidence": 0.95,
+            "lower": 5.129197890901785e-05,
+            "upper": 0.004734993575499777
+          },
+          "comparison": "pass_with_margin",
+          "frozen_labels_sha256": "b49dd8759b8161808e79ac53b9f6fa93b297a83c8aeca408b956bf47c8ce6ba4",
+          "gold_sha256": "01ca6d688fd970369f15a35af5008013b7f57cc8dbf6cc8ca0b5295b2c7c8e9a"
+        },
+        {
+          "fixture": "disjoint_warmup_mixed_gain",
+          "trials": 1000,
+          "groups_tested": 4000,
+          "accepted_groups": 615,
+          "accepted_groups_with_known_warmup": 0,
+          "any_harmful_acceptance": {
+            "events": 1,
+            "trials": 1000,
+            "estimate": 0.001,
+            "one_sided_confidence": 0.95,
+            "lower": 5.129197890901785e-05,
+            "upper": 0.004734993575499777
+          },
+          "comparison": "pass_with_margin",
+          "frozen_labels_sha256": "b49dd8759b8161808e79ac53b9f6fa93b297a83c8aeca408b956bf47c8ce6ba4",
+          "gold_sha256": "a0b9665e554dbc75f3905e4add0221505fe3c8d40714512cf301a7ada4dc678f"
+        },
+        {
+          "fixture": "overlapping_mixed_gain",
+          "trials": 1000,
+          "groups_tested": 3000,
+          "accepted_groups": 324,
+          "accepted_groups_with_known_warmup": 0,
+          "any_harmful_acceptance": {
+            "events": 3,
+            "trials": 1000,
+            "estimate": 0.003,
+            "one_sided_confidence": 0.95,
+            "lower": 0.0008181753982218005,
+            "upper": 0.007735244718479458
+          },
+          "comparison": "pass_with_margin",
+          "frozen_labels_sha256": "751708346f0e756a5bc5ab9830ccc1b3cb2c0a9d40cbccefa13b4bfc5341c495",
+          "gold_sha256": "1c4fc2f9ca9bdecb9f80e5578b558ae893c123599b06918e77486f20e53387be"
+        }
+      ],
+      "limitation": "The full production search and certifier run with a deterministic observable base estimator. These are synthetic implementation checks, not E4 coupling-sweep experiments."
+    },
+    "frozen_input_pac_monte_carlo": {
+      "status": "completed",
+      "alpha_final": 0.1,
+      "epsilon": 0.03,
+      "repetitions_per_frozen_pool": 10000,
+      "total_pac_runs": 40000,
+      "pools": [
+        {
+          "fixture": "ordered_errors",
+          "n": 240,
+          "m": 500,
+          "already_owned": 0,
+          "frozen_input_sha256": {
+            "pred": "3540e4b4fc758a76dfa8d68132ca371e0ba8d4470ca7c2aedfe6b7de39cfd687",
+            "scores": "79f21fca669fb0a0dde07c42210242ccf4237f08221e424a220f14b117b96f48",
+            "gold": "1ef3f03cc079bc8ba6dfec7d0d505e5cfc798c96432a4c7f9c1492cc57229164"
+          },
+          "violation": {
+            "events": 0,
+            "trials": 10000,
+            "estimate": 0.0,
+            "one_sided_confidence": 0.95,
+            "lower": 0.0,
+            "upper": 0.00029952835977661195
+          },
+          "comparison": "pass_with_margin",
+          "mean_total_unique_experts": 217.6519,
+          "runs_saving_at_least_one_label": 10000,
+          "maximum_final_error": 0.020833333333333332,
+          "seed_spawn_key": [
+            0
+          ]
+        },
+        {
+          "fixture": "misranked_errors",
+          "n": 240,
+          "m": 500,
+          "already_owned": 0,
+          "frozen_input_sha256": {
+            "pred": "3540e4b4fc758a76dfa8d68132ca371e0ba8d4470ca7c2aedfe6b7de39cfd687",
+            "scores": "79f21fca669fb0a0dde07c42210242ccf4237f08221e424a220f14b117b96f48",
+            "gold": "065d967ff9a3952048667cbc4d392a34f8669628ad4b9410f73da69d9213748d"
+          },
+          "violation": {
+            "events": 0,
+            "trials": 10000,
+            "estimate": 0.0,
+            "one_sided_confidence": 0.95,
+            "lower": 0.0,
+            "upper": 0.00029952835977661195
+          },
+          "comparison": "pass_with_margin",
+          "mean_total_unique_experts": 240.0,
+          "runs_saving_at_least_one_label": 0,
+          "maximum_final_error": 0.0,
+          "seed_spawn_key": [
+            1
+          ]
+        },
+        {
+          "fixture": "all_scores_tied",
+          "n": 240,
+          "m": 500,
+          "already_owned": 0,
+          "frozen_input_sha256": {
+            "pred": "3540e4b4fc758a76dfa8d68132ca371e0ba8d4470ca7c2aedfe6b7de39cfd687",
+            "scores": "dbd22a454b5d645958d95de5310392513c524e5c183de7ac18bd3a05d3087cd3",
+            "gold": "9d60edeeb91286d92e380e9bd3f7bc0a90603b7386124e26e817ea4098c1ee7c"
+          },
+          "violation": {
+            "events": 0,
+            "trials": 10000,
+            "estimate": 0.0,
+            "one_sided_confidence": 0.95,
+            "lower": 0.0,
+            "upper": 0.00029952835977661195
+          },
+          "comparison": "pass_with_margin",
+          "mean_total_unique_experts": 240.0,
+          "runs_saving_at_least_one_label": 0,
+          "maximum_final_error": 0.0,
+          "seed_spawn_key": [
+            2
+          ]
+        },
+        {
+          "fixture": "frozen_repaired_with_owned_audits",
+          "n": 240,
+          "m": 500,
+          "already_owned": 24,
+          "frozen_input_sha256": {
+            "pred": "84f5d42ae788ebdce2b6d67a422601cbc28f34b780f59742160379abc7fa7991",
+            "scores": "3ce0f535d5caa7bf41f31ac4430a84f8792090b83807b41cc106f2218b6d5305",
+            "gold": "8aa7f2ac989f861500f0b900e36f2fa4f4898fb68ff8703a51ce76faf8692518"
+          },
+          "violation": {
+            "events": 0,
+            "trials": 10000,
+            "estimate": 0.0,
+            "one_sided_confidence": 0.95,
+            "lower": 0.0,
+            "upper": 0.00029952835977661195
+          },
+          "comparison": "pass_with_margin",
+          "mean_total_unique_experts": 237.2064,
+          "runs_saving_at_least_one_label": 8561,
+          "maximum_final_error": 0.025,
+          "seed_spawn_key": [
+            3
+          ]
+        }
+      ],
+      "limitation": "Each frozen synthetic input is conditional and fixed. This does not test annotation-panel variability, audit-trained score leakage, or a general population guarantee."
+    },
+    "large_pool_pac": {
+      "status": "completed",
+      "alpha_final": 0.1,
+      "epsilon": 0.03,
+      "repetitions_per_frozen_pool": 10000,
+      "total_pac_runs": 20000,
+      "pools": [
+        {
+          "fixture": "large_32levels_distributed_risk_034",
+          "n": 5000,
+          "m": 500,
+          "already_owned": 0,
+          "frozen_input_sha256": {
+            "pred": "6a0fb51a2de045a40befbee50da00dff50504c3cf41d064f19746b05dfa5b58a",
+            "scores": "d8da770b39fa17b4405eb8a417238d45dd43172845b51c802358a8ac13304cf5",
+            "gold": "d0a4d0ee47dcae7ca250b688a67c6093fcbfd7baec68f2576ef1852fe8d06edd"
+          },
+          "violation": {
+            "events": 60,
+            "trials": 10000,
+            "estimate": 0.006,
+            "one_sided_confidence": 0.95,
+            "lower": 0.004787904240449218,
+            "upper": 0.007433605812518839
+          },
+          "comparison": "pass_with_margin",
+          "mean_total_unique_experts": 2823.1308,
+          "runs_saving_at_least_one_label": 10000,
+          "maximum_final_error": 0.0338,
+          "seed_spawn_key": [
+            0
+          ]
+        },
+        {
+          "fixture": "large_32levels_misranked_risk_034_owned400",
+          "n": 5000,
+          "m": 500,
+          "already_owned": 400,
+          "frozen_input_sha256": {
+            "pred": "6a0fb51a2de045a40befbee50da00dff50504c3cf41d064f19746b05dfa5b58a",
+            "scores": "d8da770b39fa17b4405eb8a417238d45dd43172845b51c802358a8ac13304cf5",
+            "gold": "880191aae6fedbee7ba3c2a746d6d53ebfdd1674e61ca8a28c2dc547df90325d"
+          },
+          "violation": {
+            "events": 60,
+            "trials": 10000,
+            "estimate": 0.006,
+            "one_sided_confidence": 0.95,
+            "lower": 0.004787904240449218,
+            "upper": 0.007433605812518839
+          },
+          "comparison": "pass_with_margin",
+          "mean_total_unique_experts": 4984.6193,
+          "runs_saving_at_least_one_label": 89,
+          "maximum_final_error": 0.0334,
+          "seed_spawn_key": [
+            1
+          ]
+        }
+      ],
+      "limitation": "Each frozen synthetic input is conditional and fixed. This does not test annotation-panel variability, audit-trained score leakage, or a general population guarantee."
+    }
+  },
+  "large_pool_fixture_design": [
+    {
+      "name": "large_32levels_distributed_risk_034",
+      "initial_error_count": 170,
+      "n": 5000,
+      "scores": "32 equally sized levels from 0 through 31/32",
+      "already_owned": 0,
+      "error_placement": "170 fixed indices from rng seed 38017"
+    },
+    {
+      "name": "large_32levels_misranked_risk_034_owned400",
+      "initial_error_count": 170,
+      "n": 5000,
+      "scores": "32 equally sized levels; all errors at lowest indices",
+      "already_owned": 400,
+      "owned_placement": "truthful zeros at indices 500 through 899"
+    }
+  ],
+  "unchanged_warnings": [
+    {
+      "check": "plan_grid_oracle",
+      "message": "The draft's bisection oracle is invalid for arbitrary nonmonotone rejection sets. This package checks the discrete prefix and one-unrejected-grid-null implication; it does not claim domination of a continuous first-unrejected bound."
+    },
+    {
+      "check": "stream_scope",
+      "message": "AST seed inspection verifies the named existing runner and distinct stream wiring, not statistical independence of arbitrary callers or future v8 score-training code."
+    }
+  ],
+  "known_numerical_boundary_caveat": {
+    "synthetic_nominal_zero_cases_by_fixture": [
+      1,
+      16,
+      5,
+      6
+    ],
+    "synthetic_nominal_zero_cases_total": 28,
+    "reproduced_exactly_in_WSL": true,
+    "meaning": "A positive floating-point remainder margin can coincide with a zero exact nominal-grid margin. The frozen implementation retains this previously identified numerical edge case; zero retained assertion failures do not mean the edge case disappeared.",
+    "existing_study_acceptance_audit_file": "<workdir>/v8_experiments/verification/numerical_acceptance_audit.json",
+    "existing_study_acceptance_audit_sha256": "f368c0e77f6281545081be6e515cfa68eefeb69685e20e6170225d631a82352f",
+    "existing_study_acceptance_audit_summary": {
+      "status": "no_affected_acceptances_under_audited_arithmetic",
+      "reported_accepted_groups": 55,
+      "audited_accepted_groups": 55,
+      "float_positive_nominal_nonpositive_count": 0,
+      "float_positive_nominal_zero_count": 0,
+      "float_positive_nominal_negative_count": 0,
+      "float_positive_represented_nonpositive_count": 0,
+      "assertion_count": 2169,
+      "failures": []
+    },
+    "scope_note": "The 55-group study audit is an existing reference artifact, not one of the three new WSL attachments and not rerun by this comparison. Its result is zero affected study acceptances."
+  },
+  "material_differences": [
+    {
+      "category": "runtime",
+      "reference": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+      "workstation": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "effect_observed": "All reported verification values are exactly equal despite the Python patch/compiler difference."
+    },
+    {
+      "category": "location",
+      "reference": "<workdir>/v8_experiments",
+      "workstation": "/mnt/c/audit_repair_v8_1",
+      "effect_observed": "Only leading package paths differ; normalized source/script references and hashes agree."
+    },
+    {
+      "category": "execution_time",
+      "main_reference_seconds": 391.878,
+      "main_workstation_seconds": 153.984,
+      "large_reference_seconds": 162.614,
+      "large_workstation_seconds": 73.211,
+      "effect_observed": "Execution time differs in the main total, all eight main sections, and the large-pool total; this is not a controlled performance benchmark."
+    }
+  ],
+  "remaining_scope_limits": [
+    "This is an implementation regression verification on fixed fixtures, not a proof of general guarantees or additional independent study evidence.",
+    "The four main PAC fixtures use N=240 and m=500; two separate targeted fixtures use N=5000 and m=500. The 18 exact manual PAC fixtures use epsilon=.2 and alpha=.2, while the Monte Carlo PAC fixtures use epsilon=.03 and alpha_final=.1.",
+    "Zero retained assertion failures is different from zero statistical error events: each large fixture records 60/10000 final-error exceedance events, with one-sided 95% upper bound 0.007433605812518839 below alpha_final=.1.",
+    "Repair failure has its own .05 target; final-error failure has .10. Their .15 union-bound sum is not the final-error target.",
+    "Intervals are individual one-sided Clopper-Pearson intervals, with no simultaneous adjustment across fixtures.",
+    "The grid-prefix warning and random-stream inspection warning remain valid; the reports do not establish a continuous-bound dominance claim or statistical independence of arbitrary callers.",
+    "This attachment does not rerun the factorial-specific verifier, model-fitting tests, legacy suite, or E1-E4 outcomes; those are separate artifacts. It does not include E5.",
+    "The recorded hashes and environment are artifact evidence, not independent attestation of the complete workstation execution environment."
+  ]
+}

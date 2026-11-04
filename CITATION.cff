@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite this software package; cite the original benchmark datasets and prior methods separately."
+title: "AuditRepair: Reproducible Experiments on Certified Data Cleaning and Expert Review Cost"
+version: 8.6.1
+date-released: 2026-11-05
+authors:
+  - family-names: "Yavanoğlu"
+    given-names: "Uraz"
+    orcid: "https://orcid.org/0000-0001-8358-8150"
+    affiliation: "Gazi University"
+url: "https://github.com/urazy1982/AuditRepair"
+repository-code: "https://github.com/urazy1982/AuditRepair"
+license: GPL-3.0
+type: software
+abstract: "Code, frozen inputs, result records and verification scripts for experiments E1–E8 on certified group repair of LLM labels and expert-review cost under a PAC Labels threshold certifier, including the E7 four-family annotation evidence and cross-workstation reproduction records."
+keywords:
+  - data cleaning
+  - label noise
+  - LLM annotation
+  - certified labeling
+  - confidence sequences

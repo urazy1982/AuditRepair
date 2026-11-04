@@ -1,0 +1,108 @@
+AUDIT REPAIR v8.2 — VERIFIED WSL REPRODUCTION
+4 November 2026
+
+STATUS: COMPLETE WITHIN THE STATED RECOVERY SCOPE
+
+The new WSL recovery run completed successfully. Separate comparisons of
+the returned records confirm the same specified scientific outcomes as the
+frozen v8.2 reference. The earlier interruption is resolved. No additional
+rerun is needed to close this particular reproduction check.
+
+1. WHAT WAS VERIFIED
+
+Acceptance decisions:
+  E1: 140 states; 820 groups; 11,032 audit prefixes; 11 accepted groups.
+  E2/E3: 420 states; 2,594 groups; 36,727 prefixes; 31 accepted groups.
+  E4: 40 states; 400 groups; 5,065 prefixes; 13 accepted groups.
+  Total: 600 states; 3,814 groups; 52,824 prefixes; 55 accepted groups.
+  Zero changed acceptance predicates.
+
+The complete 3,814-row acceptance-group CSV is byte-identical to the original
+v8.2 reference. All 36 states omitted by the first WSL attempt now pass both
+acceptance and their scoped PAC checks. The seven missing acceptances are all
+retained; the earlier 48-versus-55 gap is closed.
+
+Downstream checks:
+  2,800 E1 same-audit baseline/legacy-guarded arm records.
+  All 3,000 E4 arm records.
+  1,860 active factorial baseline/repair/restricted-oracle arm records.
+  Total: 7,660 original PAC arm records.
+
+For every checked record, cutoff ordinal, review-set membership, unique
+purchases, final labels, expert cost, error count and draw identity agree.
+The comparisons used 10,200 actual PAC evaluations because local and reference
+score vectors were evaluated separately when their bytes differed. Those
+extra calls do not add independent experimental observations.
+
+Active results:
+  All 31 accepted factorial states were reconstructed in full.
+  All 620 discrete paired-repair mechanism records agree.
+  The 42-cell partition remains 32 inactive, seven active with zero cost change,
+  and three active with some nonzero cost changes.
+  Among accepted-state pairs, 557/620 retain the same cost, 33 save labels, and
+  30 add labels. Small average effects still coexist with large individual
+  effects; the same seeds and clustered uncertainty summaries are retained.
+
+Power replay:
+  30 finite populations; 30,000 paired audit orders; 60,000 level-specific runs.
+  All four numerical power CSV files are byte-identical to the reference.
+
+The uploaded regression logs show nine original and twelve recovery tests
+passed. The full WSL run took 285.47 seconds, approximately 4 minutes 45 seconds.
+
+2. FLOATING DIFFERENCES ARE MEASURED AND PRESERVED
+
+Historical score/score-multiset arrays:
+  147 of 600 comparisons differ in bytes.
+  Maximum absolute difference: 4.873879078104437e-14.
+
+Active score arrays:
+  35 of 62 vectors differ in bytes: all 31 S1 vectors and four S0 vectors.
+  Maximum absolute difference: 9.636735853746359e-14.
+
+Every reported complete ordering, including ties, is unchanged. There are
+650 numeric cutoff differences: one historical E4 cutoff and 649 active
+cutoffs. Their maximum absolute difference is 7.416289804496046e-14. Their
+ordinals, review sets and scientific outcomes remain exact in the checked runs.
+
+The score diagnostics were measured by the identified recovery program on WSL.
+The upload contains those diagnostics rather than every local raw score vector.
+The comparisons verify their aggregation and compare every returned outcome
+record. They also directly compare the local scores exported for 3,279
+accepted-remainder item occurrences; every corresponding label, membership and
+gain field is exact. They do not recompute the full-vector maxima from local
+raw vectors that were not part of the upload.
+
+3. REPORTING SCOPE
+
+The correct claim is successful targeted same-seed workstation reproduction
+with exact discrete outcomes and documented numerical score/cutoff differences.
+Avoid a claim that all floating arrays are byte-identical.
+
+The 420 factorial acceptance states use complete saved audit histories. The
+180 historical states and 31 active factorial states were reconstructed in
+full. This recovery reevaluated 7,660 downstream arm records; it did not rerun
+all 42,200 original study records.
+
+Repeating fixed inputs and seeds on a second environment supplies computational
+reproducibility evidence. It does not add annotations, independent seeds or
+replications to the inferential sample, and it does not strengthen external
+validity or establish practical equivalence from degenerate intervals.
+
+The original strict integer acceptance predicate, betting rules, and terminal
+PAC rejection convention remain the source-identified procedures.
+No tolerance was substituted for a required discrete outcome comparison.
+
+4. WHAT THIS DIRECTORY CONTAINS
+
+CURRENT_STATUS.json: machine-readable closure status and exact scope.
+SOURCE_PROVENANCE.json: identities and complete hashes for the source artifacts.
+provenance_checks.json: direct release, companion and environment checks.
+MANIFEST_SHA256.json: hashes for every file in this directory except the manifest.
+
+The uploaded WSL archives themselves are identified by SHA-256 in
+SOURCE_PROVENANCE.json; they are not redistributed here. The comparisons
+reused the frozen study implementations and are not clean-room statistical
+implementations.
+
+The computational reproduction check is closed.

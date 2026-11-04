@@ -1,0 +1,56 @@
+{
+  "dataset": "fancyzhx/ag_news",
+  "revision": "eb185aade064a813bc0b7f42de02595523103ca4",
+  "split": "test",
+  "n": 2600,
+  "shuffle_seed": 0,
+  "classes": [
+    "World",
+    "Sports",
+    "Business",
+    "Sci/Tech"
+  ],
+  "deployments": {
+    "a": {
+      "url": "http://localhost:8000/v1",
+      "model": "Qwen/Qwen2.5-7B-Instruct-AWQ",
+      "fingerprint": "deployment=ae1eb9dab456f49bb8680c3c5762f0cf87f295773b630c32ebe03504293058be,rev=b25037543e9394b818fdfca67ab2a00ecc7dd641,quant=awq,maxlen=4096",
+      "server": {
+        "id": "Qwen/Qwen2.5-7B-Instruct-AWQ",
+        "root": "Qwen/Qwen2.5-7B-Instruct-AWQ",
+        "max_model_len": 4096,
+        "owned_by": "vllm"
+      }
+    },
+    "b": {
+      "url": "http://localhost:8001/v1",
+      "model": "hugging-quants/Meta-Llama-3.1-8B-Instruct-AWQ-INT4",
+      "fingerprint": "deployment=57460e190105f83c06e7305743806d8e66b50d065efcb17aa729c6c253a88976,rev=db1f81ad4b8c7e39777509fac66c652eb0a52f91,quant=awq,maxlen=4096",
+      "server": {
+        "id": "hugging-quants/Meta-Llama-3.1-8B-Instruct-AWQ-INT4",
+        "root": "hugging-quants/Meta-Llama-3.1-8B-Instruct-AWQ-INT4",
+        "max_model_len": 4096,
+        "owned_by": "vllm"
+      }
+    }
+  },
+  "selection_rule": "pinned_test_tail_excluding_normalized_prompt_text_duplicates",
+  "development_sha256": "b3a87b9b80d531e579634a64aca6239f58c640e851cbd8ac3ce849a2961d1f59",
+  "holdout_sha256": "be7a8e71e0f004761f21910be684a4f24a2e1a1c1f7e5ae4bf2899c783812b82",
+  "retry_policy": {
+    "transport_failures": true,
+    "unusable_outputs": false
+  },
+  "prompts": {
+    "direct": "35bf0b7baa943015",
+    "reason": "5f6943bce8ab29b6"
+  },
+  "gen": {
+    "temperature": 0.0,
+    "seed": 0,
+    "max_tokens": {
+      "direct": 16,
+      "reason": 512
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "created_utc": "2026-11-04T09:14:09.700837+00:00",
+  "protocol_sha256": "2931a624b1ce970ce15ce2a6d4205b3992aa42606fc4d972fb5a3db38b042f61",
+  "study": "completed_E1_E2_E3_E4",
+  "real_items": 20480,
+  "datasets": 6,
+  "real_panels": 7,
+  "evaluation_records": {
+    "E1": 12600,
+    "E2_E3": 26600,
+    "E4": 3000
+  },
+  "records_are_independent": false,
+  "frozen_file_hash_checks": 19,
+  "new_unit_integration_tests": 33,
+  "original_source_unittest_tests": 12,
+  "verification_harness_tests": 7,
+  "main_verification_assertions": 305547,
+  "large_pool_verification_assertions": 60005,
+  "accepted_study_groups_audited": 55,
+  "numerical_edge_affected_acceptances": 0,
+  "E5": "not_run",
+  "note": "Code and source inputs remain frozen. Report and README are subsequent interpretation artifacts. Intermediate quick verification reports and interpreter caches are excluded.",
+  "workstation_reproduction": {
+    "status": "accepted_complete",
+    "date_utc": "2026-11-04T09:14:09.597339+00:00",
+    "receipt": "verification/workstation_20261104/acceptance.json",
+    "main_verification_assertions": 305547,
+    "large_pool_verification_assertions": 60005,
+    "verification_failures": 0,
+    "study_evaluation_records_matched": 42200,
+    "authoritative_analysis_csvs_byte_identical": 8,
+    "no_additional_rerun_required": true
+  }
+}

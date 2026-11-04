@@ -1,0 +1,47 @@
+test_recovery_and_explicit_resampling (test_annotation_resume.ResumeTests.test_recovery_and_explicit_resampling) ... src_a_direct: 1 to query (0 cached)
+  src_a_direct: accuracy on valid nan; status {'failed': 1}
+src_a_reason: 1 to query (0 cached)
+  src_a_reason: accuracy on valid nan; status {'failed': 1}
+saved /tmp/tmp64fad7jw/labels.csv
+src_a_direct: 1 to query (0 cached)
+  src_a_direct: accuracy on valid 1.000; status {'ok': 1}
+src_a_reason: 1 to query (0 cached)
+  src_a_reason: accuracy on valid 1.000; status {'ok': 1}
+saved /tmp/tmp64fad7jw/labels.csv
+src_a_direct: 0 to query (1 cached)
+  src_a_direct: accuracy on valid 1.000; status {'ok': 1}
+src_a_reason: 0 to query (1 cached)
+  src_a_reason: accuracy on valid 1.000; status {'ok': 1}
+saved /tmp/tmp64fad7jw/labels.csv
+src_a_direct: 1 to query (0 cached)
+  src_a_direct: accuracy on valid nan; status {'invalid': 1}
+src_a_reason: 1 to query (0 cached)
+  src_a_reason: accuracy on valid nan; status {'invalid': 1}
+saved /tmp/tmp64fad7jw/invalid.csv
+src_a_direct: 0 to query (1 cached)
+  src_a_direct: accuracy on valid nan; status {'invalid': 1}
+src_a_reason: 0 to query (1 cached)
+  src_a_reason: accuracy on valid nan; status {'invalid': 1}
+saved /tmp/tmp64fad7jw/invalid.csv
+src_a_direct: 1 to query (0 cached)
+  src_a_direct: accuracy on valid 1.000; status {'ok': 1}
+src_a_reason: 1 to query (0 cached)
+  src_a_reason: accuracy on valid 1.000; status {'ok': 1}
+ok
+test_export_replays_and_original_arms_are_unchanged (test_certificate_export.CertificateTests.test_export_replays_and_original_arms_are_unchanged) ... ok
+test_high_rejection_cannot_jump_over_unrejected_null (test_cs_regressions.GridInversionTests.test_high_rejection_cannot_jump_over_unrejected_null) ... ok
+test_no_rejections_gives_zero_bound (test_cs_regressions.GridInversionTests.test_no_rejections_gives_zero_bound) ... ok
+test_rejections_are_sticky_even_if_capital_falls (test_cs_regressions.GridInversionTests.test_rejections_are_sticky_even_if_capital_falls) ... ok
+test_remainder_bound_subtracts_observed_gain (test_cs_regressions.GridInversionTests.test_remainder_bound_subtracts_observed_gain) ... ok
+test_changed_deployment_rejected (test_deployment.DeploymentTests.test_changed_deployment_rejected) ... ok
+test_mutable_revision_and_stopped_container_rejected (test_deployment.DeploymentTests.test_mutable_revision_and_stopped_container_rejected) ... ok
+test_new_verified_instance_preserves_config_fingerprint (test_deployment.DeploymentTests.test_new_verified_instance_preserves_config_fingerprint) ... ok
+test_records_actual_config_without_environment (test_deployment.DeploymentTests.test_records_actual_config_without_environment) ... ok
+test_requested_settings_must_match (test_deployment.DeploymentTests.test_requested_settings_must_match) ... ok
+test_overlapping_group_excludes_previously_revealed_item (test_repair_population.RepairPopulationTests.test_overlapping_group_excludes_previously_revealed_item) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 5.478s
+
+OK
+saved /tmp/tmp64fad7jw/invalid.csv

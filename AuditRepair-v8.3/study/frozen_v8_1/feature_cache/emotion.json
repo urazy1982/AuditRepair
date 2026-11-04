@@ -1,0 +1,13 @@
+{
+  "pool": "emotion",
+  "protocol_sha256": "2931a624b1ce970ce15ce2a6d4205b3992aa42606fc4d972fb5a3db38b042f61",
+  "code_sha256": "a3961faca0ee61aa4a3f5af3882827636321c562b0d83f55836b3f279d527f73",
+  "features_sha256": "8afdfdfd5b864c8f62d109fb5c8b6b4b609010292e9b5d042c5aa9d4a42002bf",
+  "neighbors_sha256": "8f4a8bf1b93c3c1256291d9f8ca13ae5fb3ab5bdebacd55dcec7ad0374755f62",
+  "cache_sha256": "9d6eb3925b16520f8ed5dcfd469f99e9557da5d7692d24a1cd151c8127286bd2",
+  "n": 2000,
+  "dimensions": 128,
+  "neighbor_count": 15,
+  "wall_seconds": 0.581265250999877,
+  "created_utc": "2026-11-04T06:16:37.317556+00:00"
+}

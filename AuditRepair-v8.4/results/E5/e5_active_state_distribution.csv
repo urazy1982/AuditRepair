@@ -1,0 +1,11 @@
+pool,generator,score,accepted_seed_count,pairs,mean_joint,median_joint,min_joint,max_joint,nonzero_joint
+ag_news_5000,G0_uniform,S0,8,80,0.0,0.0,0,0,0
+ag_news_5000,G0_uniform,S1,8,80,21.7125,4.5,-156,492,80
+ag_news_5000,G1,S0,12,120,-0.016666666666666666,0.0,-1,0,2
+ag_news_5000,G1,S1,12,120,-40.108333333333334,14.0,-749,465,114
+ag_news_5000,G2,S0,2,20,0.0,0.0,0,0,0
+ag_news_5000,G2,S1,2,20,-15.75,24.0,-271,48,20
+ag_news_holdout,G1,S0,8,80,0.0,0.0,0,0,0
+ag_news_holdout,G1,S1,8,80,-49.925,0.0,-547,293,70
+ag_news_holdout,G2,S0,1,10,0.0,0.0,0,0,0
+ag_news_holdout,G2,S1,1,10,3.6,4.0,-14,12,10

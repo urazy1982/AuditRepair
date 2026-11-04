@@ -1,0 +1,18 @@
+# Keep source, all *committed* reference results, and validation evidence tracked.
+# Fresh local reproductions and compiled intermediates are not part of the release.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.DS_Store
+.reproduction_work/
+reproductions/
+local_runs/
+*.log.tmp
+*.toc
+*.run.xml
+*.bcf
+# Intentionally do NOT ignore study/results, study/frozen_v8_1/results,
+# validation/, or historical/; those are required evidence.

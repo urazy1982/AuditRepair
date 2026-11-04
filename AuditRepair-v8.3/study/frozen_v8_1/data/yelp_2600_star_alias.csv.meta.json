@@ -1,0 +1,111 @@
+{
+  "dataset": "Yelp/yelp_review_full",
+  "revision": "c1f9ee939b7d05667af864ee1cb066393154bf85",
+  "split": "test",
+  "n": 2600,
+  "shuffle_seed": 20261108,
+  "classes": [
+    "1 star",
+    "2 star",
+    "3 stars",
+    "4 stars",
+    "5 stars"
+  ],
+  "deployments": {
+    "a": {
+      "url": "http://localhost:8000/v1",
+      "model": "Qwen/Qwen2.5-7B-Instruct-AWQ",
+      "fingerprint": "deployment=ae1eb9dab456f49bb8680c3c5762f0cf87f295773b630c32ebe03504293058be,rev=b25037543e9394b818fdfca67ab2a00ecc7dd641,quant=awq,maxlen=4096",
+      "server": {
+        "id": "Qwen/Qwen2.5-7B-Instruct-AWQ",
+        "root": "Qwen/Qwen2.5-7B-Instruct-AWQ",
+        "max_model_len": 4096,
+        "owned_by": "vllm"
+      }
+    },
+    "b": {
+      "url": "http://localhost:8001/v1",
+      "model": "hugging-quants/Meta-Llama-3.1-8B-Instruct-AWQ-INT4",
+      "fingerprint": "deployment=57460e190105f83c06e7305743806d8e66b50d065efcb17aa729c6c253a88976,rev=db1f81ad4b8c7e39777509fac66c652eb0a52f91,quant=awq,maxlen=4096",
+      "server": {
+        "id": "hugging-quants/Meta-Llama-3.1-8B-Instruct-AWQ-INT4",
+        "root": "hugging-quants/Meta-Llama-3.1-8B-Instruct-AWQ-INT4",
+        "max_model_len": 4096,
+        "owned_by": "vllm"
+      }
+    }
+  },
+  "selection_rule": "first_2600_unique_prompt_texts_after_fixed_test_shuffle",
+  "development_sha256": "b3a87b9b80d531e579634a64aca6239f58c640e851cbd8ac3ce849a2961d1f59",
+  "replication_sha256": "d892551dbeba09bbe7377a45370c6f90a166c94e4c5ef7a3aeab799dfabe7e83",
+  "retry_policy": {
+    "transport_failures": true,
+    "unusable_outputs": false
+  },
+  "prompts": {
+    "direct": "35bf0b7baa943015",
+    "reason": "5f6943bce8ab29b6"
+  },
+  "gen": {
+    "temperature": 0.0,
+    "seed": 0,
+    "max_tokens": {
+      "direct": 16,
+      "reason": 512
+    }
+  },
+  "parser_sensitivity": {
+    "rule": "posthoc_star_spelling_alias_v1",
+    "strict_csv_sha256": "836a83864fa9d0544eaa58daf39e0d5721aa2ffc8dd9f81840e4ffe901c3fe00",
+    "cache_sha256": "aabcfda3ce369fb1061173f71c020e474f2ef5d47689de55f83e6d17746cb5ac",
+    "sources": {
+      "src_a_direct": {
+        "strict": {
+          "ok": 2575,
+          "invalid": 25
+        },
+        "reparsed": {
+          "ok": 2599,
+          "invalid": 1
+        },
+        "recovered": 24,
+        "unusable_share": 0.0003846153846153846
+      },
+      "src_a_reason": {
+        "strict": {
+          "ok": 2052,
+          "invalid": 548
+        },
+        "reparsed": {
+          "ok": 2564,
+          "invalid": 36
+        },
+        "recovered": 512,
+        "unusable_share": 0.013846153846153847
+      },
+      "src_b_direct": {
+        "strict": {
+          "ok": 2506,
+          "invalid": 94
+        },
+        "reparsed": {
+          "ok": 2600
+        },
+        "recovered": 94,
+        "unusable_share": 0.0
+      },
+      "src_b_reason": {
+        "strict": {
+          "ok": 2196,
+          "invalid": 404
+        },
+        "reparsed": {
+          "ok": 2599,
+          "invalid": 1
+        },
+        "recovered": 403,
+        "unusable_share": 0.0003846153846153846
+      }
+    }
+  }
+}

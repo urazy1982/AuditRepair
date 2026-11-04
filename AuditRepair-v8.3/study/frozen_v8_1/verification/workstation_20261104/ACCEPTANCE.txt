@@ -1,0 +1,113 @@
+AUDIT / REPAIR / ABSTAIN v8.1 — WORKSTATION REPRODUCTION ACCEPTANCE
+Date: 4 November 2026
+
+DECISION
+
+The completed E1–E4 study rerun and the separate WSL implementation-verification
+rerun are accepted within their stated scope. No further routine experiment or
+verification run is needed to close this computational stage.
+
+VERIFICATION UPLOAD
+
+The supplied verification_wsl.zip contains the final main report, the larger-pool
+report and the workstation environment record. The original three files are
+preserved byte-for-byte beside this note.
+
+Main verification:
+- Status: passed_under_tested_conditions.
+- 305,547 assertions; zero failed assertions or retained failures.
+- All eight sections completed; full profile, seed 20261104.
+- 164 distinct ternary populations with N <= 8, 492 population/alpha cases,
+  9,840 distinct full orders, 14,748 prefixes and 1,814,004 rational capital
+  comparisons. The reference grid has 41 points; production coverage uses 401.
+- 4,000 without-replacement trajectories, 3,000 full-search runs and 40,000 PAC
+  repetitions across four fixed 240-item inputs.
+- Main Monte Carlo settings: epsilon 0.03, alpha_final 0.10, m 500;
+  alpha_repair 0.05. The separately labelled 18-case exact manual PAC oracle
+  intentionally uses epsilon=alpha=0.20 to exercise short-path branches.
+- Recorded WSL elapsed time: 153.984 seconds.
+
+Larger-pool verification:
+- Status: passed_under_tested_conditions.
+- 60,005 assertions; zero failed assertions or retained failures.
+- Two frozen 5,000-item inputs, 10,000 PAC repetitions each; seed 20261106.
+- epsilon 0.03, alpha_final 0.10, m 500, exactly matching the reference check.
+- Each fixture has 60 final-error events in 10,000 repetitions (0.6%). Its
+  individual one-sided 95% upper probability bound is 0.007433605812518839
+  (0.7434%), below the final-error failure budget of 10%.
+- Mean unique expert costs are 2823.1308 and 4984.6193. The second, misranked
+  fixture starts with 400 truthful owned labels and saves at least one label
+  in only 89 of 10,000 repetitions.
+- Recorded WSL elapsed time: 73.211 seconds.
+
+Total: 365,552 assertions and zero failures. These counts are implementation
+checks; they are not independent scientific observations.
+
+COMPARISON WITH THE REFERENCE PACKAGE
+
+Two separate comparisons examined the complete JSON structures, including
+the exhaustive population tables, every probability estimate and bound, fixture
+hashes, warnings, limitations and settings. After normalizing the package-path
+prefix, the main report differs only in the Python build string and elapsed-time
+fields. The larger-pool report differs only in elapsed time. All detailed numeric
+results are identical.
+
+All five unique referenced files match their reported SHA-256 values and the
+reference package: audit_repair/core.py, audit_repair/pac.py, the historical runner
+reference, verify_guarantees.py and verify_large_pool_pac.py. The main script's
+separate script hash also matches. The report records source_files_unchanged=true.
+
+The environment record reports WSL2, Python 3.12.3 (GCC 13.3.0), NumPy 2.3.5,
+pandas 2.2.3, SciPy 1.17.0 and scikit-learn 1.8.0. These four package versions
+match the project pins. The reference used Python 3.12.14; the patch/build
+difference did not change any recorded verification result.
+
+STUDY RERUN ALREADY ACCEPTED
+
+The earlier rerun.zip supplied all 320 full-scope checkpoints and 42,200 study
+evaluation records: E1 12,600; E2/E3 26,600; E4 3,000. Every recorded consequential
+cost/error/decision outcome matches the reference. All eight authoritative
+analysis CSVs are byte-identical to the reference and to an independent
+recomputation from the uploaded checkpoints.
+
+The study artifacts are not universally bitwise identical: complete score-array
+hashes can differ, and recorded thresholds differ by up to approximately
+9.8e-14. The complete score vectors are not available in the rerun archive, so
+their differences cannot be bounded from hashes alone. Timestamps and elapsed
+times also differ. This is successful outcome reproduction on the same finite
+panels and seeds, not a new independent annotation sample.
+
+EXISTING NUMERICAL AND STATISTICAL LIMITS
+
+The WSL main report reproduces 28 synthetic cases where a tiny positive floating
+margin corresponds to a zero nominal-grid remainder margin. This is the same
+known edge case as in the reference run. A separate completed audit examined all
+55 accepted study groups and found none affected under the audited nominal and
+represented-grid arithmetic; see ../numerical_acceptance_audit.json and the
+accompanying note. The current upload does not rerun that distinct study audit.
+The frozen implementation remains unchanged; the conservative arithmetic guard
+is a documented recommendation for a future version.
+
+The two existing warnings are unchanged: bisection is invalid for general
+nonmonotone rejection sets, and static seed-wiring inspection is not a proof of
+independence for arbitrary callers or future score-training code. Verification
+does not replace a proof of the general statistical guarantees. Its simulation
+intervals are individual, not simultaneous, and cover the declared fixed inputs.
+Repeating the same seeds on WSL adds portability evidence, not new independent
+simulation samples. The final-error target remains 90%; the conjunction with the
+95% repair-stage target has an at-least-85% union-bound guarantee, subject to the
+respective assumptions.
+
+RESULT FILES
+
+Use analysis/ for the real-pool effects and intervals and results/E4/ for the
+authoritative synthetic intervals. No new annotations or efficacy experiments
+were launched during this acceptance check.
+
+EVIDENCE IN THIS DIRECTORY
+
+verification_report.json; large_pool_pac_report.json;
+workstation_environment.json; independent_verification_comparison.json;
+study_rerun_comparison.json; study_analysis_recomputation_check.json;
+acceptance.json. Reference reports remain one directory above. The machine-
+readable receipt records the uploaded archive and evidence-file checksums.

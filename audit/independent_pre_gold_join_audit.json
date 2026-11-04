@@ -1,0 +1,108 @@
+{
+  "quality": {
+    "ag_news_5000_qwen": {
+      "count": 5000,
+      "unusable": 21,
+      "rate": 0.0042,
+      "style_counts": {
+        "direct": 2500,
+        "reason": 2500
+      },
+      "version": "original"
+    },
+    "ag_news_5000_llama": {
+      "count": 5000,
+      "unusable": 11,
+      "rate": 0.0022,
+      "style_counts": {
+        "reason": 2500,
+        "direct": 2500
+      },
+      "version": "original"
+    },
+    "ag_news_5000_mistral": {
+      "count": 5000,
+      "unusable": 0,
+      "rate": 0.0,
+      "style_counts": {
+        "direct": 2500,
+        "reason": 2500
+      },
+      "version": "RC2"
+    },
+    "ag_news_5000_phi": {
+      "count": 5000,
+      "unusable": 0,
+      "rate": 0.0,
+      "style_counts": {
+        "reason": 2500,
+        "direct": 2500
+      },
+      "version": "RC2"
+    },
+    "ag_news_holdout_qwen": {
+      "count": 2600,
+      "unusable": 7,
+      "rate": 0.002692307692307692,
+      "style_counts": {
+        "direct": 1300,
+        "reason": 1300
+      },
+      "version": "original"
+    },
+    "ag_news_holdout_llama": {
+      "count": 2600,
+      "unusable": 7,
+      "rate": 0.002692307692307692,
+      "style_counts": {
+        "reason": 1300,
+        "direct": 1300
+      },
+      "version": "original"
+    },
+    "ag_news_holdout_mistral": {
+      "count": 2600,
+      "unusable": 0,
+      "rate": 0.0,
+      "style_counts": {
+        "direct": 1300,
+        "reason": 1300
+      },
+      "version": "RC2"
+    },
+    "ag_news_holdout_phi": {
+      "count": 2600,
+      "unusable": 0,
+      "rate": 0.0,
+      "style_counts": {
+        "reason": 1300,
+        "direct": 1300
+      },
+      "version": "RC2"
+    }
+  },
+  "rows": {
+    "ag_news_5000": {
+      "count": 5000,
+      "gold_exact": true,
+      "text_exact": true
+    },
+    "ag_news_holdout": {
+      "count": 2600,
+      "gold_exact": true,
+      "text_exact": true
+    }
+  },
+  "sources": {
+    "ag_news_5000": {
+      "old_df_sha256": "b3a87b9b80d531e579634a64aca6239f58c640e851cbd8ac3ce849a2961d1f59",
+      "new_df_sha256": "656f1cb831d1c45239759f6cb89b8da876de73e39ebfa1af6a8d6412a2a08cf6"
+    },
+    "ag_news_holdout": {
+      "old_df_sha256": "be7a8e71e0f004761f21910be684a4f24a2e1a1c1f7e5ae4bf2899c783812b82",
+      "new_df_sha256": "76634fd5fc5e9085d0915941ed736b1ad6338f0ef44b9236d62c2a3e5a4f955e"
+    }
+  },
+  "status": "passed",
+  "conclusion": "All original and RC2 request/response hashes match; labels, text and gold reproduced from frozen input; all eight 5% gates passed."
+}

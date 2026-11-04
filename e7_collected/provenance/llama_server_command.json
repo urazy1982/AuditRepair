@@ -1,0 +1,1 @@
+["--model","hugging-quants/Meta-Llama-3.1-8B-Instruct-AWQ-INT4","--revision","db1f81ad4b8c7e39777509fac66c652eb0a52f91","--tokenizer-revision","db1f81ad4b8c7e39777509fac66c652eb0a52f91","--served-model-name","hugging-quants/Meta-Llama-3.1-8B-Instruct-AWQ-INT4","--host","0.0.0.0","--port","8000","--max-model-len","4096","--gpu-memory-utilization","0.82","--max-num-seqs","8"]

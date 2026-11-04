@@ -1,0 +1,1640 @@
+{
+  "created_utc": "2026-11-04T08:44:37.868117+00:00",
+  "protocol_sha256": "2931a624b1ce970ce15ce2a6d4205b3992aa42606fc4d972fb5a3db38b042f61",
+  "analysis_code_sha256": "c33d0c93b9e5dabc225b5df1c4d9ab612775da796625248adc13d9ed0b2fe018",
+  "status": "complete_and_integrity_checked",
+  "rows": {
+    "E1": 12600,
+    "E2_E3": 26600,
+    "E4": 3000
+  },
+  "real_pool_items": 20480,
+  "checks": {
+    "all_expected_cells": true,
+    "current_code_hashes_match": true,
+    "unique_cost_partition": true,
+    "paired_calibration_hashes": true,
+    "PAC_only_identical_across_real_experiments": true,
+    "O0_identity": true,
+    "O5_cost_floor": true
+  },
+  "bootstrap": "4000 resamples of20 paired preprocessing seed means; one shared matrix per pool across all arms and contrasts; pointwise intervals, not simultaneous winner intervals.",
+  "bootstrap_matrix_sha256": {
+    "ag_news_5000": "50eeb80f25b6458e197b331c81ef83b6a5c51baf3e53c21ebce4641b49b0da9a",
+    "ag_news_holdout": "ba9bed976107a844ff10406d2e99a77d547ae4f18e450cc17769d3534c57523b",
+    "yelp_2600_star_alias": "7a6c37bd2364168d95b183182acebe50e0622812487780cdecd78eae4eaa339e",
+    "dbpedia": "4fa7b631f5a4f21b231006e66c61b255d1fe3c1a6f3593da3bca0dbe71e88882",
+    "emotion": "cb6c6a93b7a5f26861e0256d5375b7fc0803de0c9d08b6d8751e80d8187bac53",
+    "imdb": "57ffa3dc560820bd0173da76e7c9a20df14046b2e1b745fece2981525c64c469",
+    "banking77": "49c1c2174df5941672c0379b61e443e1eaf774a64813cd25a92f8cf00a980289"
+  },
+  "source_checkpoints": {
+    "E1": [
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_00.json",
+        "sha256": "ade9dec8350342fd5c4dd143cdc9b0cbdb98c3d6dbe64d60551571d3ae1e4d95",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_01.json",
+        "sha256": "28f90a6bf3e75682aeff27555fce6153ed74ec9cdef7765988c1f6fc98eeff65",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_02.json",
+        "sha256": "675bd846b176b426697df77ba73d05030a412b91409a77e9c168a3c523afc310",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_03.json",
+        "sha256": "782895d7446c5e52d316d8fc751d9db85d534278dedf4cf0292b69842038e441",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_04.json",
+        "sha256": "aaf65f4419ba28f0c65cdc3f96f898f0203e0b8c3ff9abf31afa5cbe495d0776",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_05.json",
+        "sha256": "ae35616b4a5c010f47af0d8b950b4c6a596b2cf2911be1c33143c95855231f83",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_06.json",
+        "sha256": "f094aa78d76aa5135711ff3a8b9b5802bd3439c73378b5d1f1b9e61958f315a1",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_07.json",
+        "sha256": "d5035e310ec67895a7cebabbba87f916f33e7f90b5484a30151dd39f00ed0e83",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_08.json",
+        "sha256": "4d25db3ba4eb10d503d1479e5894f108614d4852e43ba632dc6b3254b315f905",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_09.json",
+        "sha256": "696dcef476e3813a0cc06e0006a715c94696a49de952356f99a3e095617f9ea9",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_10.json",
+        "sha256": "6c0f582cb2b9af76916f6aeaeaafcc8e2e76322b571496ab69e4ef982f51823b",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_11.json",
+        "sha256": "6aa68b0fcacd91f89c33de33fcbfcaf92e0498774bb67af5040f95d3bc06cb45",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_12.json",
+        "sha256": "7008204be0ef34fd34a14ba842f5b82730e1f82ff40cca4ff8a560a83b5fceb0",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_13.json",
+        "sha256": "e870911ab8dca04103fa2b08d21d68e37ed8ffbcfa8b9906488f9e48cb13aa08",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_14.json",
+        "sha256": "fa5472f553b948231a5177ec0964703015331434fccec21ebb1929996d9120bb",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_15.json",
+        "sha256": "8f959b3fe046c1e7055b06e435403671e7107c90d6072800a61a497c64f9553d",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_16.json",
+        "sha256": "e305d604218b5924799d480585ce720196b6aa73e8705306ae814d62ecdf30a0",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_17.json",
+        "sha256": "072c3a32c0d5bfeac12b23e29e2d795c78672e649c5811cd18f141e59e687a8f",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_18.json",
+        "sha256": "4453355b02f8d22925f0408ad4b95d121ee2637cd7e81f3cce9d3e68668084d0",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_19.json",
+        "sha256": "ffb0b28e050f73331283776fb31d63d391ff63a2dd982afc274540e894dcd54c",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_00.json",
+        "sha256": "9db408f648caf911c5b0bab78ce72c39ec4386cdcccab1f0599fda4ff4c07d64",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_01.json",
+        "sha256": "3d5400ebce0edced36098f9558b427c62e73795c5ca19de0f07d7d25b26f8533",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_02.json",
+        "sha256": "692aa37c00a221c8733d4542173c28da0c169d393b0982ce09d6cd41dc70c2ff",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_03.json",
+        "sha256": "62c60490205fcee8311836961b58eb1fa8535bb1929898047daf537f38687a53",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_04.json",
+        "sha256": "b933974c02ab8e83947fd0dcc7db546d4939a3aa4437857940f09aab8f58f549",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_05.json",
+        "sha256": "d814fa91f2bd8672c8f1a22b3826a8f460319ff02f1386568728fdaf17922bb5",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_06.json",
+        "sha256": "450bb52dd14849b07be52b6d84ac7ee95e49619c71b17009b1fa7e77a663b31f",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_07.json",
+        "sha256": "b69ae33678769069eaf3b0f7aa7dbd84975ffee56e7602574fbdbc22656daf6c",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_08.json",
+        "sha256": "8ee1ac53b2518faa1dc138d726814c5c67a5417772769e1e232c8b6623e8f31b",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_09.json",
+        "sha256": "fe5a0007f8ccad2f974d866b311841848c22beb84e7ca17149d9176629f29716",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_10.json",
+        "sha256": "5d53f62914fa634977eab35b7a03bba83c20dc8759d18ba5ceb29753ae031a5f",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_11.json",
+        "sha256": "478fefa9f9ac298fb264455072c660e7ac36d621458498c2d75bf22fe0d032e8",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_12.json",
+        "sha256": "8e6c7816e5529f2b80f535593b5aaa4100a62a4fc2ddfc6d9abcf1de1050838c",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_13.json",
+        "sha256": "8a24a9a201dec0f33e6624b70645d90a3dba9781692e8f48cb565bce900627a8",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_14.json",
+        "sha256": "35ace9e936a7753c7cad260bb717c4b9da01eb5c3e1a307d2cec0c7bab198a76",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_15.json",
+        "sha256": "63fd9aa5a32e357e15c58ce03bcc33f8a6f4afc3fafe8329801f299a65ee7110",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_16.json",
+        "sha256": "049ad306ccc6581df981b239059dd4215657780b9976103a3278850d51d353ea",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_17.json",
+        "sha256": "bc615fa359163233be4d14075fd443743bce934277772999cd2d64909fd2bd90",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_18.json",
+        "sha256": "aa4a4f80a3be94711919dfa3afcb51f5fbeb6a71a8e56bf7d63115bee7f192d5",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_19.json",
+        "sha256": "eeaab9b8488fb3b797c6c2c44c9c9d7f9999005dbc2bc0e9dfa208c442cc75cf",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_00.json",
+        "sha256": "21c29286a158d98fdec41fe71d199b5c9e07b4c549355a8f939a468829f75974",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_01.json",
+        "sha256": "ac0cdeb6de382c3f09fbf6b1ba3bc331e31bf3ad70744517391954de06d36fad",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_02.json",
+        "sha256": "2a6f549a1c25b36dfbe34a66b30f92bf9c88c3fd22c3276c523973c2f54e0ae5",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_03.json",
+        "sha256": "e3b9c57abfc30b630e7d47037763ad61b783fb7191c57ad8eb80ac6160eaaf59",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_04.json",
+        "sha256": "c1e72ccc175ea05b375789c8acf3ebc7ce4f6acf245dd4e8fa90b89e960a1120",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_05.json",
+        "sha256": "9209462bab31d1f9287b90b234abbb5fa69b392738a098f52df6ca63ff5bdf07",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_06.json",
+        "sha256": "a5108599422bf269564c8632026a7a6f52c9c6fd1b7d9b9c61e76ab6a55f31c0",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_07.json",
+        "sha256": "38cd26dd0685e65af006b5204af3072f7646383f03b82bb29b014886bfabc697",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_08.json",
+        "sha256": "a4d9a74a3d0daf4bbde77506346a70f20fc4957d79fc3d3f2f6f563d0e702cde",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_09.json",
+        "sha256": "64536b5633e4dd25020b1ea0d0aa22181ff5107f7a503195c2b46a2132014728",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_10.json",
+        "sha256": "7201948580a7b6d288e30459e5af946bda6f6d19e5052e268613f1574b625a7e",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_11.json",
+        "sha256": "a31756f32044d07ce3d8fd3faa3696c3d0c77c903015c4121853d6336b7d2839",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_12.json",
+        "sha256": "0b7969f469c8d30cfff0e4ed5624bdbafb6e71e3da75f81395c1d87016fd1a6c",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_13.json",
+        "sha256": "287617cdd4f7d5de6bed16970c9853cda8baf6777aed47c0f309256659032064",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_14.json",
+        "sha256": "34256894f18ee0b32bab884dd4604d5981e7855c42732dcaae320d4352b98b29",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_15.json",
+        "sha256": "1a35b2d1e2e82ff7a530293ffe4c7cff502b9077f2de4602f9a3ac1e682f5242",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_16.json",
+        "sha256": "5dcd74c80d5ef7a866b74fd02b3fc550a1a1a9fd9751c1e03950d136358a888d",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_17.json",
+        "sha256": "d81b59a448e7bf8e10f6a68c03a617a8c733ff1172396efb68b1a0dee00fe9cb",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_18.json",
+        "sha256": "5b9379779b5a518792d68b3a8c7cfd0224309c6e245cc93157ad190cf6f05dd2",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_19.json",
+        "sha256": "54c77044613e781e8c6019b3856270ad14042810cc43fd7d9fcbfb326d2b2fe5",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_00.json",
+        "sha256": "73a8526ec22d5d3878d6f64d477ef056c3ca860aa11e2e16803fa09367e4e919",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_01.json",
+        "sha256": "c1c688822caf6dfb5f1e5ed9b2346edabe7d3e9d77157c0a0a604fb3b27895cd",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_02.json",
+        "sha256": "95b1201a59b2930d67390c85752f257973c30a23e88d83c8814db9101bf6c3d7",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_03.json",
+        "sha256": "b7cfbc892caeb4baac4ef3434ded104af99f1b795f01bec97f6573b0d8a51299",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_04.json",
+        "sha256": "70e631550b0033b1b60fb32b1c537108508d561b0399616ebe308143a20ffd3b",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_05.json",
+        "sha256": "dd0e3a6613b1aa70335ff53780b3a87cb0f35061b461f8856edf92a35f8e3e11",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_06.json",
+        "sha256": "591f3769f508726d135e804c0eb3dae57660f942c23ff38bca805cbf0852e9bf",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_07.json",
+        "sha256": "94898d4a1103a055f1e1af18849da5b00a418ac715650022523f71a9a907ad16",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_08.json",
+        "sha256": "5f5b8b8e3d47002172839debade7e0e1f97f6af3c14fd0fa4491f26f8f15e217",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_09.json",
+        "sha256": "6754533c633858ab79a1f7a254716fec8d710723e6379fdaf40fcc833574282e",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_10.json",
+        "sha256": "d8982d1a2a882e8924ea2193e40fc81192aebcdb1d34f8c779a44fbac1e64850",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_11.json",
+        "sha256": "f9fc2903c918f5ee9eccb9d4f746976c7ee58a09383b9db6b8fd0abaea27393c",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_12.json",
+        "sha256": "f29c169178c8848daaabb08bc325dc14dc3c8e0de70c58090693ae587ddecd0a",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_13.json",
+        "sha256": "d00eb14751927bfbf8c58f984924790c55866843a4a24a116496fc4c1e9511ab",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_14.json",
+        "sha256": "88f4f313cc6991b84f3eb4bdf6456ed2285caef66c6334239215c4b5bf577ba9",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_15.json",
+        "sha256": "a6988c50c78b1bbfec3ee7368197ed3065e55a9f58d81898236aecbf5c8cf4ad",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_16.json",
+        "sha256": "627af04f5c3791972aef64684328ec8c0cd117211b58ce8f22fd6cb029cc6d2b",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_17.json",
+        "sha256": "de320a2e21582550d72a3c60c28303fc1ab31c9695c09b5e7ee94ac780b855fc",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_18.json",
+        "sha256": "52ef0d50dffe9f60ce9b5b4d5708ce466d0cf448ad22b79d5d97d99368f6a868",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_19.json",
+        "sha256": "c26f45d6e84a6051c1ddb6355fd32dbeafce34566c6b3c53e2e055ac2f88787e",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_00.json",
+        "sha256": "b05bd73ef10b54317969f1f0107edbbe46f4ebfca1ddd8b3cae8ab4eb20db371",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_01.json",
+        "sha256": "a5650ca1590843e152730bf6568a411a82b11107f89b5f6ec5ac817f575d2270",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_02.json",
+        "sha256": "7878107c1faffda4a83c1fbe2c84f51ad1c8731148cfedf5dce5a8810bbbfa5b",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_03.json",
+        "sha256": "49dfcd6f626fe577056ff7db1147dd4521eb3cd66dfadcfe3107804f5d01710e",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_04.json",
+        "sha256": "8a43da7f5139464c3e35769c24cac8750275844b2fc56245cbf6ba2fac7369b7",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_05.json",
+        "sha256": "03b22dcf998f3c94ae87d89a12ca2086ca3b91fb42cbc363ac2123637d470efa",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_06.json",
+        "sha256": "cf90f9daa589aff9ff9459c57f0d71c541897d265ef450757a9b61bf58ad6ae4",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_07.json",
+        "sha256": "0c5880922387d64786e7ae06e7092a66eec63cd4aa8c2e28e24cfc3ed0a35b97",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_08.json",
+        "sha256": "72fedeb0a80d573cfe6de3a4cfc8cd745173dc40fa7c6ea3a34947f426884c65",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_09.json",
+        "sha256": "cad60c530644dca56272bcdea480de736ec4719f63dbaf82c9c2f19e647bfee3",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_10.json",
+        "sha256": "5ef1516fd088682473c5f0f544fd1e960802660d286a1280245acf38a90a482c",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_11.json",
+        "sha256": "0bc2abaaa880228a18ebd18598055109c05358d47cc8f93aa81c8db3f68b68ec",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_12.json",
+        "sha256": "10d4dda0c93f6f1429d4e7ea2dc55b07bfb5bc4e0a7da52385733a6775d0ab47",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_13.json",
+        "sha256": "ee48af66b65bd8326c4cd5e0cda946e913fd0a9b487b4711339d7141adf3a6cf",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_14.json",
+        "sha256": "f5e03626a3ff0e5c54b84f575095072f5cce25e65c65fff6763cfec5dff1ebb9",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_15.json",
+        "sha256": "09cad1e32234c9123221564b1b9ba364f8fa1ea29580cb41658e80d7b418d92d",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_16.json",
+        "sha256": "16c6c7a699f0624cf1defb3465afd2d7d8875e609df03e43ec46dedbb60dc203",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_17.json",
+        "sha256": "1c712c79114e21ba5a1389f824e26836d1d5157cd86a4b61a7409d6ee9a1428d",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_18.json",
+        "sha256": "9d0a2b677ad0c53bbe37d7b92ca8e3b471bc954c3029c4bef8b1dc60bc30f1e0",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_19.json",
+        "sha256": "10b60780d5f4c87f8322b09835ccd097afdc1bbf1d5bf212251dac3907c76477",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_00.json",
+        "sha256": "85b077b682db8f2bbcde10efc6cbd090a7166c37db66bb21ba83f3f1d5d7758a",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_01.json",
+        "sha256": "97e1326b98997581bbf170d87cfd2f5815b30de998a62dc2bc8cbba8f2b40216",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_02.json",
+        "sha256": "2127883a996533b24e1e3a4ab65ae343cfee654cf9617f82408008bc99e42cce",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_03.json",
+        "sha256": "0c8494ecaa15e9903433a66d8648a091f173acf612479f1d77ebbe6351ae8782",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_04.json",
+        "sha256": "76710cc3c744f488d3c5bbddee93fca115b6ae4b695e6d56b7a64f3f0ccb86b8",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_05.json",
+        "sha256": "8dec183d9fc68a1e106a00e290078075d2ebf2f09b528debe37bb9034c7ab569",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_06.json",
+        "sha256": "9e5415c9b57bd81fb71bf733459459e7822ef8621fc10ab4acb22c381545fc5a",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_07.json",
+        "sha256": "6408ffc7b6cdf68fb0c35c1501f22d1ea12f0feb170bd3eadba64ad95855a66e",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_08.json",
+        "sha256": "7a3b95e002504d531fbcdbbbf6546f143e168e86c26588e78d37aaf0ff4012eb",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_09.json",
+        "sha256": "bb161e3b7b4a2759c5d3d8b08d95461b228d84a57ddf71f90244f5c591d150f9",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_10.json",
+        "sha256": "48fcef54523bfa84a2ec5a12be706cad26c9cefc0bc3d58fb87875e92232ffdd",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_11.json",
+        "sha256": "205f79ad7806ecc9cd84f8dbabb4f9833675b42f6e21f5fd00874c57f030265a",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_12.json",
+        "sha256": "8e6824338d0d4207916e83e434530014ef1ae37fd8a195e0035d6c2353d9fab2",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_13.json",
+        "sha256": "9e6cf0abbf5fd3d89a4818c03fa82da6f6f8298ead1131db7fb2d185d3211912",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_14.json",
+        "sha256": "bd01cf78b7f2e2e2a6c0ce8fa829725cd89b6efcc31cd62892c0e3356a746072",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_15.json",
+        "sha256": "6551e102f966ed4a3bd6e1c78941161ce6d4a0318135161a7c7753d0534744db",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_16.json",
+        "sha256": "5ce1f3bb5b39970a2a5e058f94be70cd0924d4e6ab0bb9829f10c0a1da5e3f36",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_17.json",
+        "sha256": "5f99e2a516b4286086ed8792684d4209243eaf133d11dbb20872e10205590b6e",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_18.json",
+        "sha256": "5c541c55505486660793b7c04f0187a0a2deaa97125bbde56b8e793649cc4baf",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_19.json",
+        "sha256": "837a8e20e149ac5890dd3bd06dd6c4aca30b613df7c31b04c885d324c5baa54f",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_00.json",
+        "sha256": "3b642ea0faf358790947093fdd19c15f20b21844e6aede8b2955e99823c4e620",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_01.json",
+        "sha256": "be2da7976909d141e15857e5627926dcec05c52041eff3750406473aacfab9ff",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_02.json",
+        "sha256": "4e5e29c444df9965cb29abbfb459f3e2fa4f6ba2ebd2ada9f43f963d24c69d9a",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_03.json",
+        "sha256": "7573347de97b80c007d247aaad4c7e1e89c6e064111d0d7aea290d0cd0db7183",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_04.json",
+        "sha256": "6d7bc84e88c245ee8c2183df7fa7e812a89f36ab544a1f196ebd273faa8d25d6",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_05.json",
+        "sha256": "9b322d8adb9fb52578f3aeb477999b2e3c3301dcb84361257954bfe949ff9d31",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_06.json",
+        "sha256": "def67a52198ff27117b298d78ccd0b8035beeed4cd197bf0c540394348ea314b",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_07.json",
+        "sha256": "af8a9f50281ed8579ea99ebd338c21ad674cfb2dc838cca132e526cae5709e3d",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_08.json",
+        "sha256": "4ff3c3fd5a641514d7574de95db0f4675d4da3852c220cedf63e3fc298223599",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_09.json",
+        "sha256": "6fd1356ebd78b6eea4fd24d186f2db9fe9ede4655e33b7a04f7ce826ea001ab7",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_10.json",
+        "sha256": "75c839d72c1beba72f57db7588b0460094133be4bce3acaff56727aea31f253b",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_11.json",
+        "sha256": "bd739079bac1d632299b6f5f4f39f0e638c73c648203da00e3f0268313918f15",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_12.json",
+        "sha256": "cdb8036b94d9d6fa852b68b7db2dd84804b3640665698db78cbbd82168ce22f4",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_13.json",
+        "sha256": "cf74acb7c3fdb40091e6cc5790558b93b8f51457e30ad42d6ba5164fc9db14c2",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_14.json",
+        "sha256": "cf6e0e167565433d4a29ee75647f67a1d51f66b7faae694e752cf775b5a5e3ec",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_15.json",
+        "sha256": "f6bf919883a156ff3cdb2c284006170acd9919a7e888dcbdac7a8971e0aec3a7",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_16.json",
+        "sha256": "ff9ca13e5eeb571ecf9c98904d206d418315217f9ea9ac98635c8d362d145e0a",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_17.json",
+        "sha256": "02c71865a00e457028611db939b26219a51e3db444e08c809c1d1c89700e5d57",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_18.json",
+        "sha256": "eed182b42dc9ad17ce6cec8edd1fc415bb2f2fc64c12a815bb4813c53bf21e50",
+        "rows": 90
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_19.json",
+        "sha256": "33aae09b301c3b1446e8e504e3173276f374532c65f48c2ef396c4be857a9994",
+        "rows": 90
+      }
+    ],
+    "E2_E3": [
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_00.json",
+        "sha256": "c541669cac492f5678cc6ba5f94b6ade901502e180497e4223dc3ce3cc28d90a",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_01.json",
+        "sha256": "1b82a7d7d5ae16686707717d8b597aecfb2ab33f0d8247cf903b07bc1f1fcc40",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_02.json",
+        "sha256": "a2db527066f72914468d0e8d187b51da03405d518d9a18968d792a9174e36cb1",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_03.json",
+        "sha256": "8f1bc95eece2cbbb2ed7fc400a4ebdc351f23067839d38911a3a10257a6ec13b",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_04.json",
+        "sha256": "f3ac373457a164cfab8c394d4edc976eb10f2f33d6705cf17445a74bf8c25f96",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_05.json",
+        "sha256": "930b26961e0587da18901366caba617092d82b0e43a637e6300a2b2124863f2b",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_06.json",
+        "sha256": "86c6d3b09cbc6ef2fcd6aaa96634e491dd7fbd8d8ddaa4721b75be6dd85872ea",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_07.json",
+        "sha256": "928a5717b4605f88f0b873bffa20a16ae42371c63994915a741c947822aee520",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_08.json",
+        "sha256": "78f20306c538e157b7dd29f03c6413ca2f6c0af26a9c0b67be1126aa6634386c",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_09.json",
+        "sha256": "ba55b03370241a93aee5d06107651ab5d186b62abf04cbdb58f1ee4df7afb766",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_10.json",
+        "sha256": "48ee11ee5fc22116b335f20d7bf739b0beaf2315c1c7cf7257f184d9ab18855f",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_11.json",
+        "sha256": "b56ded4a70c0f74b77cdf0f8354bc8672cbe1b3f77968934847bbb62b692f5bb",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_12.json",
+        "sha256": "b876db363d8d5478103841e4794bbbe5bdc978bc01dded5e700e823f023916f6",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_13.json",
+        "sha256": "f6a120779ca7ef58f39539ae5589bd1b961c4c26695b77a8b0fca189d59b709d",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_14.json",
+        "sha256": "293b609ff6f70bbf20e46edc35a9c2364f25b84b87ddad831bfbfeb289382129",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_15.json",
+        "sha256": "e28d7c2a1e03803425c240aaf907db25f159cac05dc150115e92bf2e38c44c1a",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_16.json",
+        "sha256": "964c65da02fadb11a1b097b83bf6d7019b1857e89146ec20c13bb9f2a34842ce",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_17.json",
+        "sha256": "a88cc3d8fff48b52544a87406d1d37880a8e3e077b96cf5c0c18f83ed7808dd3",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_18.json",
+        "sha256": "2d8e46abd0b28aa961eabec042273a9f9809788b7b2837f1b4fcccaa0656b0b9",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_5000/seed_19.json",
+        "sha256": "2c81b2cfcec93418dced74066dc1ad2c8881d32017db81b7ddd0701398016387",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_00.json",
+        "sha256": "48c53a48b341bede2496dd8124aff4e75c92283a0b27e35f527288508549662e",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_01.json",
+        "sha256": "33ba01bd7089edb22d5aeca3abc7b736dfe6ad7dae61e472d21dcd43cc4c924d",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_02.json",
+        "sha256": "ec0590262cfcb11a2121adb90d27c96dd4292711465f7835c9ccb054e918a6d0",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_03.json",
+        "sha256": "3785f9f5b3487302ed252a9eb3293b738848622a04570ddd31a1ba2ec2d60507",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_04.json",
+        "sha256": "1a9c75227da3f96bc20b8fb379495a0c44871cc6d189ff6491abf5c39d079690",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_05.json",
+        "sha256": "d4225ad2058f499302bf72771e9366b0026bed57e2fd66898ee2e469249fb2fc",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_06.json",
+        "sha256": "243cf74745ca49e7791367d432799c6c8df783db7bbb82730d51c8664c00239a",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_07.json",
+        "sha256": "e8fea41028865aad13a9748d1055d04a19cf9ad9a13f71779cee856ac6da360b",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_08.json",
+        "sha256": "aea53dc1dcbd1418e69408ef24d263d0e0d0db70989359d50eae2b2bd5172904",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_09.json",
+        "sha256": "c7ccd816ef5d6254f8f14dc5e6443c0d0332116693ea32ec40054541ce3a5054",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_10.json",
+        "sha256": "96d939932f7edf3ebb0ceb94350eb8813db5b2bd1c68ba964a3f3910366e0104",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_11.json",
+        "sha256": "439100318d7caa401e749c79b294cb0df933261978fa28c770ecb9226c20cf75",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_12.json",
+        "sha256": "985551384a1fdc983464fcf0f0b3b4f2e9e8975b45d9542c96ba4abf46e85519",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_13.json",
+        "sha256": "3f0ea36a725b86941c1f69f2a9a9a729dda05c26a23aa0403755f092811dd8b5",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_14.json",
+        "sha256": "2d1a5f902857a6ef5aa126b01e54c3ca4ccb9bd29d7d3ca33a543f198fc4b284",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_15.json",
+        "sha256": "bea11f4f2b0fb818009c6b8fc92819132059b683adddc11951885dfa28f2c360",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_16.json",
+        "sha256": "afbed4b506d74b98ac12bd5ce92a40846d9bafbbd246c5acfb42d408a1b7ca1d",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_17.json",
+        "sha256": "51b7756b5605b68f60b396408dc96b540c8ec0fbe2f209370bef0651358a299b",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_18.json",
+        "sha256": "55be52a457ec8933710eb866631e3c3ef2de0cf824a9c1bf79c0ff35d994bca4",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/ag_news_holdout/seed_19.json",
+        "sha256": "78f356042b8e0874e00269bccb4a540b17a9c4e9904f4f5f894b733b55080c58",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_00.json",
+        "sha256": "cea80bec12e42e1e41bda8075fa102ada3754725050f2ea45a414a8fea1ee37e",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_01.json",
+        "sha256": "6ba94efbe55984b33d8b2eb010fa0d054bb30469f09cbc7d04e5ea92e5a04d71",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_02.json",
+        "sha256": "b62ae7a3159a4b8495e624fc56dd4d5700ff993e756bb05f3ab7054b0210c075",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_03.json",
+        "sha256": "d5578235adb2b0739f06d583a3e761b8648d834d645593a52bf573f313b16821",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_04.json",
+        "sha256": "e3fed30b65a95171fe8f698c21ed5d66ab52556618b3b4e1a65bbda4d2895780",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_05.json",
+        "sha256": "4e78fdab91c9feb46b9b25854d914dbbdf300d4ce23a4bffd28096978bd6f5f9",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_06.json",
+        "sha256": "8851f435d4558a473a491fae29b0e1d3ab53a06a6a6cc716c47a61221b0be09d",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_07.json",
+        "sha256": "67a551c65b60ca8a645260ab2603462115640a903e32028369fedb0b6de108bb",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_08.json",
+        "sha256": "df10a48ff524c5e5c62360390bf706c235ba3606a4b5f5d70e526857c3cb5206",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_09.json",
+        "sha256": "95ab0a1aa01471ce305143cb01a2207e4d9a28af203a27019810f7e9d0759e8c",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_10.json",
+        "sha256": "db4cf045218577883fcdcb3d8a40e01482842a3a615be19d08f258d6bf550f4f",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_11.json",
+        "sha256": "0a4f4ad3d25158c6ec158e4510f0664f896bbca6f128d52b43e5dae550132e43",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_12.json",
+        "sha256": "39e012565f2d5350a5a78f93c4f07aba77a2468b6834ef56473ad1671c28b4dd",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_13.json",
+        "sha256": "19f2e20f4a7f4ee92ee633ab2e22fa85c39adef62db8badb2ca33096da51d9db",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_14.json",
+        "sha256": "f39ff7a2bc6fca5bf6746c83d656d6cb19deaf515cd5fcbf2a28668a139355be",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_15.json",
+        "sha256": "f7b1c1b7ffb9e4d54fd5253f3e0b2766d076784b241d8165d78ee31f0919678e",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_16.json",
+        "sha256": "039afdeed983024424ec2dfd515c29d2bd92ce46f8cbde08e8092aaaf16ecc32",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_17.json",
+        "sha256": "df1e371bddb4c1c4f4ad494a836a3fe5ee1291ea6e0e42df5be678ce7badce0c",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_18.json",
+        "sha256": "c24583b51314777fa29b25c927c37c9871492c22a29be2107641163976c0b3e8",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/banking77/seed_19.json",
+        "sha256": "0b836743a40491fc549ebaf9b26dba8be96200f057f252d0ba5be70fbd0e5bf6",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_00.json",
+        "sha256": "3960b2b04cda8cb4057e47bb28c5b0fce80c8c8fd67eb3723fe1ff568e91a0db",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_01.json",
+        "sha256": "b4683b6d39eb515f5e1e814d76d3d00468631d8d42cf906c8292d2007c6281d7",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_02.json",
+        "sha256": "dec89b8b25c4780e0c24508403970393bc03d21d24a182eed03e7b7bc466d4ff",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_03.json",
+        "sha256": "3490b2a4d4fa48c9bb2a3b804203013ca83f0fe58e108d338fe40e3726408ad2",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_04.json",
+        "sha256": "6d3fa33476435460ff1d2d994f51a2308c8646608f067e82c4bf35e92a6d5bcc",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_05.json",
+        "sha256": "655b7adf008f7d8265078fe6b2a81265ddde3e6deb926b1aeaec01b5719c4c5b",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_06.json",
+        "sha256": "87fd18d7828886bdc550bf6ac9e6c7480461763296207d39acd38f5ab702f47e",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_07.json",
+        "sha256": "e1352c0966e8df57eda23bb6f937f3d4b14b38f41667d130411dd6b99a5e5c27",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_08.json",
+        "sha256": "66033de0e162220cb972856942ffc8c00732498847d83e4712eae3702c97c343",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_09.json",
+        "sha256": "0df3695c94b541ca2d8696ff358b526edb5509bd9a46fde30bceec2e5c9b9e34",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_10.json",
+        "sha256": "8280573c7904b76bd0a347f0d0b93de38499216e4f25d2efee03352c8b79b4c5",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_11.json",
+        "sha256": "d4859d975f68b20b25357503c812b69059f774f6ee9fb7b699604c63d962122f",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_12.json",
+        "sha256": "ad022af5fc1df6b8a5b29bf7aab5cd2700d6c4341b13b42e3787b3a66617f3b5",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_13.json",
+        "sha256": "6ad8b4fe0e859a6c0ac755a8de9638248e01bd3cdc973cbe8c1eab0488e15982",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_14.json",
+        "sha256": "ed292397cfe61a5d7c272ceeb24add9d47aceadc0ca1765a5f883d7171173ca4",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_15.json",
+        "sha256": "63bba92a74b2932037da967a89412413edc70cbd2f6bc178de63cb03d02fd2ec",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_16.json",
+        "sha256": "b158eeae79b0d758f867a5d289a1397f1a6a925b61c221de842929f872553252",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_17.json",
+        "sha256": "9b45ee66b3701ca6678d0415dab15942e2903b15882c2fee03255e400c3a7b74",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_18.json",
+        "sha256": "3597929472d0d7192a244e8ec18ab471760e876c4490fb45312bd810bd9fc468",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/dbpedia/seed_19.json",
+        "sha256": "b6a492ab81e1961682188094eed849dd92afb318344cb94e9cc2a5f53cfdabb6",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_00.json",
+        "sha256": "002170a5a4543ebeb77e277f755978aa7e2e857d52591ee84f211642aad845e5",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_01.json",
+        "sha256": "b897e910df611b2b47129e73e69f96e98e2bb9a7021e283becbc987a9fd143fc",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_02.json",
+        "sha256": "00379413f4fb84adf3bca5a6e9f403ea1781f82f00ca4946dbc71d7d52e34696",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_03.json",
+        "sha256": "9f47378748342a13dd20bd5f6368ba338edefff042a4e0e711ef147162905148",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_04.json",
+        "sha256": "5d2e35305a625224e7a078d0a1be63cf20b990ff14e4e40470f62f2cf8f08285",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_05.json",
+        "sha256": "ebdeb05ba7391f573475c0f19a8a8338370cabea2ff7ff3b076fd7ea3f77f233",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_06.json",
+        "sha256": "e5307676269269f92257eb7c3a1406c3df091265e46ce5d4b81285eb437ccd24",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_07.json",
+        "sha256": "fffb4316f6f1bf84fee7172960b8928841ecc2d3222443763fcab9af4f9e76a6",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_08.json",
+        "sha256": "011a387853b256da13b3eac9317c5c541c7be6f3e99805ac525eb692ca02b63c",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_09.json",
+        "sha256": "3b97be070354ec579bd856d391f7f189b77ba72f12b9071ab87efb0dc3746ffd",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_10.json",
+        "sha256": "945c786ba898d8aab274beca104c3d38097077b7e86819475ede2f5a1a877958",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_11.json",
+        "sha256": "3572ec277013e06b5cd7cbc3d3671412ff20642ec3180e928a46bdf76b03b804",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_12.json",
+        "sha256": "61f112b69a59416bacee802f1e99c330006a4d1f9079ef8e49e523086ff2f562",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_13.json",
+        "sha256": "474d5d85cfbcbf5f4b6ccf78534a2b852076360bd82268ccd0a0c609f332ea1a",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_14.json",
+        "sha256": "5bfecde08a5cf0506591a4a919984b95608d99e77c41fd6aef69068a544b8481",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_15.json",
+        "sha256": "40caf4bdae67033aad17838249b5c657b11952c1dcd785c9dd1f176d0433d2eb",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_16.json",
+        "sha256": "ae0823586c7a112c981a1b0150f241d6e300f16ca08bae395b625699fcd7d58b",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_17.json",
+        "sha256": "136cec912edf0173add954da6b16634a1b4cb2e6394cad97107e5391045b5fc5",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_18.json",
+        "sha256": "086fd462612acaee303fd6f40e33742051f9045a1fd87ab6f5160823bc34a1a0",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/emotion/seed_19.json",
+        "sha256": "b0082be78018851b6ab7b4113fb84a4bb988d4a353abe8e5d802124eab05641e",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_00.json",
+        "sha256": "a83e7c462bcf564b9c4a99512aa4b477f14a26397a45224d07526b8f5ee16701",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_01.json",
+        "sha256": "07ca1bb40c76be9fe10d5eac04585aaec22f9cbf51c679514174c527cfff8d35",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_02.json",
+        "sha256": "d8b0c46646dbb4b9dc0b77abc621aacd911490d255ebd553d04f994017566ae2",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_03.json",
+        "sha256": "74783d54c7fe142deab7e53132c3037b1b75a3bbe69971b140283bb8e1f791e9",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_04.json",
+        "sha256": "eb7278b7606767d43d050920bc982d820cd0b0bc328205835bd59137a16f03c8",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_05.json",
+        "sha256": "46c773fe63cae292c00b492458173323681da2b3ddda240d858ac79985f2ce5c",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_06.json",
+        "sha256": "b26ba8e9ac37a288bff2f4ebc4972227cfac2a5b3a4bd5ccd99aba3bd4f2edf3",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_07.json",
+        "sha256": "78023a4eda3174091a9c9c5a62fbe2ddf35ac86804ead338eab2a1b213355294",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_08.json",
+        "sha256": "a154ed4a8c5baec06eccd3021008fc1b1eeb3472c3e796a1f6663d9e0fcc1213",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_09.json",
+        "sha256": "ac8b7ef602a09f17b6ff4e23cd55e2f1ed8a017598264e946d1dd42fd13a5f97",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_10.json",
+        "sha256": "c848d47e81c5bd5ed4a2a38b7464efabde3e8651b05285e44505483d78b95ff2",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_11.json",
+        "sha256": "470b71e9d16dab9c5a18a5ba530402d52d4479e97853cf3abb59e2ef9f297b01",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_12.json",
+        "sha256": "af9a691847dce0319894fcd5db76ee90a099cc5271b4fb89ef5349f4ae12f9cf",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_13.json",
+        "sha256": "4571743542bb62a48688bdda5a37ff41740d4e9da122be6e03a4e78bca2ab74d",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_14.json",
+        "sha256": "fe460ac027ef9619e6b5d85c77994b6fb9a853d60206b57e3b58fd3a157bb9fd",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_15.json",
+        "sha256": "a11c28a51998bbe41d9bbca15ea744286a0208d8b60477ba23b8c84e045102c9",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_16.json",
+        "sha256": "73db43b2c18c37d056fd5cf3d6074fac9e9a57007f665e518a148afc5aa405f9",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_17.json",
+        "sha256": "15e44313d97261a3e4bf06e62ac3ec611f810d204ea66933faf97a65f000ea22",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_18.json",
+        "sha256": "a81341c833d6a546466e69d6572f2b4f80a561dcc815770c3ead78812280432d",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/imdb/seed_19.json",
+        "sha256": "c83028656523736722e47e4605ef44d53d912debb9f1eb045ae77de307d21d55",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_00.json",
+        "sha256": "ecdcc17407947440bd1ee6a0a3087c10c90c012badadc0ea9046bb44bf4e8f8f",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_01.json",
+        "sha256": "4d538fb939745371a06949c696f76d0971b070e7406ead3812ede4c035eeb91b",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_02.json",
+        "sha256": "ea355fed5a4650a0293d7579a9644a4c3fa3e5cbb8b531c88c94e5126d006bc2",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_03.json",
+        "sha256": "230dfa8b1b334b0e7ec9ad8e0f2261db6f200367ac95742c73ea5d1b7e239338",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_04.json",
+        "sha256": "edfc44884a23424a64ee09c0b173a435de3d3abfdc860cc4297bca2055d22652",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_05.json",
+        "sha256": "8d508fd7a4d5823752dcc90753a1320c5adab17961c961d938f9a8ba04192dbc",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_06.json",
+        "sha256": "4b17ac129bc8f1c018168f573c0eefd43123fdfed8b2264b6314e045815710c0",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_07.json",
+        "sha256": "1666465700864d9d1f6eabd05386c7f8bc960b818d9789cb0266d4799c8c292c",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_08.json",
+        "sha256": "faf58bd784c3c0fd0a9321ee679763d558745310e78212ab48530f748bc44807",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_09.json",
+        "sha256": "6982e99afd58399a71384dbab088e53b190865b404bbd680d645d3ac1630dd3b",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_10.json",
+        "sha256": "66188c5e06909b46ecbc3d297c4ea03abd68cb9a17242858a63d96c99a5480be",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_11.json",
+        "sha256": "3ab2d87531543c2d4a052e4763ba88aa7da88ac3176cd34d7fe213676f5f7ff9",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_12.json",
+        "sha256": "a46a18b9887c563e38dd561358dcb922d696d23ca37eb4b521089cb8840b30e8",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_13.json",
+        "sha256": "1356213cc120447a964a7f407f97f6788cb6d8739ce1f7693788ee94085137c5",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_14.json",
+        "sha256": "211e0f3e1d595f0be54013064bdb4b126485e3ae09b83e61a8e45f8f84429e8d",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_15.json",
+        "sha256": "a04b6c89a773d53f7dedd46630e4e08853d185e951558f1fce0cb224843c85da",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_16.json",
+        "sha256": "de6f374ea6015756cde9e410515a0d9d4c5a0c3bb64855b1caa088440e0aec4a",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_17.json",
+        "sha256": "9c4ba95e2b740be82a550de8f951ec457d934af18bc8d951ed45ef4b22ab73cc",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_18.json",
+        "sha256": "6cf87b034bac1b3c9b7bf84e1c01df955f5cbf8bbdb8ba0d137c2903b5636181",
+        "rows": 190
+      },
+      {
+        "checkpoint": "checkpoints/yelp_2600_star_alias/seed_19.json",
+        "sha256": "3ddb3157583bc84e740e6ee33a2bbcd97af8da146376228dd31331960c10f16b",
+        "rows": 190
+      }
+    ],
+    "E4": [
+      {
+        "checkpoint": "checkpoints/shared3_slice20/seed_00.json",
+        "sha256": "c8ce2718903dd1162e3765ef378fa1b4ed8a31ef94f2da1b8b59bcbed3f03ccf",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared3_slice20/seed_01.json",
+        "sha256": "ec39fd5938f8872083e4038cf7db28649816cec5cdc66d1812aaf6c16e5009db",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared3_slice20/seed_02.json",
+        "sha256": "08644fbc5bed860e26bbd9e912907b878c7d711a82b3c9444732bf76c4e6f00b",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared3_slice20/seed_03.json",
+        "sha256": "fded1447cb3d06b2f9e370ee0611348fd9d0e9cc95b93baeee8ca1583ff34d6d",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared3_slice20/seed_04.json",
+        "sha256": "d1df4dc85554607bc438457b46648e986a76e436b87edcff8b4e1ed4b10dac08",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared3_slice20/seed_05.json",
+        "sha256": "43c9a555333783d2c0d4b22b1a425645e99e1859dcc78c32b00155a6912602e1",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared3_slice20/seed_06.json",
+        "sha256": "268fcf54f74463a6ed68da46656d6a814aa85de0a6701f48053e4cab6800eb30",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared3_slice20/seed_07.json",
+        "sha256": "8eb28fe00139a077f65e9661bce1a4d2f62ad130f7a9a762840613457941676c",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared3_slice20/seed_08.json",
+        "sha256": "4bcd8740d42e2133b49727cc2b7d2e02c2d686289d39a3da994e88051652eb45",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared3_slice20/seed_09.json",
+        "sha256": "6538d5b275b0e3c1eb7096d36571e9d70ba3e2d72d0b0a1c236bbf8c114afa69",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared3_slice35/seed_00.json",
+        "sha256": "f7ef16f3faf459b1891cabae6bf6ab79c7b0b0ae3e9caebad6e7f9573af0afcf",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared3_slice35/seed_01.json",
+        "sha256": "6ad476bf57cc349600619fe299b554fa721bc10af6ee333613cf9ee652a7579c",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared3_slice35/seed_02.json",
+        "sha256": "cff3834254a647f6d5e1119227a9c8b3a5b8ff1550b5cc37c36de7250f4be6d8",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared3_slice35/seed_03.json",
+        "sha256": "a4f68218d236b5bbce123590a2c634d7938ea15c0910334864b80b7d02b5ac8a",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared3_slice35/seed_04.json",
+        "sha256": "506e5d7520a06948e5a510c62c5445f09f5e7b61b4a1e959b1dcfe4bb3574e5a",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared3_slice35/seed_05.json",
+        "sha256": "f303da2f1307afc28f5f4dcb0d5ed7e7b00ad0acbf4920420cebfeb3f8cc67f2",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared3_slice35/seed_06.json",
+        "sha256": "b298a86b61437bc0f03ceae51e0566219416334210b7fe2da22afcac5d840811",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared3_slice35/seed_07.json",
+        "sha256": "437ecf6dc98a9614081741b07bd8391a36d072d0ea41162164f68994d4cba9ff",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared3_slice35/seed_08.json",
+        "sha256": "6e75501086b4da94f37b745c0205bfc5632eb691332acc62cac1bafb0180564b",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared3_slice35/seed_09.json",
+        "sha256": "68e9fcc4d466ee5ab729ab3ba1fe2d1f0dfe1ba70d1fc0f890e90e6b796a6447",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared4_slice20/seed_00.json",
+        "sha256": "85de7b24136932aabcb1d4850b8ecfada8d1391f7e105fa268c1a79fb5a9a16d",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared4_slice20/seed_01.json",
+        "sha256": "bc92c27502fcd900478e7869fd57dce97bdfe11a4556b21526d941af1e0ce4e9",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared4_slice20/seed_02.json",
+        "sha256": "432a44fd20078c780dc03ad1c8fee048467b90e5eab3d3a5fc663ad75c78178a",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared4_slice20/seed_03.json",
+        "sha256": "58cd1b41d12e2f81dbc96aed7eff3161b15fbc76f31db141b59afd61fa72b4f8",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared4_slice20/seed_04.json",
+        "sha256": "45c84b6f193d5e8557e5e9940b212073e24a9619aeeff110c14af11d21ef44c0",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared4_slice20/seed_05.json",
+        "sha256": "ba8fb660a4caeeb1a02a8f85edb46b4b1f192f076928946a12dede221039776a",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared4_slice20/seed_06.json",
+        "sha256": "ccdb68a913039cb53cd76072020f56faa0767a2c39aa01263356ade83dde7c60",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared4_slice20/seed_07.json",
+        "sha256": "b785e192c6798d057fcdc27025a75bccbb0ce7a9c16e26021958e6f5f728f788",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared4_slice20/seed_08.json",
+        "sha256": "e061a2a4223ca3ecb6f3b5ca767a84684d75e00849a1e4e4d90f58c49ab9a221",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared4_slice20/seed_09.json",
+        "sha256": "dc43f229d723cf70d565c5a33603336b1da8737d8e1a99d5e6d1545abb56e9c5",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared4_slice35/seed_00.json",
+        "sha256": "4473517b28a2649830c3f028985c7ce59f6df372cc7e25100aea6fdbe13defb5",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared4_slice35/seed_01.json",
+        "sha256": "3e05e5960fd1d6d489a24e4a56edb30a9fd0707bb1ab64ff1c4275a6b3bae034",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared4_slice35/seed_02.json",
+        "sha256": "704d649402e239ee6275062e86e0824900d9c7ca7628cd62d621caa403eb3096",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared4_slice35/seed_03.json",
+        "sha256": "2c440d59cfb53aeb1ec1404ab4ccd89b1e46c34e69063ed5ae275de2491c29ee",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared4_slice35/seed_04.json",
+        "sha256": "a5ff342500220dcab0446976b2da2a5ffedf38a9976b95b5391ffba10953488b",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared4_slice35/seed_05.json",
+        "sha256": "a26a765467af32c478d35dcf09c65f69990cdd122a528e2c81a97286f36652b0",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared4_slice35/seed_06.json",
+        "sha256": "262644b46c7f3cbef983f3c7083bde156eaf117b1f818c7fb23deadf02a64090",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared4_slice35/seed_07.json",
+        "sha256": "e22f895a34be972c90820a9eda7ef82c20986627c22d7bbc22ca564787461548",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared4_slice35/seed_08.json",
+        "sha256": "351ec2f2e210433515ae83d59da1fabad248ac71679431646bb68b9eee92c086",
+        "rows": 75
+      },
+      {
+        "checkpoint": "checkpoints/shared4_slice35/seed_09.json",
+        "sha256": "4adcadad41df8955903160454ac9e10b526dd4b3ddd2e28ca930b9744f5705c8",
+        "rows": 75
+      }
+    ]
+  },
+  "note": "Phase-level initial summaries retain their original bootstrap Monte Carlo draws. This unified analysis is authoritative for real-pool intervals and jointly retains arm pairing. E4 paired/reach intervals already use shared seed matrices and remain in results/E4."
+}

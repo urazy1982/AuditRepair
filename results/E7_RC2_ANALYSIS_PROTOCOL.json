@@ -1,0 +1,95 @@
+{
+  "id": "E7_RC2_analysis_v1",
+  "status": "frozen_before_new_RR_outcomes",
+  "exposure": "Original successful Qwen and Llama responses; newly constrained-decoded Mistral and Phi responses; all four families one answer per same AG News item",
+  "primary_question": "Does label-repair and joint-rescoring performance transfer to the independently collected mixed-protocol four-family annotation panel?",
+  "panels": {
+    "ag_news_5000": 5000,
+    "ag_news_holdout": 2600
+  },
+  "model_classes": [
+    "World",
+    "Sports",
+    "Business",
+    "Sci/Tech"
+  ],
+  "generator_arms": [
+    "G0_uniform",
+    "G1",
+    "G2"
+  ],
+  "score_arms": [
+    "S0",
+    "S1"
+  ],
+  "pac_roles": [
+    "same_audit_A",
+    "repair_B_fixed_scores",
+    "repair_C_rescored",
+    "O1_privileged_shortlist"
+  ],
+  "pac_only": "same no-audit Dawid-Skene PAC-only reference",
+  "estimands": {
+    "primary": "A minus C in G1 S1 AG News holdout (labels saved); panel-specific, seed-clustered",
+    "secondary": [
+      "A minus B",
+      "B minus C",
+      "A minus O1",
+      "total cost vs PAC-only",
+      "accepted states and group-repair funnel",
+      "heldout vs development",
+      "model error correlations",
+      "final error rate"
+    ]
+  },
+  "analysis": {
+    "main": "paired full-seed bootstrap with 4000 resamples, seed 20261104; nested PAC draws not independent",
+    "notes": [
+      "new panel is collected on the same public items",
+      "Mistral/Phi use RC2 constrained decoding and Qwen/Llama use earlier original formats",
+      "cross-panel source differences are not a pure causal effect of model diversity",
+      "comparison is a post hoc extension after viewing v8.4 results",
+      "no assumption of effect equivalence from zero observed results"
+    ]
+  },
+  "frozen_settings": {
+    "epsilon": 0.03,
+    "alpha_final": 0.1,
+    "alpha_repair": 0.05,
+    "budget": 400,
+    "warmup": 120,
+    "group_budget": 196,
+    "max_groups": 10,
+    "min_size": 30,
+    "pac_draws": 500,
+    "preprocessing_seeds": 20,
+    "pac_reps": 10,
+    "root_seed": 20261030
+  },
+  "source_hashes": {
+    "amended_panel_dev": "656f1cb831d1c45239759f6cb89b8da876de73e39ebfa1af6a8d6412a2a08cf6",
+    "amended_panel_holdout": "76634fd5fc5e9085d0915941ed736b1ad6338f0ef44b9236d62c2a3e5a4f955e",
+    "rc2_manifest": "37865151332a7c6a5166b2ba989c97c5d2d832efca9b3b708402130d5ab8eb49",
+    "pre_gold_gate": "6b34eb768fbc9da30c0637e2164bb0fe882ed6934532ca562a29c39f3967a48d",
+    "original_task_manifest": "b121d405de7193ed8a6c19946dc6a4fd58e37e951dc91e4c1c373c9998e12dfd",
+    "corrected_factorial": "b64565bbf4a1496efdce962eefc2605327b738ac03f45403e000f50520b18e3f",
+    "corrected_core": "b1145503a8beb0a3690d4db395eab2ffffb5676396188b396940d0cd3ec46089",
+    "fast_pac": "dc628fab61fcb1ba91e1275c2a0ea8d2f1459601cbeba7f39deaa85502ab2880",
+    "original_protocol": "2931a624b1ce970ce15ce2a6d4205b3992aa42606fc4d972fb5a3db38b042f61",
+    "dev_feature_cache": "4237516082e8cf5c1f29ed12506c72104c65dc8684e52091ad25a8718ba591e0",
+    "holdout_feature_cache": "f0e821935395ebe9ac92930625fde1de67cf1952653371f92b394da323ce8549"
+  },
+  "source_paths": {
+    "amended_panel_dev": "e7_collected_rc2/validated/e7_rc2_four_family_ag_news_5000.csv",
+    "amended_panel_holdout": "e7_collected_rc2/validated/e7_rc2_four_family_ag_news_holdout.csv",
+    "rc2_manifest": "e7_rc2/E7_RC2_MANIFEST.json",
+    "pre_gold_gate": "e7_collected_rc2/validated/E7_RC2_PRE_GOLD_GATE.json",
+    "original_task_manifest": "AuditRepair-v8.4/E7_tasks/E7_GOLD_BLIND_MANIFEST.json",
+    "corrected_factorial": "AuditRepair-v8.3/study/corrected/factorial.py",
+    "corrected_core": "AuditRepair-v8.3/study/corrected/audit_repair/core.py",
+    "fast_pac": "AuditRepair-v8.4/code/fast_pac.py",
+    "original_protocol": "AuditRepair-v8.3/study/frozen_v8_1/protocol_v8_1.json",
+    "dev_feature_cache": "AuditRepair-v8.3/study/frozen_v8_1/feature_cache/ag_news_5000.npz",
+    "holdout_feature_cache": "AuditRepair-v8.3/study/frozen_v8_1/feature_cache/ag_news_holdout.npz"
+  }
+}

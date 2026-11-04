@@ -1,0 +1,13 @@
+{
+  "pool": "banking77",
+  "protocol_sha256": "2931a624b1ce970ce15ce2a6d4205b3992aa42606fc4d972fb5a3db38b042f61",
+  "code_sha256": "a3961faca0ee61aa4a3f5af3882827636321c562b0d83f55836b3f279d527f73",
+  "features_sha256": "8e15cd42d6244c04d8516fea124f60314aa7a21b32b043d072358dc12026d0cb",
+  "neighbors_sha256": "453c00cfc9779bc8df9146fe09449526860446db5bb0fdd8e3141838d203ef17",
+  "cache_sha256": "63ad565074a99cfd6b1ae9d6b8c5f4817175bd1c5e495e679aed3f5730d9832a",
+  "n": 3080,
+  "dimensions": 128,
+  "neighbor_count": 15,
+  "wall_seconds": 1.0557784090001405,
+  "created_utc": "2026-11-04T06:16:41.824925+00:00"
+}

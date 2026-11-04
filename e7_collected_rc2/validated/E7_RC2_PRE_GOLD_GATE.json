@@ -1,0 +1,65 @@
+{
+  "status": "passed_and_joined",
+  "amendment": "E7-RC2",
+  "original_failed_collection_preserved": true,
+  "no_gold_joined": false,
+  "assessments": {
+    "ag_news_5000_qwen": {
+      "response_count": 5000,
+      "unusable": 21,
+      "unusable_rate": 0.0042,
+      "passed": true,
+      "collection_version": "original"
+    },
+    "ag_news_5000_llama": {
+      "response_count": 5000,
+      "unusable": 11,
+      "unusable_rate": 0.0022,
+      "passed": true,
+      "collection_version": "original"
+    },
+    "ag_news_5000_mistral": {
+      "response_count": 5000,
+      "unusable": 0,
+      "unusable_rate": 0.0,
+      "passed": true,
+      "collection_version": "RC2"
+    },
+    "ag_news_5000_phi": {
+      "response_count": 5000,
+      "unusable": 0,
+      "unusable_rate": 0.0,
+      "passed": true,
+      "collection_version": "RC2"
+    },
+    "ag_news_holdout_qwen": {
+      "response_count": 2600,
+      "unusable": 7,
+      "unusable_rate": 0.002692307692307692,
+      "passed": true,
+      "collection_version": "original"
+    },
+    "ag_news_holdout_llama": {
+      "response_count": 2600,
+      "unusable": 7,
+      "unusable_rate": 0.002692307692307692,
+      "passed": true,
+      "collection_version": "original"
+    },
+    "ag_news_holdout_mistral": {
+      "response_count": 2600,
+      "unusable": 0,
+      "unusable_rate": 0.0,
+      "passed": true,
+      "collection_version": "RC2"
+    },
+    "ag_news_holdout_phi": {
+      "response_count": 2600,
+      "unusable": 0,
+      "unusable_rate": 0.0,
+      "passed": true,
+      "collection_version": "RC2"
+    }
+  },
+  "failure_reasons": []
+}

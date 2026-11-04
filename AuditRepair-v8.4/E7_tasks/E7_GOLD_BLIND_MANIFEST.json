@@ -1,0 +1,79 @@
+{
+  "status": "prepared_not_annotated",
+  "dataset": "fancyzhx/ag_news",
+  "classes": [
+    "World",
+    "Sports",
+    "Business",
+    "Sci/Tech"
+  ],
+  "source": "same fixed 5000 development and 2600 holdout item IDs; excludes gold and old model responses",
+  "prompt_scheme": "per item and family: two direct and two reasoning requests; each family alternates style over items",
+  "models": [
+    {
+      "family": "qwen",
+      "model_id": "Qwen/Qwen2.5-7B-Instruct-AWQ",
+      "revision": "b25037543e9394b818fdfca67ab2a00ecc7dd641"
+    },
+    {
+      "family": "llama",
+      "model_id": "hugging-quants/Meta-Llama-3.1-8B-Instruct-AWQ-INT4",
+      "revision": "db1f81ad4b8c7e39777509fac66c652eb0a52f91"
+    },
+    {
+      "family": "mistral",
+      "model_id": "mistralai/Mistral-7B-Instruct-v0.3",
+      "revision": "c170c708c41dac9275d15a8fff4eca08d52bab71"
+    },
+    {
+      "family": "phi",
+      "model_id": "microsoft/Phi-3.5-mini-instruct",
+      "revision": "2fe192450127e6a83f7441aef6e3ca586c338b77"
+    }
+  ],
+  "tasks": {
+    "ag_news_5000_qwen_tasks.jsonl": {
+      "n": 5000,
+      "sha256": "c95e1c3d50b0bab05099fcc21a58872c9edb8847fb4ae8ac7c7675f645f16cc9",
+      "source_file_sha256": "b3a87b9b80d531e579634a64aca6239f58c640e851cbd8ac3ce849a2961d1f59"
+    },
+    "ag_news_5000_llama_tasks.jsonl": {
+      "n": 5000,
+      "sha256": "1d08f503ab15a1b1140fae3b4c776dab6985c0f2fbb5f370113de97be6e0f64c",
+      "source_file_sha256": "b3a87b9b80d531e579634a64aca6239f58c640e851cbd8ac3ce849a2961d1f59"
+    },
+    "ag_news_5000_mistral_tasks.jsonl": {
+      "n": 5000,
+      "sha256": "7caa268e12fff128de184890cb4ed4dbf8d1f17624955f860ccb5c7bf2ab558e",
+      "source_file_sha256": "b3a87b9b80d531e579634a64aca6239f58c640e851cbd8ac3ce849a2961d1f59"
+    },
+    "ag_news_5000_phi_tasks.jsonl": {
+      "n": 5000,
+      "sha256": "e991176cb08c0510c31d40b083c223661fcc6d9c17fb648dde2a1aeaa2ba459f",
+      "source_file_sha256": "b3a87b9b80d531e579634a64aca6239f58c640e851cbd8ac3ce849a2961d1f59"
+    },
+    "ag_news_holdout_qwen_tasks.jsonl": {
+      "n": 2600,
+      "sha256": "393850e4b9a3e0896988fc7af9c2fd64bc3a6bcfb5d7b4194e3b00db83feb4c4",
+      "source_file_sha256": "be7a8e71e0f004761f21910be684a4f24a2e1a1c1f7e5ae4bf2899c783812b82"
+    },
+    "ag_news_holdout_llama_tasks.jsonl": {
+      "n": 2600,
+      "sha256": "8463d1db3b4df4283171ea1e17c831253ce1561b1d8344b3052dacabe5336e84",
+      "source_file_sha256": "be7a8e71e0f004761f21910be684a4f24a2e1a1c1f7e5ae4bf2899c783812b82"
+    },
+    "ag_news_holdout_mistral_tasks.jsonl": {
+      "n": 2600,
+      "sha256": "20fca929f309eee0da5f4df1d7d2bdb2b117b11f5aea58800f00d8d7c3fafce7",
+      "source_file_sha256": "be7a8e71e0f004761f21910be684a4f24a2e1a1c1f7e5ae4bf2899c783812b82"
+    },
+    "ag_news_holdout_phi_tasks.jsonl": {
+      "n": 2600,
+      "sha256": "2d7c373bb5e8ecbcc4d724a587e6f25975ba17a7f93538b6c1ac645034b696c6",
+      "source_file_sha256": "be7a8e71e0f004761f21910be684a4f24a2e1a1c1f7e5ae4bf2899c783812b82"
+    }
+  },
+  "quality_gate": "each family <=5% invalid/failed on each panel, before gold joins",
+  "model_revision_verification": "operator must independently confirm server loaded the pinned revision; /models ID alone does not establish commit",
+  "existing_holdout_status": "previously inspected in historical study; new model annotations are independent collection, not blind confirmation of prior results"
+}

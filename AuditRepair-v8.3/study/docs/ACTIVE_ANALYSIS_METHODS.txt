@@ -1,0 +1,231 @@
+ACTIVE REPAIR ANALYSIS — v8.2 RETROSPECTIVE AMENDMENT
+===================================================
+
+Purpose and status
+------------------
+This amendment separates policy inactivity
+from the conversion of accepted corrections into expert-label savings. It uses
+the fixed v8.1 factorial records. The analyses were designed after those records
+were available; they are not a new preregistered efficacy
+experiment. No new LLM annotations or PAC repetitions are collected.
+
+Run from the revision directory:
+    python3 -B scripts/analyze_active_repairs.py
+
+The script reads frozen_v8_1 and, by default, compares accepted-state
+preprocessing with corrected/factorial.py. It writes only active_* outputs in
+results/. Passing --skip-corrected-comparison omits that extra comparison and
+records the omission. Exact saved-array hash matching is mandatory for the
+mechanism analysis. The script stops on a mismatch; it does not replace this
+gate with a floating-point tolerance.
+
+Populations, units and denominators
+----------------------------------
+The full factorial remains seven pools × three generators × two scores = 42
+cells. A cell is inactive if none of its 20 preprocessing seeds certified a group
+action. An active cell has at least one such seed; it is classified separately
+according to whether any paired cost differs. This definition concerns the
+sampled seeds, not whether a policy could ever act under other random draws.
+
+Every cell has 20 preprocessing seeds × 10 paired PAC repetitions = 200 paired
+cost comparisons. Two score variants share the same preprocessing state; they
+do not create two independently accepted actions. The archived factorial has 31
+accepted group actions in 31 preprocessing states, distributed over five
+generator–pool combinations and therefore ten score-specific active cells.
+
+Distributions are given under both of the following explicit scopes:
+
+1. All prespecified preprocessing seeds: all 20 seeds and all 200 paired
+   repetitions in each active cell. This is the original policy-level
+   comparison, including realizations in which no repair was accepted.
+2. Accepted preprocessing seeds only: the 10 PAC repetitions for every seed that
+   accepted at least one action. This is a descriptive, selection-conditioned
+   mechanism analysis. It is not a randomized comparison, a new policy, or an
+   estimate of the gain from forcing an acceptance.
+
+The five active generator–pool combinations have 8, 12, 2, 8 and 1 accepted states,
+respectively (AG News development G0_uniform, G1, G2; AG News holdout G1, G2).
+Crossing these with two scores produces 620 accepted-state paired comparisons.
+The all-seed summaries of the ten active cells contain 2,000 paired comparisons.
+
+The state classification retains all 420 pool–generator–seed states and reports
+whether an accepted action changes any prediction against final same-audit DS,
+and whether its incremental accuracy gain is positive, zero or negative. In
+these records, all 31 accepted states make actual prediction changes and have
+strictly positive gain against final same-audit DS (minimum 7 labels). There are
+389 states with no accepted action and no accepted states with a zero or
+negative gain against that final comparator. These empirical facts are separate
+from the certificate's guarantee against the frozen reference.
+
+Positive savings mean:
+    S = total unique expert labels for same-audit DS
+        - total unique expert labels for certified repair.
+
+Both arms use the same audits, scores and calibration draws within a pair. The
+same-audit baseline is DS refitted on every audit, whereas the group certificate
+compares with a reference frozen immediately after the warm-up. These two label
+vectors are kept distinct throughout the analysis.
+
+Practical event thresholds
+-------------------------
+The frozen practical margin is 1% of pool size. Since purchases are integers,
+an individual paired repetition meets the threshold if
+    saving >= ceil(N/100), or saving <= -ceil(N/100) for a cost increase.
+
+The bounds are inclusive. They are 50 labels for AG News development and 26 for
+its holdout. These are repetition-level tail events; they must not be confused
+with a 1% threshold on the policy's mean effect. The cost-distribution table also
+reports mean savings / N and mean savings / mean baseline cost in separate,
+explicitly named columns. The latter is a ratio of means, not a mean of the
+individual ratios.
+
+Distributional reporting and clustering
+---------------------------------------
+For each scope, report the numbers and proportions of positive, negative and
+zero savings; practically important benefits and increases; min, 1st, 5th, 25th,
+50th, 75th, 95th, 99th percentiles and max; and the same summaries for nonzero
+effects and preprocessing-seed means. Quantiles use NumPy's default linear
+interpolation and therefore need not themselves be attainable integer costs.
+
+The seed table contains every one of the 20 seeds for each active cell, with its
+mean effect and its ten-repetition event frequencies. The distribution table
+also gives the number of seeds that exhibited each type of event and the
+minimum, median and maximum seed-specific frequencies. A seed with positive and
+negative repetitions can have a zero mean; a zero seed mean is not classified
+as proof that every repetition was unchanged.
+
+The original authoritative pointwise 95% percentile intervals for all-seed mean
+effects are retained from frozen_v8_1/analysis/E2_E3_effects.csv. These resample
+20 preprocessing-seed means, 4,000 times, with the shared frozen matrix per pool.
+Mean values are checked against the integer paired effects. New frequency
+tables receive no independent-repetition standard errors or binomial confidence
+intervals. No confidence interval is computed for the accepted-only summaries.
+
+An interval of [0, 0] remains a degenerate empirical bootstrap. It neither
+establishes equivalence nor excludes unobserved algorithmic realizations. No
+"rules out 1% saving" conclusion or flag is used in these amendment outputs.
+
+Recovery of the current factorial mechanisms
+-------------------------------------------
+All 140 factorial checkpoints are checked for a complete 26,600-row grid,
+matching frozen protocol/code hashes and paired calibration-draw hashes. The
+classification and cost summaries use archived integer outcomes.
+
+Only the 31 accepted preprocessing states require item-level recovery. For each,
+the script reconstructs the archived item permutation and preprocessing using
+the unchanged v8.1 implementation, data and frozen feature cache. It requires
+exact saved hashes for baseline predictions, repaired predictions, restricted
+oracle predictions, both score arrays, audited-item indices and the warm-up.
+The complete saved group logs, shortlist and diagnostic counts must also match.
+These checks precede the new mechanism calculations. Recovered scores are not
+used if their hashes differ, even by an apparently small numeric amount.
+
+The optional corrected-code comparison reruns those same 31 preprocessing
+states under the publication predicate, then requires the same seven array
+hashes and every recorded audit path, stopping decision, lower bound and gain
+diagnostic to match. New exact-arithmetic diagnostic fields are not mistaken
+for changes in the archived policy trajectory. This complements the separate
+all-prefix acceptance replay; it is not a new sample.
+
+For every accepted group, the group table records the certified population,
+audit count, stopping remainder, selected grid index, exact nominal remainder
+margin, actual frozen-reference gain, and gain against final same-audit DS.
+It records actual changed predictions, corrections, introduced errors, changes
+from one wrong label to another, and items for which final DS already agrees
+with the accepted replacement. The integer nominal margin here audits the
+selected bound; it is not a proof that all floating-point betting arithmetic
+is exact.
+
+All accepted remainders are retained in the item table with the original pool
+row index, frozen reference, final same-audit DS, accepted prediction, gold and
+the two frozen scores. Item records are joined to group records by group_id.
+Multiple seeds can include the same original item; summing these rows counts
+occurrences, not distinct corrected items.
+
+For every accepted state × score × PAC repetition, the mechanism table reports
+actual changed predictions, corrections, introduced errors and wrong-to-wrong
+changes strictly below, equal to and strictly above the baseline threshold.
+The equality region is not merged into the strict-below automatic-acceptance
+region. It records both thresholds and their ranks among fixed candidate scores,
+the reviewed sets, unique expert purchases, final-label differences and final
+errors. Group and state identifiers link these quantities to the two gain
+comparators.
+
+Review and purchase sets are calculated independently from the recorded
+thresholds, reconstructed score vector and fresh reconstruction of the archived
+draw stream:
+    R = {i outside the audits: U_i >= selected threshold}
+    P = A union distinct(D) union R.
+
+Both |P| and the final label error are required to match the archived outcomes.
+The number of purchases removed minus the number added must equal the archived
+paired saving. A raw reduction in |R| is not assumed to equal a reduction in
+unique expert purchases: overlap with prepaid audits or calibration matters.
+
+Mechanism classes
+-----------------
+The following mutually exclusive hierarchy classifies each accepted-state pair:
+
+1. No actual prediction change against final same-audit DS.
+2. All actual changed predictions are strictly above the baseline threshold.
+   This is the sufficient structural locality condition; equality
+   of thresholds, review sets, purchase sets and final labels is verified.
+3. The changed predictions reach the baseline prefix, but no sampled binary
+   loss changes at or below that threshold. All tested loss sequences through
+   the baseline cutoff are then identical. Threshold and purchase invariance
+   are verified, even though unqueried final labels can still differ.
+4. Some sampled loss changes at or below the baseline cutoff, but the selected
+   threshold does not change.
+5. The threshold changes but the unique purchase union does not.
+6. Unique expert cost decreases.
+7. Unique expert cost increases.
+
+Zero-count classes remain defined rather than being silently merged. The
+structural condition is sufficient, not necessary. A label change entering the
+baseline prefix is not evidence that cost must change. Classes 3–5 distinguish
+three additional observed possibilities without claiming a causal decomposition
+of lost savings. The classification concerns the actual sampled paired runs.
+
+Outputs and join keys
+---------------------
+active_cell_classification.csv  All 42 cells; the 32/7/3 decomposition.
+active_state_classification.csv  All 420 preprocessing states, including no-ops
+                                 and nonpositive-gain categories if observed.
+active_state_classification_summary.csv  State classes by pool and generator.
+active_cost_distributions.csv  Ten active cells × two explicit scopes.
+active_seed_summaries.csv      All 200 active-cell preprocessing-seed summaries.
+active_repetition_effects.csv  All 2,000 active-cell paired repetitions.
+active_accepted_groups.csv     All 31 accepted actions; one row per action.
+active_remainder_items.csv     Item-level accepted remainders, with group_id.
+active_mechanisms.csv          All 620 accepted-state paired mechanisms.
+active_mechanism_summary.csv   Counts and position summaries by active cell.
+active_reconstruction_checks.json  Exact hash and trajectory recovery receipts.
+active_analysis_report.json    Input hashes, environment, checks and limitations.
+active_analysis_summary.txt    Compact numerical findings.
+active_cost_distribution.png/pdf  Cluster-labelled distribution plot of the
+                                 three nonzero cells, including all zero pairs.
+
+state_id joins state and group diagnostics across scores. pair_id adds the score
+and PAC repetition. accepted_group_ids joins mechanism rows to group_id (a
+semicolon-separated list if a future input has multiple accepted groups). In
+these archived data, each active state accepted exactly one group.
+
+The mean score-position summaries are per accepted paired repetition. Their
+corresponding sums are explicitly labelled occurrences across repetitions;
+they repeatedly count the same state-level labels and are not extra independent
+corrections. The plot shows nested repetitions and seed means; its point cloud
+must not be used as 2,000 or 620 independent experiments.
+
+Interpretation limits
+---------------------
+The analyses explain the sampled current-factorial comparisons and preserve
+adverse tails. They do not identify a general causal reason that cleaning fails,
+estimate effects on a new annotation panel, or prove practical equivalence.
+Conditional acceptance is not a randomized treatment; restricted O1 actions
+are not a cost-optimal oracle. The certificate's local reference guarantee,
+the empirical final-DS gain and the expert-purchase effect are separate objects.
+
+Verification here combines deterministic reconstruction with independent set
+accounting. It is neither a separately developed implementation of the entire
+cleaning algorithm nor an independent annotation campaign. Exact matching of
+the corrected and frozen paths is evidence about those fixed inputs and seeds.

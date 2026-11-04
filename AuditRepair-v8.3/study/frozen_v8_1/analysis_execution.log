@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-11-04T06:28:28.746656+00:00",
+  "protocol_sha256": "2931a624b1ce970ce15ce2a6d4205b3992aa42606fc4d972fb5a3db38b042f61",
+  "analysis_code_sha256": "c33d0c93b9e5dabc225b5df1c4d9ab612775da796625248adc13d9ed0b2fe018",
+  "status": "complete_and_integrity_checked",
+  "rows": {
+    "E1": 12600,
+    "E2_E3": 26600,
+    "E4": 3000
+  },
+  "real_pool_items": 20480,
+  "checks": {
+    "all_expected_cells": true,
+    "current_code_hashes_match": true,
+    "unique_cost_partition": true,
+    "paired_calibration_hashes": true,
+    "PAC_only_identical_across_real_experiments": true,
+    "O0_identity": true,
+    "O5_cost_floor": true
+  },
+  "bootstrap": "4000 resamples of20 paired preprocessing seed means; one shared matrix per pool across all arms and contrasts; pointwise intervals, not simultaneous winner intervals.",
+  "note": "Phase-level initial summaries retain their original bootstrap Monte Carlo draws. This unified analysis is authoritative for real-pool intervals and jointly retains arm pairing. E4 paired/reach intervals already use shared seed matrices and remain in results/E4."
+}

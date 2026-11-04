@@ -1,0 +1,11 @@
+{
+  "frozen_utc": "2026-11-04T06:28:25.413630+00:00",
+  "analysis_code_sha256": "c33d0c93b9e5dabc225b5df1c4d9ab612775da796625248adc13d9ed0b2fe018",
+  "protocol_sha256": "2931a624b1ce970ce15ce2a6d4205b3992aa42606fc4d972fb5a3db38b042f61",
+  "phase_csv_sha256": {
+    "E1": "e6f10b3d27986135cd191074d6a16e43f61a3b00193d3c1a48381dbb040fee06",
+    "E2_E3": "d3af473757e23d1b4c68f17c4246f04e00023108077ef7a4e983b7ab2fdc9af0",
+    "E4": "85fa0aef52cd043bf710bcde399124d4a85c555b0ec5e90fbd4d0a2b45f2d07b"
+  },
+  "note": "Implementation of already specified paired seed bootstrap; shared resample matrix across arms. No arms/seeds excluded and no outcome-selected contrasts."
+}

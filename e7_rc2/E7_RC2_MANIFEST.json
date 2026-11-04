@@ -1,0 +1,63 @@
+{
+  "amendment_id": "E7-RC2",
+  "status": "prepared_gold_blind_not_annotated",
+  "created_utc": "2026-11-04T17:45:20.319100+00:00",
+  "parent_manifest_sha256": "b121d405de7193ed8a6c19946dc6a4fd58e37e951dc91e4c1c373c9998e12dfd",
+  "classes": [
+    "World",
+    "Sports",
+    "Business",
+    "Sci/Tech"
+  ],
+  "models": [
+    {
+      "family": "mistral",
+      "model_id": "mistralai/Mistral-7B-Instruct-v0.3",
+      "revision": "c170c708c41dac9275d15a8fff4eca08d52bab71"
+    },
+    {
+      "family": "phi",
+      "model_id": "microsoft/Phi-3.5-mini-instruct",
+      "revision": "2fe192450127e6a83f7441aef6e3ca586c338b77"
+    }
+  ],
+  "change": "Versioned full-family re-collection with constrained class-name-only decoding; original response files preserved",
+  "parsing": "strip leading/trailing whitespace; exact match one of four class names; finish_reason stop only",
+  "gold_not_used": true,
+  "original_qwen_llama_retained": true,
+  "new_request_count": 15200,
+  "tasks": {
+    "ag_news_5000_mistral_tasks.jsonl": {
+      "count": 5000,
+      "sha256": "c2828ca1823fa7b7309149d9421a30160f74866425579e3cccffc52da6dd8764",
+      "original_sha256": "7caa268e12fff128de184890cb4ed4dbf8d1f17624955f860ccb5c7bf2ab558e",
+      "source_file_sha256": "b3a87b9b80d531e579634a64aca6239f58c640e851cbd8ac3ce849a2961d1f59",
+      "family": "mistral",
+      "panel": "ag_news_5000"
+    },
+    "ag_news_holdout_mistral_tasks.jsonl": {
+      "count": 2600,
+      "sha256": "f80abaaf8c556027d89038bde9c137e13996c1a1b89b619a0cb63d7a39d6703a",
+      "original_sha256": "20fca929f309eee0da5f4df1d7d2bdb2b117b11f5aea58800f00d8d7c3fafce7",
+      "source_file_sha256": "be7a8e71e0f004761f21910be684a4f24a2e1a1c1f7e5ae4bf2899c783812b82",
+      "family": "mistral",
+      "panel": "ag_news_holdout"
+    },
+    "ag_news_5000_phi_tasks.jsonl": {
+      "count": 5000,
+      "sha256": "6fc805282becf4cd891982f7336f44b4d476b51647a406e45be34d3441bdfced",
+      "original_sha256": "e991176cb08c0510c31d40b083c223661fcc6d9c17fb648dde2a1aeaa2ba459f",
+      "source_file_sha256": "b3a87b9b80d531e579634a64aca6239f58c640e851cbd8ac3ce849a2961d1f59",
+      "family": "phi",
+      "panel": "ag_news_5000"
+    },
+    "ag_news_holdout_phi_tasks.jsonl": {
+      "count": 2600,
+      "sha256": "8e9925862720e697b1f020a2ddce499748a2ea4f21b779732988cf7f54148344",
+      "original_sha256": "2d7c373bb5e8ecbcc4d724a587e6f25975ba17a7f93538b6c1ac645034b696c6",
+      "source_file_sha256": "be7a8e71e0f004761f21910be684a4f24a2e1a1c1f7e5ae4bf2899c783812b82",
+      "family": "phi",
+      "panel": "ag_news_holdout"
+    }
+  }
+}

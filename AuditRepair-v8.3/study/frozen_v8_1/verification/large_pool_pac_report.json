@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "targeted_implementation_verification_not_study_results",
+  "status": "passed_under_tested_conditions",
+  "configuration": {
+    "n": 5000,
+    "m": 500,
+    "epsilon": 0.03,
+    "alpha_final": 0.1,
+    "seed": 20261106,
+    "repetitions_per_fixture": 10000,
+    "fixture_count": 2
+  },
+  "source_and_script_sha256": {
+    "/workspace/scratch/aa68c1db5a6b/v8_experiments/verification/verify_large_pool_pac.py": "ba6bae68fc6de5ab71246a65200cfce63bb2bd777a8cdd44277497aac679bb47",
+    "/workspace/scratch/aa68c1db5a6b/v8_experiments/verification/verify_guarantees.py": "15a05324d97d2163487e55b48da9f104df8a4ec6e7d1e0be68bb2f1a9afe5cff",
+    "/workspace/scratch/aa68c1db5a6b/v8_experiments/audit_repair/pac.py": "e8be17586836737780d2e9e98fefea05a64fa41019952300d38b87add160f978"
+  },
+  "motivation": "m=500 labels most of the N=240 pools in the main verification. These two frozen larger pools retain a substantial unqueried set and start just above the final-error tolerance.",
+  "scope": "Conditional PAC calls on frozen synthetic predictions, gold and scores; no real study data or E1-E4 outcome is loaded.",
+  "fixture_design": [
+    {
+      "name": "large_32levels_distributed_risk_034",
+      "initial_error_count": 170,
+      "n": 5000,
+      "scores": "32 equally sized levels from 0 through 31/32",
+      "already_owned": 0,
+      "error_placement": "170 fixed indices from rng seed 38017"
+    },
+    {
+      "name": "large_32levels_misranked_risk_034_owned400",
+      "initial_error_count": 170,
+      "n": 5000,
+      "scores": "32 equally sized levels; all errors at lowest indices",
+      "already_owned": 400,
+      "owned_placement": "truthful zeros at indices 500 through 899"
+    }
+  ],
+  "limitations": [
+    "Two deliberately specified fixed-input conditions do not represent the seven real study pools or all annotation-panel distributions.",
+    "This is an implementation regression check, not a proof of the general guarantee.",
+    "One-sided 95% Clopper-Pearson intervals are individual, not simultaneous. A lower bound above alpha is a statistical regression signal, not a deterministic proof of a defect.",
+    "Repair-stage familywise failure has its separate .05 budget in the main report. The final-error event here is compared only with alpha_final=.10."
+  ],
+  "results": {
+    "status": "completed",
+    "alpha_final": 0.1,
+    "epsilon": 0.03,
+    "repetitions_per_frozen_pool": 10000,
+    "total_pac_runs": 20000,
+    "pools": [
+      {
+        "fixture": "large_32levels_distributed_risk_034",
+        "n": 5000,
+        "m": 500,
+        "already_owned": 0,
+        "frozen_input_sha256": {
+          "pred": "6a0fb51a2de045a40befbee50da00dff50504c3cf41d064f19746b05dfa5b58a",
+          "scores": "d8da770b39fa17b4405eb8a417238d45dd43172845b51c802358a8ac13304cf5",
+          "gold": "d0a4d0ee47dcae7ca250b688a67c6093fcbfd7baec68f2576ef1852fe8d06edd"
+        },
+        "violation": {
+          "events": 60,
+          "trials": 10000,
+          "estimate": 0.006,
+          "one_sided_confidence": 0.95,
+          "lower": 0.004787904240449218,
+          "upper": 0.007433605812518839
+        },
+        "comparison": "pass_with_margin",
+        "mean_total_unique_experts": 2823.1308,
+        "runs_saving_at_least_one_label": 10000,
+        "maximum_final_error": 0.0338,
+        "seed_spawn_key": [
+          0
+        ]
+      },
+      {
+        "fixture": "large_32levels_misranked_risk_034_owned400",
+        "n": 5000,
+        "m": 500,
+        "already_owned": 400,
+        "frozen_input_sha256": {
+          "pred": "6a0fb51a2de045a40befbee50da00dff50504c3cf41d064f19746b05dfa5b58a",
+          "scores": "d8da770b39fa17b4405eb8a417238d45dd43172845b51c802358a8ac13304cf5",
+          "gold": "880191aae6fedbee7ba3c2a746d6d53ebfdd1674e61ca8a28c2dc547df90325d"
+        },
+        "violation": {
+          "events": 60,
+          "trials": 10000,
+          "estimate": 0.006,
+          "one_sided_confidence": 0.95,
+          "lower": 0.004787904240449218,
+          "upper": 0.007433605812518839
+        },
+        "comparison": "pass_with_margin",
+        "mean_total_unique_experts": 4984.6193,
+        "runs_saving_at_least_one_label": 89,
+        "maximum_final_error": 0.0334,
+        "seed_spawn_key": [
+          1
+        ]
+      }
+    ],
+    "limitation": "Each frozen synthetic input is conditional and fixed. This does not test annotation-panel variability, audit-trained score leakage, or a general population guarantee."
+  },
+  "elapsed_seconds": 162.614,
+  "assertion_count": 60005,
+  "failures": [],
+  "failure_count_retained": 0
+}

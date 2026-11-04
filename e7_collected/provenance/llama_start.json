@@ -1,0 +1,8 @@
+{
+  "timestamp_utc": "2026-11-04T16:32:29.215760+00:00",
+  "family": "llama",
+  "model": "hugging-quants/Meta-Llama-3.1-8B-Instruct-AWQ-INT4",
+  "revision": "db1f81ad4b8c7e39777509fac66c652eb0a52f91",
+  "image": "vllm/vllm-openai@sha256:d825baf9ce4b1b6bfc5ecc7b79880c7e6748c65a72d697ce3d47607aafa84c6e",
+  "collection_status": "starting"
+}

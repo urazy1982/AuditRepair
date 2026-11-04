@@ -1,0 +1,13 @@
+{
+  "pool": "dbpedia",
+  "protocol_sha256": "2931a624b1ce970ce15ce2a6d4205b3992aa42606fc4d972fb5a3db38b042f61",
+  "code_sha256": "a3961faca0ee61aa4a3f5af3882827636321c562b0d83f55836b3f279d527f73",
+  "features_sha256": "976d15535f0e1ebf39abd030c79afa0a5a5f44d6fe944105e764adaee45c7b70",
+  "neighbors_sha256": "d77c20a889424ad2196d4938dd7a15f258d445b3fce7d8b90675ba197dd7db74",
+  "cache_sha256": "30354bfb01ef2eba66664b0a942568681fe1d27d521a67184c75c80aad9e110f",
+  "n": 2600,
+  "dimensions": 128,
+  "neighbor_count": 15,
+  "wall_seconds": 1.722617796999657,
+  "created_utc": "2026-11-04T06:16:36.727848+00:00"
+}

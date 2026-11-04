@@ -1,0 +1,1 @@
+["--model","mistralai/Mistral-7B-Instruct-v0.3","--revision","c170c708c41dac9275d15a8fff4eca08d52bab71","--tokenizer-revision","c170c708c41dac9275d15a8fff4eca08d52bab71","--served-model-name","mistralai/Mistral-7B-Instruct-v0.3","--host","0.0.0.0","--port","8000","--max-model-len","4096","--gpu-memory-utilization","0.82","--max-num-seqs","8"]

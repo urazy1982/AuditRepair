@@ -1,0 +1,1 @@
+["--model","microsoft/Phi-3.5-mini-instruct","--revision","2fe192450127e6a83f7441aef6e3ca586c338b77","--tokenizer-revision","2fe192450127e6a83f7441aef6e3ca586c338b77","--served-model-name","microsoft/Phi-3.5-mini-instruct","--host","0.0.0.0","--port","8000","--max-model-len","4096","--gpu-memory-utilization","0.82","--max-num-seqs","8"]

@@ -1,0 +1,8 @@
+{
+  "timestamp_utc": "2026-11-04T16:23:43.811420+00:00",
+  "family": "qwen",
+  "model": "Qwen/Qwen2.5-7B-Instruct-AWQ",
+  "revision": "b25037543e9394b818fdfca67ab2a00ecc7dd641",
+  "image": "vllm/vllm-openai@sha256:d825baf9ce4b1b6bfc5ecc7b79880c7e6748c65a72d697ce3d47607aafa84c6e",
+  "collection_status": "starting"
+}

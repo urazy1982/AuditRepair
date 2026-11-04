@@ -1,0 +1,30 @@
+{
+  "frozen_utc": "2026-11-04T06:20:49.727819+00:00",
+  "protocol_sha256": "2931a624b1ce970ce15ce2a6d4205b3992aa42606fc4d972fb5a3db38b042f61",
+  "files": {
+    "factorial.py": "a3961faca0ee61aa4a3f5af3882827636321c562b0d83f55836b3f279d527f73",
+    "run_factorial.py": "513405820407acbe382b0f074245fc10e1f7c617c453c657875348a1cc62d330",
+    "experiment_common.py": "0d2faa792d52e0c80582c16451e7839e36b66479336e715c041ab1840ba8bc24",
+    "audit_repair/core.py": "d8c463954a8454b1755986129053d2abf6214004712e21ef6362b2c0d1461d3a",
+    "audit_repair/pac.py": "e8be17586836737780d2e9e98fefea05a64fa41019952300d38b87add160f978",
+    "tests/test_factorial.py": "b73c4770579f9085f0a8e6f5d28e6d258dc4cab6e765c220459002064fe07b71",
+    "tests/test_factorial_runner.py": "3d77a6faf324e396755d2a60de3d833f64f58deb4a6625fa3e75ee8535bc8da6"
+  },
+  "feature_cache": {
+    "ag_news_5000.json": "71e3edf2e20d7890ecb94b1c5fa7e1d9a3aa627d5f17a6e1bfc97d3782c9ee81",
+    "ag_news_5000.npz": "4237516082e8cf5c1f29ed12506c72104c65dc8684e52091ad25a8718ba591e0",
+    "ag_news_holdout.json": "1ac2abd91d75eed5de48b422cccbd36d21981fba11487838d08453d0c38007bf",
+    "ag_news_holdout.npz": "f0e821935395ebe9ac92930625fde1de67cf1952653371f92b394da323ce8549",
+    "banking77.json": "5e8fbf2f8ab9206d93b8f39aaf9f2da51495b27381f52c55a87e50a3c734e80d",
+    "banking77.npz": "63ad565074a99cfd6b1ae9d6b8c5f4817175bd1c5e495e679aed3f5730d9832a",
+    "dbpedia.json": "af65afd1069eb04f4d4fb2776e92cca0c0febd31ce6b8880e6e09b22c7419995",
+    "dbpedia.npz": "30354bfb01ef2eba66664b0a942568681fe1d27d521a67184c75c80aad9e110f",
+    "emotion.json": "23663be2df725fc7a7d8bd5abbfc41624e99486f6ed69baf48af108465a8fd30",
+    "emotion.npz": "9d6eb3925b16520f8ed5dcfd469f99e9557da5d7692d24a1cd151c8127286bd2",
+    "imdb.json": "46c0815c71a00ddcecf1fd72469473e6a796ee56f5e91d619e25ab22eaee80eb",
+    "imdb.npz": "894acc4361a4a0ef12a362ca5eb4b50707db4f848e45ade2a442c2e19ad66356",
+    "yelp_2600_star_alias.json": "3033896c160f7b6c9916e8cb80cd33db65ffc039dc9a23e5b282cc61e04bfdaf",
+    "yelp_2600_star_alias.npz": "4d4f58bd9cecb064ce101ff2c715dc9435d046a87fd2e751f7647740831f940c"
+  },
+  "preflight": "10 preprocessing plus5runner integration tests passed; no E2/E3 outcomes inspected before execution freeze."
+}

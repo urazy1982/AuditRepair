@@ -1,0 +1,28 @@
+{
+  "identity_type": "sha256 of canonical sorted source-path to file-hash mapping",
+  "revision_sha256": "3021bddbc2751cb89bd71263cda785f5c5d7f6993843d25d2f6d9db992966f8e",
+  "git_commit": null,
+  "note": "No external Git commit is invented. Frozen v8.1 identities are recorded separately.",
+  "files": {
+    "corrected/audit_repair/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corrected/audit_repair/core.py": "b1145503a8beb0a3690d4db395eab2ffffb5676396188b396940d0cd3ec46089",
+    "corrected/audit_repair/pac.py": "e8be17586836737780d2e9e98fefea05a64fa41019952300d38b87add160f978",
+    "corrected/audit_repair/simulate.py": "bb529d860ef1e4c76671cbf61574e1eb1feda5adf4b15c69646c7eb02c5bac90",
+    "corrected/factorial.py": "b64565bbf4a1496efdce962eefc2605327b738ac03f45403e000f50520b18e3f",
+    "protocol_v8_2.json": "6695e33de9eb88ccf74726d3015bc7cc4b2baf650cdb4cb1b2696f3c04f53516",
+    "references/historical_power/run_safeguard_validity.py": "49453e74f52b47f75f854c24d55652871b72c83279fcd46df949167dba66f2d1",
+    "requirements-experiments.lock": "7178899381bdab44e6b58c276e081742c7ceb64aa47521819ec8fcab7fb92b93",
+    "run_all.sh": "0af838f6e152389701273fcc84cf9a8895647f89f7fa474177cc7a7ab7716f17",
+    "run_revision.sh": "ca4380c6bcc6022ba87b340310bebc6916de7276fba784e30b8ba6c5236fff9e",
+    "scripts/analyze_active_repairs.py": "0b2d5e733cc4dfc42df949aa5ac5548bac0d545c72672f5139067a700d523ecb",
+    "scripts/capture_environment.py": "88020641abfdefaa85c72c1f43223911577a1b6428d595fd0d72a38d355c6f4e",
+    "scripts/check_release.py": "f08f065a2bf1f624bf26c60d2ad83d9783b16f64a7f9f782e7cdb74970dd09a9",
+    "scripts/export_publication_tables.py": "647f35121dde062ec0971dbc63563557535cb9777e5fc8202b903e06dc63458a",
+    "scripts/plot_active_distributions.py": "9e58b30728a6a5decec5c7c6a61cd493c3d8d10190c638987143a65490122501",
+    "scripts/replay_corrected_acceptance.py": "6c0ee9d86616da728a12ef76a3e38333255bb28819aea8fd4c7293ec1244ffdd",
+    "scripts/run_operational_power.py": "bf9af73232e8e571c9dbb39c7600c1ac852b9828e4be54aa3426fb6df5d45005",
+    "scripts/seal_release.py": "3c002d441b3175c0a42586ce7a0c99f23ef02e3edc9d4a61ad94aa5df6e2cd5d",
+    "tests/test_exact_acceptance.py": "7f8126d679349707f2c09f74b2fa1458467f8662af17e77d426862d622f6bd66",
+    "tests/test_pac_convention.py": "ae758b8cce6247f27096872c671dd04899bb096542ddf45db28bbdc02e76dd3a"
+  }
+}

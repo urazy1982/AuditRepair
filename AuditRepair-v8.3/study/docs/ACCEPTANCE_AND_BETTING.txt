@@ -1,0 +1,195 @@
+V8.2 EXACT ACCEPTANCE AND GROUP-BETTING SPECIFICATION
+===================================================
+
+Scope and implementation identity
+---------------------------------
+This amendment corrects the final strict remainder-acceptance inequality. It
+does not change candidate generation, the betting strategy, group audit caps,
+the PAC certifier, or the fixed-score estimand. The original v8.1 sources and
+results remain in frozen_v8_1/ without modification.
+
+Corrected production files at execution:
+  corrected/audit_repair/core.py
+  SHA-256 b1145503a8beb0a3690d4db395eab2ffffb5676396188b396940d0cd3ec46089
+  corrected/factorial.py
+  SHA-256 b64565bbf4a1496efdce962eefc2605327b738ac03f45403e000f50520b18e3f
+
+V8.2 protocol SHA-256:
+  6695e33de9eb88ccf74726d3015bc7cc4b2baf650cdb4cb1b2696f3c04f53516
+
+1. Strict acceptance uses integers
+---------------------------------
+For a fixed population of N items, let d_r in {-1,0,1} be each observed
+replacement's accuracy gain over the frozen reference. Define x_r=(d_r+1)/2.
+The publication implementation retains sum(d_r) as a Python integer updated
+at each observation, and retains the grid index selected by inversion directly.
+It never recovers this index by rounding a printed or stored lower bound.
+
+The nominal grid has q=400 and L=j/q. Define
+
+  D_nominal = N*(2*j-q) - q*sum(d_r).
+
+The nominal remainder bound is D_nominal/q. At q=400, its positivity is
+equivalent to the integer expression
+
+  N*(j-200) - 200*sum(d_r) > 0.
+
+The betting calculation uses the represented np.linspace grid point. If its
+exact binary-float value is a/b, the implementation additionally computes
+
+  D_represented = N*(2*a-b) - b*sum(d_r).
+
+Publication acceptance is:
+
+  0 < t < N AND D_nominal > 0 AND D_represented > 0.
+
+All integers are unbounded Python integers. Both denominators are positive.
+There is no tolerance or epsilon in this final decision. The represented-grid
+guard is a conservative addition: acceptance requires positivity at the smaller
+of the nominal j/q and the actually represented grid value. This avoids claiming
+a bound at a slightly larger nominal value when the betting grid value happens
+to lie below it. It also rejects the review's nominal-zero example even when its
+represented float value lies slightly above the rational grid point.
+
+The production API is WorLowerCS.remainder_is_positive(). Both group-policy
+callsites, historical run_group_repair and current preprocess_generator, call
+this method. WorLowerCS.remainder_gain_lb() remains available only as a
+floating-point diagnostic; its sign does not govern acceptance.
+
+Generic [0,1] observations remain supported by the confidence-sequence update.
+The exact repair gate refuses a path containing values outside {0,0.5,1}; it
+does not silently round arbitrary observations to the gain lattice.
+
+2. Regression and recorded-decision replay
+------------------------------------------
+The eight focused tests in tests/test_exact_acceptance.py check the review's
+N=50, j=204, sum(d)=1 counterexample, neighboring negative/positive grid points,
+independence from the rounded diagnostic's sign, exact gain accumulation,
+empty-remainder handling, refusal to quantize generic observations, an
+independent Fraction reference including large-integer and represented-grid
+boundary cases, and unambiguous logging.
+
+In the review's example the legacy float diagnostic is approximately
+8.88e-16 > 0, while D_nominal=0. The corrected gate rejects it.
+
+scripts/replay_corrected_acceptance.py performs the following bounded replay:
+
+* All 420 factorial preprocessing states: every stored group audit prefix is
+  replayed through both old and corrected confidence-sequence implementations.
+  Capital arrays, sticky rejection masks, sufficient statistics and acceptance
+  decisions are compared exactly. A separately expressed Fraction calculation
+  checks both exact remainder margins.
+* All 140 E1 and 40 E4 preprocessing states: the corrected complete preprocessing
+  code reconstructs the trajectories omitted from the old checkpoints. Saved
+  audit IDs, prediction hashes and score hashes identify the recovered states.
+  Every recovered prefix is then replayed through both CS implementations.
+* E4's five score-intervention arrays are also reconstructed and hash checked.
+* Frozen source and checkpoint hashes are checked before and after replay.
+  PAC calls are disabled in this replay. The final PAC source is byte-identical.
+
+Machine-readable outcomes, counts, full source hashes and per-stage minimum
+positive margins are in results/acceptance_replay_summary.json. Group and state
+details are in acceptance_replay_groups.csv and acceptance_replay_states.csv.
+The completed replay checked 600 preprocessing states, 3,814 tested groups and
+52,824 observed audit prefixes. No acceptance predicate changed. E1 retained
+11 acceptances, E2/E3 retained 31 and E4 retained 13: all 55 archived acceptances
+remain accepted. The minimum positive nominal remainder margins were 0.025,
+0.010 and 0.050 respectively. All 1,500 reconstructed E1/E4 output-array hash
+checks matched; no failure was recorded. The eight regression tests also passed.
+The active-factorial reconstruction additionally compares complete frozen and
+corrected accepted-state preprocessing; see the active analysis verification
+artifact accompanying this amendment.
+
+Unchanged decisions and preprocessing inputs, together with unchanged final
+PAC code and calibration streams, preserve the archived downstream outcomes.
+This is a targeted algorithmic replay, not a claim that all 42,200 PAC records
+were newly rerun and not an additional statistical sample.
+
+3. Complete group-betting rule
+-------------------------------
+Population: a fixed group sampled uniformly without replacement. Reference
+labels and the proposed alternative are frozen before its audit. There are
+g groups on the fixed shortlist; each test uses alpha_group=0.05/g (when g>0),
+with g<=10. The denominator is the full shortlisted count, not the number later
+tested, accepted, or still affordable. For g=10 the group level is 0.005.
+The historical core docstring's shorthand "alpha/max_groups" is superseded by
+this exact specification; the actual executable code uses alpha/len(groups).
+
+For every j=0,...,400, let m_j be the represented np.linspace(0,1,401) point.
+Initially t=0, s=0, ss=0, log K_j=0, all rejection flags false and lower index 0.
+The numerical cap is c=0.5. Immediately before observing x_(t+1), calculate
+
+  r = N-t,
+  m_wor,j = (N*m_j-s)/r,
+  mu_hat = (0.5+s)/(t+1),
+  v_hat = (0.25+ss)/(t+1),
+  gap_j = mu_hat-m_wor,j.
+
+For a live null (see boundary rules below), the bet is
+
+  lambda_j = min(max(gap_j/(v_hat+gap_j^2),0), 0.5/m_wor,j),
+
+where a nonpositive gap is assigned zero explicitly. All these quantities use
+only observations preceding x_(t+1). Update the live log capital by
+
+  log K_j <- log K_j + log1p(lambda_j*(x_(t+1)-m_wor,j)).
+
+Then update, in this order, t<-t+1, s<-s+x_(t+1), and
+ss<-ss+(x_(t+1)-mu_hat)^2, where mu_hat is the pre-observation estimate above.
+This is an evolving predictable squared-deviation accumulator, not a sample
+variance computed using the final sample mean. The integer gain accumulator is
+updated by d_(t+1)=2*x_(t+1)-1 on the ternary lattice.
+
+The inherited floating boundary convention uses eta=1e-12:
+
+* m_wor,j < -eta: set log K_j to +infinity.
+* -eta <= m_wor,j <= eta: set log K_j to +infinity if x_(t+1)>eta;
+  otherwise leave capital unchanged.
+* eta < m_wor,j < 1: apply the betting update above.
+* m_wor,j >= 1: leave capital unchanged.
+
+The sufficient-statistic updates still occur in every branch. These conventions
+are retained to reproduce v8.1, and are stated explicitly rather than described
+as exact directed-rounding arithmetic.
+
+Rejection is sticky: after each observation, set rejected_j to its previous
+value OR [log K_j >= log(1/alpha_group)]. Once true it never becomes false.
+Let k be the first index with rejected_k false. The lower index is max(k-1,0).
+The implementation uses index 400 if no such k remains. In the ideal arithmetic
+argument m=1 is a true, never-rejected endpoint. No monotonicity of rejection
+over j is assumed: the inversion uses the first unrejected grid point. No
+universal one-grid-step approximation to continuous inversion is asserted.
+
+4. Stopping order and relation to the final PAC stage
+----------------------------------------------------
+After each group observation, test exact remainder acceptance first. If it
+fails, apply futility at t>=10 when mean(x)<0.45. Next apply the cap of 80 audits
+or t>=N/2, which is ceil(N/2) for odd N. Global group-budget exhaustion is checked
+before the next query. Thus the arithmetic repair does not alter stopping order.
+
+The current factorial spends 120 uniform warm-up labels out of B=400, permits
+up to 196 additional group-stage labels and shortlists at most 10 disjoint groups
+of at least 30 items. It stops after 10 unsuccessful groups. Accepted populations
+are excluded from uncertainty fill; accepted unaudited replacements override the
+later same-audit DS refit, while audited labels retain gold. These are policy
+details, separate from the mathematical certificate's frozen comparator.
+
+The group CS's sticky rejection convention must not be copied into the final
+PAC pseudocode. The final PAC implementation tests terminal capital after all
+m=500 calibration observations. Its exact terminal convention, betting rule,
+threshold ties and unique-label costs are specified separately in the amendment.
+Changing final PAC to first-crossing rejection would be a different procedure
+and is not part of this revision.
+
+5. What the correction establishes
+----------------------------------
+The final strict decision exactly implements positivity of the two stated
+rational bounds, conditional on the selected grid index and observed gains.
+It does not independently certify all floating-point capital updates, endpoint
+tolerances or logarithmic threshold comparisons. The certificate's statistical
+argument remains conditional on the stated sampling and coverage assumptions.
+
+Exact rational reference calculations check the narrow acceptance arithmetic.
+Reexecuting original seeds checks algorithmic reproducibility. Neither is a new
+annotation sample, a full clean-room reimplementation of the study, or evidence
+of a universal floating-point theorem.

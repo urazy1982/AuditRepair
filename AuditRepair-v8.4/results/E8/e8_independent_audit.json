@@ -1,0 +1,24 @@
+{
+  "source": "reference PAC Labels and WoR betting mathematical contracts; independent Fraction/Decimal implementations",
+  "scope": "small exhaustive and adversarial numerical cases; no general guarantee proof",
+  "wor": {
+    "paths": 585,
+    "pointwise_null_paths": 310,
+    "null_exceedances": 0,
+    "violations": 0,
+    "float_integer_gate_disagreements": 0,
+    "max_abs_logcapital_diff": 1.1102230246251565e-16
+  },
+  "terminal_pac": {
+    "scenarios": 36,
+    "matched": 36,
+    "violations": 0,
+    "max_abs_cutoff_diff": 0.0,
+    "degenerate_cases": 9,
+    "ties": 9,
+    "repeated_draw_sequences": 36
+  },
+  "failures": [],
+  "status": "passed",
+  "code_sha256": "6895f021def4b43d42ee753cc4966e70346c1c7e88ec9eaf70d8eb035d38c52c"
+}

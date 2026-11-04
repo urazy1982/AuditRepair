@@ -1,0 +1,13 @@
+pool,method,records,preprocessing_seeds,observed_final_error_violations,mean_final_error,maximum_final_error
+shared3_slice20,O1_shortlist,250,10,0,0.0109,0.0192
+shared3_slice20,guarded_fixed_scores,250,10,0,0.0086608,0.0252
+shared3_slice20,same_audit_ds,250,10,0,0.00696,0.0252
+shared3_slice35,O1_shortlist,250,10,0,0.0108688,0.0242
+shared3_slice35,guarded_fixed_scores,250,10,0,0.0108688,0.0242
+shared3_slice35,same_audit_ds,250,10,0,0.0070896,0.0098
+shared4_slice20,O1_shortlist,250,10,4,0.000688,0.032
+shared4_slice20,guarded_fixed_scores,250,10,4,0.0006256,0.032
+shared4_slice20,same_audit_ds,250,10,4,0.0006256,0.032
+shared4_slice35,O1_shortlist,250,10,0,0.0008136,0.0028
+shared4_slice35,guarded_fixed_scores,250,10,0,2e-05,0.0002
+shared4_slice35,same_audit_ds,250,10,0,2e-05,0.0002

@@ -1,0 +1,21 @@
+{
+  "release": "E7_RC2_Panel_Study_Addon_v1",
+  "status": "qualified_four_family_and_completed_CPU_study",
+  "base_release_sha256": "ac91f57483a0bb98b6e67f3284e04696d179065362a2052058ec8a5be46b1395",
+  "user_qualified_archive_sha256": "05e1f4e8c3be057aa0a41c09192d80ba695d8f631742e7807cff58037049bf11",
+  "original_failed_archive_sha256": "7481ca34b42f939abe4af97a54550e7b07848b6383f6dd143cd846b9cdb58e1b",
+  "needs_parent_repository": true,
+  "run_scope": {
+    "E7_RC2": {
+      "states": 120,
+      "pac_arm_records": 10000,
+      "paired_comparisons": 2400,
+      "accepted_actions": 60
+    },
+    "E7_E1_secondary": {
+      "states": 40,
+      "arm_records": 3200
+    }
+  },
+  "caveat": "Same benchmark items; original Qwen/Llama + constrained-output Mistral/Phi; secondary E1 added after primary, all source provenance preserved."
+}

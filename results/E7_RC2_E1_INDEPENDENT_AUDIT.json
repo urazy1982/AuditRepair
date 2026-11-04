@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "rows": 3200,
+  "methods": [
+    "O1_shortlist",
+    "O2_disagreement",
+    "O3_complete_unanimity",
+    "O4_baseline_prefix",
+    "O5_all_errors",
+    "legacy_guarded",
+    "pac_only",
+    "same_audit_ds"
+  ],
+  "preprocessing_states": 40,
+  "oracle_1_all_same_cost": true,
+  "oracle_5_all_gold_corrected_and_fixed_query_floor": true,
+  "all_expert_cost_accounting_valid": true,
+  "source_code_sha256": "6ab71ae6fab9f0b64dea10713f23c2a9cd3917caf796e287ce194b70f779db4d",
+  "secondary_protocol_sha256": "d3ed61a235585ed9feb3d2ccbedec5d0366aa66ef28ce533692ced599d18f31d"
+}
