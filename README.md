@@ -72,7 +72,7 @@ The protocol files are kept byte-identical, so they still name source documents 
 
 ## License and data
 
-Project code is under GPL-3.0 (`LICENSE`). The benchmark texts and labels (AG News, Yelp Review Full, DBpedia-14, IMDb, Emotion, BANKING77) and the stored model outputs keep their own terms; see [`docs/DATA_AND_RELEASE_RIGHTS.md`](docs/DATA_AND_RELEASE_RIGHTS.md).
+Project code is MIT (`LICENSE`). The benchmark texts and labels (AG News, Yelp Review Full, DBpedia-14, IMDb, Emotion, BANKING77) and the stored model outputs keep their own terms; see [`docs/DATA_AND_RELEASE_RIGHTS.md`](docs/DATA_AND_RELEASE_RIGHTS.md).
 
 ## Citation
 
