@@ -77,3 +77,7 @@ Project code is MIT (`LICENSE`). The benchmark texts and labels (AG News, Yelp R
 ## Citation
 
 See [`CITATION.cff`](CITATION.cff).
+
+## AI Assistance Disclosure
+
+OpenAI GPT and Anthropic Claude models assisted with code review, debugging, and validation. All research findings and conclusions remain the responsibility of the author.
