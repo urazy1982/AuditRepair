@@ -600,7 +600,7 @@
     "README.md": "74423c7e7406d1e1f8ade6bbca9bd1693ded659fccf3e742b01b65b170e83476",
     "REPRODUCE.md": "ac76e079322f98f4aebf72fe96086436f5cd535e168ee52f27c032b79c4e9ae5",
     "VERIFY_V85.sh": "9babf46dcf0e35a0221e0e818f024956424eb3adcc754f5b417b8c9d71587809",
-    "verify_manifest.py": "973ac3441c819a8d8c4a3327a8bcd0376e2466ad423091bdf72dcee34563f95d"
+    "verify_manifest.py": "66304ed79091593bea4cd6d75c9a3d130fc8caf1420c56445fb089cb3cde9c4e"
   },
   "manifest_notes": "Updated distribution-only root files and removed Python bytecode from sealed distribution; study source/data/checkpoint files retained.",
   "omitted_groups": [
