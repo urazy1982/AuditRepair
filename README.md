@@ -1,5 +1,7 @@
 # AuditRepair — certified group repair of LLM labels and expert-review cost
 
+U. Yavanoglu, "When Does Repairing LLM Labels Reduce Expert Review? A Diagnostic Study of Certified Data Cleaning", Submitted to REDACTED, 2026
+
 This repository holds the code, frozen inputs, result records and verification scripts for a study of **when certified repair of LLM-generated labels reduces the number of expert labels a threshold certifier (PAC Labels) has to buy**. It covers experiments E1–E8:
 
 | Block | Question | Records |
