@@ -2432,7 +2432,7 @@
       "size_bytes": 990
     },
     "COMPACTION_MANIFEST.json": {
-      "sha256": "014a2c60e01719f0420cb25e6b875bdd2929b8bdaf46475496cab4be3ac18d66",
+      "sha256": "0b64d71f2df5f308c6e3b0bc4750b6cc6c4dafff45c8ec00a344965e385273ea",
       "size_bytes": 89652
     },
     "E7_RC2_RELEASE_MANIFEST.json": {
@@ -2976,12 +2976,12 @@
       "size_bytes": 1568
     },
     "scripts/verify_complete_release.py": {
-      "sha256": "92e935abe40dac2907fcd4800b2b1ccb7c57af267ae46ed137eea94fa5a10dba",
-      "size_bytes": 3152
+      "sha256": "5aa39a4f48730a4d406155c078dd6fe9c8082423b81c70c2fe9cdb6daa8cac1a",
+      "size_bytes": 3416
     },
     "verify_manifest.py": {
-      "sha256": "973ac3441c819a8d8c4a3327a8bcd0376e2466ad423091bdf72dcee34563f95d",
-      "size_bytes": 475
+      "sha256": "66304ed79091593bea4cd6d75c9a3d130fc8caf1420c56445fb089cb3cde9c4e",
+      "size_bytes": 745
     }
   }
 }
