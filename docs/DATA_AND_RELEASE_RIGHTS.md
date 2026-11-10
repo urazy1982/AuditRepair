@@ -6,7 +6,7 @@ This repository **does not certify permission to redistribute every included thi
 |---|---|---|
 | AG News, Yelp Review Full, DBpedia-14, IMDb, Emotion, BANKING77 text and source labels | Frozen CSVs, text worklists and joined E7 panels | Check each original source license, citation/attribution and redistribution constraints. |
 | Model-generated source/annotation responses | Cached source labels and E7 original + amended response JSONL | Verify applicable model output terms and any disclosure obligations. |
-| This project's original code | GPL-3.0 license file at root | GPL terms apply only to material owned/licensed accordingly, not to the third-party data and styles. |
+| This project's original code | MIT license file at root | MIT terms apply only to material owned/licensed accordingly, not to the third-party data and styles. |
 | Open-weight model weights | **Not included** | Reproduction of GPU collection needs obtaining checkpoints under model-provider terms. |
 | API tokens / credentials | Not included | None are required to verify or reproduce the CPU results. |
 
