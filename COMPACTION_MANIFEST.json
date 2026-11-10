@@ -595,9 +595,9 @@
     "AuditRepair-v8.4/results/figures/e6_conversion_by_position.png": "b3e8987dc04406374d2e69681229ddab7c470364d5233758d3ba7b9e0f9bc67b",
     "AuditRepair-v8.4/tests/test_e6_design.py": "776effbf5ffd5b6f7bb0803515a7a001740c14396dc1325f68ead276291d81cd",
     "AuditRepair-v8.4/tests/test_fast_pac.py": "f815dc548fe7aee52629071e3e2616af41dfbd361dd6e84326b5751413b36899",
-    "CITATION.cff": "6ab95a6a28fdea876660f1b1acce6d90105227c97a3d8b22fb9009f7d961d833",
-    "LICENSE": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
-    "README.md": "a6ddb719aa4e9bc03881ba4ef67c3341d94205b9f98a216011f00d51d7d90fb7",
+    "CITATION.cff": "a6e1f5e17c1abe700592c40ad62012228209b56d14899461beae6f0bdb46fabe",
+    "LICENSE": "f70705f5ae36f59fbcdaeb10de5fe2b942c044392e01199cc30e862df1ba5677",
+    "README.md": "74423c7e7406d1e1f8ade6bbca9bd1693ded659fccf3e742b01b65b170e83476",
     "REPRODUCE.md": "ac76e079322f98f4aebf72fe96086436f5cd535e168ee52f27c032b79c4e9ae5",
     "VERIFY_V85.sh": "9babf46dcf0e35a0221e0e818f024956424eb3adcc754f5b417b8c9d71587809",
     "verify_manifest.py": "973ac3441c819a8d8c4a3327a8bcd0376e2466ad423091bdf72dcee34563f95d"
