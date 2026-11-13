@@ -1,6 +1,7 @@
 # AuditRepair — certified group repair of LLM labels and expert-review cost
 
-Author: Uraz Yavanoğlu, Department of Computer Engineering, Gazi University, Ankara, Türkiye
+Author: Uraz Yavanoğlu
+Department of Computer Engineering, Gazi University, Ankara, Türkiye
 https://orcid.org/0000-0001-8358-8150
 
 This repository holds the code, frozen inputs, result records and verification scripts for a study of **when certified repair of LLM-generated labels reduces the number of expert labels a threshold certifier (PAC Labels) has to buy**. It covers experiments E1–E8:
