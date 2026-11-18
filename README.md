@@ -84,4 +84,4 @@ See [`CITATION.cff`](CITATION.cff).
 
 ## AI Assistance Disclosure
 
-OpenAI GPT and Anthropic Claude models assisted with code review, debugging, and validation. All research findings and conclusions remain the responsibility of the author.
+OpenAI GPT and Anthropic Claude models assisted with code review and validation. The author retains sole and full responsibility for the integrity, accuracy, and validity of all research findings, software development, experimental testbed designs, code execution, data analysis, interpretations, and conclusions presented in this work.
